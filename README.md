@@ -17,7 +17,7 @@ Chez Scheme 用户手册 翻译
 | 章节                                          | 认领人 | 完成情况 | 开始时间 |
 | --------------------------------------------- | ----- | ------ | ------- |
 | Preface                                       ||||
-| Chapter 1. Introduction                       ||||
+| Chapter 1. Introduction                       | flowingfirefly | 完成 section1.1 之前的部分| 2019-01-04 |
 | Chapter 2. Using Chez Scheme                  ||||
 | Chapter 3. Debugging                          ||||
 | Chapter 4. Foreign Interface                  ||||

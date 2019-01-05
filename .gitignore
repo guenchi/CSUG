@@ -5,3 +5,6 @@
 *.scm~
 *.scm#*
 .#*.scm
+
+*.iml
+.idea/
