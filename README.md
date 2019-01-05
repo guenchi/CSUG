@@ -14,25 +14,25 @@ Chez Scheme 用户手册 翻译
 
 注：想认领章节翻译的同学可以到Issues中提一个任务领取的Issuse，提的时候最好能同时给一个预估的翻译截止时间。
 
-| 章节                                          | 认领人 | 完成情况 | 开始时间 |
-| --------------------------------------------- | ----- | ------ | ------- |
-| Preface                                       ||||
-| Chapter 1. Introduction                       ||||
-| Chapter 2. Using Chez Scheme                  ||||
-| Chapter 3. Debugging                          ||||
-| Chapter 4. Foreign Interface                  ||||
-| Chapter 5. Binding Forms                      ||||
-| Chapter 6. Control Structures                 ||||
-| Chapter 7. Operations on Objects              ||||
-| Chapter 8. Numeric Operations                 ||||
-| Chapter 9. Input/Output Operations            ||||
-| Chapter 10. Libraries and Top-level Programs  ||||
-| Chapter 11. Syntactic Extension and Modules   ||||
-| Chapter 12. System Operations                 ||||
-| Chapter 13. Storage Management                ||||
-| Chapter 14. Expression Editor                 ||||
-| Chapter 15. Thread System                     ||||
-| Chapter 16. Compatibility Features            ||||
+| 章节                                          | 认领人 | 完成情况    | 开始时间     |
+| --------------------------------------------- | -----  | ------      | -------      |
+| Preface                                       |        |             |              |
+| Chapter 1. Introduction                       |        |             |              |
+| Chapter 2. Using Chez Scheme                  |        |             |              |
+| Chapter 3. Debugging                          |        |             |              |
+| Chapter 4. Foreign Interface                  |        |             |              |
+| Chapter 5. Binding Forms                      |        |             |              |
+| Chapter 6. Control Structures                 |        |             |              |
+| Chapter 7. Operations on Objects              | xashes | Section 7.2 | Dec 31, 2018 |
+| Chapter 8. Numeric Operations                 |        |             |              |
+| Chapter 9. Input/Output Operations            |        |             |              |
+| Chapter 10. Libraries and Top-level Programs  |        |             |              |
+| Chapter 11. Syntactic Extension and Modules   |        |             |              |
+| Chapter 12. System Operations                 |        |             |              |
+| Chapter 13. Storage Management                |        |             |              |
+| Chapter 14. Expression Editor                 |        |             |              |
+| Chapter 15. Thread System                     |        |             |              |
+| Chapter 16. Compatibility Features            |        |             |              |
 
 <!--
 ## 目录
