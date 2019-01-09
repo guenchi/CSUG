@@ -12,13 +12,13 @@ Chez Scheme 用户手册 翻译
 
 ## 翻译任务清单
 
-注：想认领章节翻译的同学可以到Issues中提一个任务领取的Issuse，提的时候最好能同时给一个预估的翻译截止时间。
+注：想认领章节翻译的同学可以到Issues中提一个任务领取的Issue，提的时候最好能同时给一个预估的翻译截止时间。
 
 | 章节                                          | 认领人 | 完成情况 | 开始时间 |
 | --------------------------------------------- | ----- | ------ | ------- |
 | Preface                                       ||||
-| Chapter 1. Introduction                       | flowingfirefly | 完成 section1.1 之前的部分| 2019-01-04 |
-| Chapter 2. Using Chez Scheme                  ||||
+| Chapter 1. Introduction                       | flowingfirefly | 译完了 Chapter 1 | Jan 4, 2019 |
+| Chapter 2. Using Chez Scheme                  | flowingfirefly | 认领了 Chapter 2 | Jan 9, 2019 |
 | Chapter 3. Debugging                          ||||
 | Chapter 4. Foreign Interface                  ||||
 | Chapter 5. Binding Forms                      ||||
