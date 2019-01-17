@@ -8,8 +8,6 @@ Chez Scheme 用户手册 翻译
 
 # *Chez Scheme Version 9.5 User's Guide* 中文版
 
-原文地址：http://cisco.github.io/ChezScheme/csug9.5
-
 ## 翻译任务清单
 
 注：想认领章节翻译的同学可以到Issues中提一个任务领取的Issue，提的时候最好能同时给一个预估的翻译截止时间。
@@ -23,7 +21,7 @@ Chez Scheme 用户手册 翻译
 | Chapter 4. Foreign Interface                  ||||
 | Chapter 5. Binding Forms                      ||||
 | Chapter 6. Control Structures                 ||||
-| Chapter 7. Operations on Objects              | xashes | Section 7.12 | Dec 31, 2018 |
+| Chapter 7. Operations on Objects              | xashes | Section 7.14 | Dec 31, 2018 |
 | Chapter 8. Numeric Operations                 ||||
 | Chapter 9. Input/Output Operations            ||||
 | Chapter 10. Libraries and Top-level Programs  ||||
