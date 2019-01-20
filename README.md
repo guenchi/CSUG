@@ -21,8 +21,8 @@ Chez Scheme 用户手册 翻译
 | Chapter 4. Foreign Interface                  ||||
 | Chapter 5. Binding Forms                      ||||
 | Chapter 6. Control Structures                 ||||
-| Chapter 7. Operations on Objects              | xashes | Section 7.14 | Dec 31, 2018 |
-| Chapter 8. Numeric Operations                 ||||
+| Chapter 7. Operations on Objects              | xashes | 初步完成 | Dec 31, 2018 |
+| Chapter 8. Numeric Operations                 |xashes|initial|Jan 19, 2019|
 | Chapter 9. Input/Output Operations            ||||
 | Chapter 10. Libraries and Top-level Programs  ||||
 | Chapter 11. Syntactic Extension and Modules   | DeathKing |  initial | Jan 6, 2019 |
