@@ -27,7 +27,7 @@ Chez Scheme 用户手册 翻译
 | Chapter 8. Numeric Operations                 ||||
 | Chapter 9. Input/Output Operations            ||||
 | Chapter 10. Libraries and Top-level Programs  ||||
-| Chapter 11. Syntactic Extension and Modules   | DeathKing | 校订 | Jan 6, 2019 |
+| Chapter 11. Syntactic Extension and Modules   | DeathKing | 完成（遗留术语 `fluid keyword`） | Jan 6, 2019 |
 | Chapter 12. System Operations                 ||||
 | Chapter 13. Storage Management                ||||
 | Chapter 14. Expression Editor                 ||||
