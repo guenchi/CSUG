@@ -17,14 +17,14 @@ Chez Scheme 用户手册 翻译
 | Preface                                       ||||
 | Chapter 1. Introduction                       | flowingfirefly | 译完了 Chapter 1 | Jan 4, 2019 |
 | Chapter 2. Using Chez Scheme                  | flowingfirefly | 认领了 Chapter 2 | Jan 9, 2019 |
-| Chapter 3. Debugging                          ||||
+| Chapter 3. Debugging                          |shenxs |||
 | Chapter 4. Foreign Interface                  ||||
 | Chapter 5. Binding Forms                      ||||
 | Chapter 6. Control Structures                 ||||
 | Chapter 7. Operations on Objects              | xashes | 校订 | Dec 31, 2018 |
 | Chapter 8. Numeric Operations                 |xashes|初步完成|Jan 19, 2019|
 | Chapter 9. Input/Output Operations            |xashes|initial|Jan 26, 2019|
-| Chapter 10. Libraries and Top-level Programs  ||||
+| Chapter 10. Libraries and Top-level Programs  |DeathKing|||
 | Chapter 11. Syntactic Extension and Modules   | DeathKing | 完成（遗留术语 `fluid keyword`） | Jan 6, 2019 |
 | Chapter 12. System Operations                 ||||
 | Chapter 13. Storage Management                ||||
