@@ -1,4 +1,4 @@
-# Chez Scheme 用户手册（中文）
+# Chez Scheme 用户手册
 
 
 ### [00 术语表](00.%20术语表.md)
