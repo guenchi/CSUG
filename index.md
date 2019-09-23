@@ -1,6 +1,9 @@
 # Chez Scheme 用户手册
 
-Kent R. Dybvig
+```
+原著：Kent R. Dybvig
+编辑：guenchi
+```
 
 ## [00 术语表](00.Terminology.md)
 
