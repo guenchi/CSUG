@@ -37,6 +37,10 @@ Kent R. Dybvig
 ### [16 兼容功能](16.CompatibilityFeatures.md)
 
 
+## [翻译项目](README.md)
+
+
+## 授权
 
 [Chez Scheme 第 9 版用户手册](http://cisco.github.io/ChezScheme/csug9.5/index.html)
 
