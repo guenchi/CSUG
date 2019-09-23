@@ -11,7 +11,7 @@
 
 [Chez Scheme 第 9 版用户手册](http://cisco.github.io/ChezScheme/csug9.5/index.html)
 
-思科系统公司版权所有 © 2018
+## 思科系统公司版权所有 © 2018
 
 按  [ Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) 授权 
 （[完整的版权公告](http://cisco.github.io/ChezScheme/csug9.5/canned/copyright.html)）
@@ -19,3 +19,7 @@
 为 Chez Scheme 9.5.1 版本修改于 2018 年十月
 
 [关于本书](http://cisco.github.io/ChezScheme/csug9.5/canned/about.html)
+
+## 译文授权
+
+可用于非商业用途的自由存储，修改与传播，但必须包含版权文件与译者姓名。
