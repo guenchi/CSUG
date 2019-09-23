@@ -5,7 +5,7 @@
 编辑：guenchi
 ```
 
-## [00 术语表](00.Terminology.md)
+- 1. [00 术语表](00.Terminology.md)
 
 
 ## [01 简介](01.Introduction.md)
