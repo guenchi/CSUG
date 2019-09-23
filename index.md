@@ -30,9 +30,21 @@
 
 ### [07. 对象操作](07.OperationsOnObjects.md)
 
+```
+译者：xashes（完成）
+```
+
 ### [08. 数字操作](08.NumericOperations.md)
 
+```
+译者：xashes（完成）
+```
+
 ### [09. 输入输出操作](09.InputOutputOperations.md)
+
+```
+译者：xashes（完成）
+```
 
 ### [10. 库和顶层程序](10.LibrariesAndTop-levelPrograms.md)
 
