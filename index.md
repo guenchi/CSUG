@@ -17,7 +17,7 @@
 ### [02. 使用Chez Scheme](02.UsingChezScheme.md)
 
 ```
-译者：flowingfirefly（完成）
+译者：flowingfirefly（未完成）
 ```
 
 ### [03. Debugging](03.Debugging.md)
