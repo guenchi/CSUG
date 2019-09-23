@@ -32,6 +32,16 @@
 | Chapter 15. Thread System                     ||||
 | Chapter 16. Compatibility Features            ||||
 
+
+## 结算
+
+**字数统计按照Scrivener最新版本字数统计功能为准**
+
+```
+统计按照一个汉字算一个字，一个英文单词算一个字，一个符号算一个字计数。
+```
+
+
 <!--
 ## 目录
 
@@ -185,3 +195,5 @@
 - Summary of Forms
 - Index
 -->
+
+
