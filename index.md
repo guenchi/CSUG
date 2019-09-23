@@ -22,6 +22,10 @@
 
 ### [03. Debugging](03.Debugging.md)
 
+```
+译者：shenxs（未完成）
+```
+
 ### [04. 外部接口](04.ForeignInterface.md)
 
 ### [05. 绑定](05.BindingForms.md)
@@ -48,7 +52,15 @@
 
 ### [10. 库和顶层程序](10.LibrariesAndTop-levelPrograms.md)
 
+```
+译者：DeathKing（未完成）
+```
+
 ### [11. 语法扩展和模块](11.SyntacticExtensionAndModules.md)
+
+```
+译者：DeathKing（完成）
+```
 
 ### [12. 系统操作](12.SystemOperations.md)
 
