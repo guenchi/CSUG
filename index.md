@@ -5,54 +5,54 @@
 编辑：guenchi
 ```
 
-- 1. [00 术语表](00.Terminology.md)
+### [00. 术语表](00.Terminology.md)
 
 
-## [01 简介](01.Introduction.md)
+### [01. 简介](01.Introduction.md)
 
 ```
 译者：flowingfirefly （完成）
 ```
 
-## [02 使用Chez Scheme](02.UsingChezScheme.md)
+### [02. 使用Chez Scheme](02.UsingChezScheme.md)
 
 ```
 译者：flowingfirefly（完成）
 ```
 
-## [03 Debugging](03.Debugging.md)
+### [03. Debugging](03.Debugging.md)
 
-## [04 外部接口](04.ForeignInterface.md)
+### [04. 外部接口](04.ForeignInterface.md)
 
-## [05 绑定](05.BindingForms.md)
+### [05. 绑定](05.BindingForms.md)
 
-## [06 控制结构](06.ControlStructures.md)
+### [06. 控制结构](06.ControlStructures.md)
 
-## [07 对象操作](07.OperationsOnObjects.md)
+### [07. 对象操作](07.OperationsOnObjects.md)
 
-## [08 数字操作](08.NumericOperations.md)
+### [08. 数字操作](08.NumericOperations.md)
 
-## [09 输入输出操作](09.InputOutputOperations.md)
+### [09. 输入输出操作](09.InputOutputOperations.md)
 
-## [10 库和顶层程序](10.LibrariesAndTop-levelPrograms.md)
+### [10. 库和顶层程序](10.LibrariesAndTop-levelPrograms.md)
 
-## [11 语法扩展和模块](11.SyntacticExtensionAndModules.md)
+### [11. 语法扩展和模块](11.SyntacticExtensionAndModules.md)
 
-## [12 系统操作](12.SystemOperations.md)
+### [12. 系统操作](12.SystemOperations.md)
 
-## [13 存储系统](13.StorageManagement.md)
+### [13. 存储系统](13.StorageManagement.md)
 
-## [14 扩展编辑器](14.ExpressionEditor.md)
+### [14. 扩展编辑器](14.ExpressionEditor.md)
 
-## [15 线程系统](15.ThreadSystem.md)
+### [15. 线程系统](15.ThreadSystem.md)
 
-## [16 兼容功能](16.CompatibilityFeatures.md)
-
-
-## [翻译项目](README.md)
+### [16. 兼容功能](16.CompatibilityFeatures.md)
 
 
-## 授权
+### [翻译项目](README.md)
+
+
+### 授权
 
 [Chez Scheme 第 9 版用户手册](http://cisco.github.io/ChezScheme/csug9.5/index.html)
 
@@ -65,7 +65,7 @@
 
 [关于本书](http://cisco.github.io/ChezScheme/csug9.5/canned/about.html)
 
-## 译文授权
+### 译文授权
 
 ```
 可用于非商业用途的自由存储，修改与传播，但必须包含版权文件与译者姓名。
