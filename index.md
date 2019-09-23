@@ -1,4 +1,4 @@
-# Chez Scheme 用户手册
+# Chez Scheme 用户手册（中文版）
 
 ```
 原著：Kent R. Dybvig
