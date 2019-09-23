@@ -1,12 +1,12 @@
-# csug
+# *Chez Scheme Version 9.5 User's Guide* 中文版
 
-Chez Scheme 用户手册 翻译
+
+### 请访问 https://guenchi.github.io/CSUG/ 获得最佳阅读体验
+
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
 
 源文档：https://cisco.github.io/ChezScheme/csug9.5/csug.html
-
-# *Chez Scheme Version 9.5 User's Guide* 中文版
 
 ## 翻译任务清单
 
