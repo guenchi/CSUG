@@ -4,9 +4,18 @@ Kent R. Dybvig
 
 ### [00 术语表](00.Terminology.md)
 
+
 ### [01 简介](01.Introduction.md)
 
+```
+译者：flowingfirefly （完成）
+```
+
 ### [02 使用Chez Scheme](02.UsingChezScheme.md)
+
+```
+译者：flowingfirefly（完成）
+```
 
 ### [03 Debugging](03.Debugging.md)
 
