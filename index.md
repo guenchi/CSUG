@@ -18,7 +18,7 @@ Kent R. Dybvig
 
 ### [07 对象操作](07.OperationsOnObjects.md)
 
-### [08 数字操作]](08.NumericOperations.md)
+### [08 数字操作](08.NumericOperations.md)
 
 ### [09 输入输出操作](09.InputOutputOperations.md)
 
