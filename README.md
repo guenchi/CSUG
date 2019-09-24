@@ -1,7 +1,7 @@
 # *Chez Scheme Version 9.5 User's Guide* 中文版
 
 
-### 请访问 https://guenchi.github.io/CSUG/ 获得最佳阅读体验
+### 请访问 https://guenchi.github.io/CSUG 获得最佳阅读体验
 
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
