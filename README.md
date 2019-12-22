@@ -1,12 +1,12 @@
-# csug
+# *Chez Scheme Version 9.5 User's Guide* 中文版
 
-Chez Scheme 用户手册 翻译
+
+### 请访问 https://guenchi.github.io/CSUG 获得最佳阅读体验
+
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
 
 源文档：https://cisco.github.io/ChezScheme/csug9.5/csug.html
-
-# *Chez Scheme Version 9.5 User's Guide* 中文版
 
 ## 翻译任务清单
 
@@ -23,7 +23,7 @@ Chez Scheme 用户手册 翻译
 | Chapter 6. Control Structures                 ||||
 | Chapter 7. Operations on Objects              | xashes | 校订 | Dec 31, 2018 |
 | Chapter 8. Numeric Operations                 |xashes|初步完成|Jan 19, 2019|
-| Chapter 9. Input/Output Operations            |xashes|initial|Jan 26, 2019|
+| Chapter 9. Input/Output Operations            |xashes|初步完成|Jan 26, 2019|
 | Chapter 10. Libraries and Top-level Programs  |DeathKing|||
 | Chapter 11. Syntactic Extension and Modules   | DeathKing | 完成（遗留术语 `fluid keyword`） | Jan 6, 2019 |
 | Chapter 12. System Operations                 ||||
@@ -31,6 +31,69 @@ Chez Scheme 用户手册 翻译
 | Chapter 14. Expression Editor                 ||||
 | Chapter 15. Thread System                     ||||
 | Chapter 16. Compatibility Features            ||||
+
+
+## 结算
+
+**字数统计按照Scrivener最新版本字数统计功能为准**
+
+```
+统计按照一个汉字算一个字，一个英文单词算一个字。
+```
+
+
+第一章
+```
+字数：2649
+
+段落数：59
+句数：160
+平均段落长度：44
+平均句子长度：16
+
+=> 265元 （未认领）
+```
+
+第七章
+
+```
+字数：16428
+
+段落数：1428
+句数：2107
+平均段落长度：11
+平均句子长度：7
+
+=> 1643元 （未认领）
+```
+
+第八章
+
+```
+字数：6115
+
+段落数：668
+句数：863
+平均段落长度：9
+平均句子长度：7
+
+=> 612元 （未认领）
+```
+
+第十一章
+
+```
+字数：8530
+
+段落数：747
+句数：969
+平均段落长度：11
+平均句子长度：8
+
+=> 853元 （未认领）
+```
+
+
 
 <!--
 ## 目录
@@ -185,3 +248,5 @@ Chez Scheme 用户手册 翻译
 - Summary of Forms
 - Index
 -->
+
+
