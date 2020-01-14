@@ -30,7 +30,7 @@
 | Chapter 13. Storage Management                ||||
 | Chapter 14. Expression Editor                 ||||
 | Chapter 15. Thread System                     ||||
-| Chapter 16. Compatibility Features            ||||
+| Chapter 16. Compatibility Features            | Faiz | 认领了 Chapter 16 | Jan 14, 2020 |
 
 
 ## 结算

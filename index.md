@@ -71,6 +71,9 @@
 ### [15. 线程系统](15.ThreadSystem.md)
 
 ### [16. 兼容功能](16.CompatibilityFeatures.md)
+```
+译者：Faiz（）
+```
 
 
 ### [关于此项目](README.md)
