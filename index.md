@@ -72,7 +72,7 @@
 
 ### [16. 兼容功能](16.CompatibilityFeatures.md)
 ```
-译者：Faiz（）
+译者：Faiz（认领）
 ```
 
 
