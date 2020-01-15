@@ -30,7 +30,7 @@
 | Chapter 13. Storage Management                ||||
 | Chapter 14. Expression Editor                 ||||
 | Chapter 15. Thread System                     ||||
-| [Chapter 16. Compatibility Features](https://github.com/guenchi/CSUG/blob/master/16.CompatibilityFeatures.md)            | Faiz | 认领了 Chapter 16 | Jan 14, 2020 |
+| [Chapter 16. Compatibility Features](https://github.com/guenchi/CSUG/blob/master/16.CompatibilityFeatures.md) | [Faiz](https://github.com/faiz-lisp) | 认领了 Chapter 16 | Jan 14, 2020 |
 
 
 ## 结算
@@ -51,7 +51,7 @@
 平均段落长度：44
 平均句子长度：16
 
-=> 265元 （未认领）
+=> 265元 （flowingfirefly认领）
 ```
 
 第七章
@@ -64,7 +64,7 @@
 平均段落长度：11
 平均句子长度：7
 
-=> 1643元 （未认领）
+=> 1643元 （xashes认领）
 ```
 
 第八章
@@ -77,7 +77,7 @@
 平均段落长度：9
 平均句子长度：7
 
-=> 612元 （未认领）
+=> 612元 （xashes认领）
 ```
 
 第十一章
@@ -90,7 +90,46 @@
 平均段落长度：11
 平均句子长度：8
 
-=> 853元 （未认领）
+=> 853元 （DeathKing认领）
+```
+
+第十二章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （未认领）
+```
+
+第十四章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （未认领）
+```
+
+第十六章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （Faiz认领）
 ```
 
 
