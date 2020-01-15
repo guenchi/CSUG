@@ -30,7 +30,7 @@
 | Chapter 13. Storage Management                ||||
 | Chapter 14. Expression Editor                 ||||
 | Chapter 15. Thread System                     ||||
-| [Chapter 16. Compatibility Features](https://github.com/guenchi/CSUG/blob/master/16.CompatibilityFeatures.md) | [Faiz](https://github.com/faiz-lisp) | 认领了 Chapter 16 | Jan 14, 2020 |
+| [Chapter 16. Compatibility Features](../16.CompatibilityFeatures.md) | [Faiz](https://github.com/faiz-lisp) | 认领了 Chapter 16 | Jan 14, 2020 |
 
 
 ## 结算
