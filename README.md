@@ -29,9 +29,9 @@ Github镜像 https://guenchi.github.io/CSUG
 | Chapter 10. Libraries and Top-level Programs  | DeathKing |||
 | Chapter 11. Syntactic Extension and Modules   | DeathKing | 完成（遗留术语 `fluid keyword`） | Jan 6, 2019 |
 | Chapter 12. System Operations                 ||||
-| Chapter 13. Storage Management                ||||
-| Chapter 14. Expression Editor                 ||||
-| Chapter 15. Thread System                     ||||
+| Chapter 13. Storage Management                |dasheng523 |初步完成||
+| Chapter 14. Expression Editor                 |dasheng523 |初步完成||
+| Chapter 15. Thread System                     |待我伸伸脚|完成（未上传PR）||
 | [Chapter 16. Compatibility Features](16.CompatibilityFeatures.md) | [Faiz](https://github.com/faiz-lisp) | 认领了 16.兼容功能 | Jan 14, 2020 |
 
 
