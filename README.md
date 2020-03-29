@@ -19,7 +19,7 @@ Github镜像 https://guenchi.github.io/CSUG
 | Preface                                       ||||
 | Chapter 1. Introduction                       | flowingfirefly | 译完了 Chapter 1 | Jan 4, 2019 |
 | Chapter 2. Using Chez Scheme                  | flowingfirefly | 认领了 Chapter 2 | Jan 9, 2019 |
-| Chapter 3. Debugging                          | shenxs |||
+| Chapter 3. Debugging                          |shenxs |初步完成||
 | Chapter 4. Foreign Interface                  ||||
 | Chapter 5. Binding Forms                      ||||
 | Chapter 6. Control Structures                 ||||
