@@ -1,5 +1,7 @@
 # Chez Scheme 用户手册（中文版）
 
+[GitLab Pages镜像](https://guenchi.gitlab.io/CSUG)
+
 ```
 原著：Kent R. Dybvig
 编辑：guenchi
