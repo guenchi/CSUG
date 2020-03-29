@@ -1,7 +1,9 @@
 # *Chez Scheme Version 9.5 User's Guide* 中文版
 
 
-### 请访问 https://guenchi.github.io/CSUG 获得最佳阅读体验
+### 请访问 https://guenchi.gitlab.io/CSUG/ 获得最佳阅读体验
+
+Github镜像 https://guenchi.github.io/CSUG
 
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
@@ -22,15 +24,15 @@
 | Chapter 5. Binding Forms                      ||||
 | Chapter 6. Control Structures                 ||||
 | Chapter 7. Operations on Objects              | xashes | 校订 | Dec 31, 2018 |
-| Chapter 8. Numeric Operations                 |xashes|初步完成|Jan 19, 2019|
-| Chapter 9. Input/Output Operations            |xashes|初步完成|Jan 26, 2019|
-| Chapter 10. Libraries and Top-level Programs  |DeathKing|||
+| Chapter 8. Numeric Operations                 | xashes | 初步完成| Jan 19, 2019|
+| Chapter 9. Input/Output Operations            | xashes | 初步完成| Jan 26, 2019|
+| Chapter 10. Libraries and Top-level Programs  | DeathKing |||
 | Chapter 11. Syntactic Extension and Modules   | DeathKing | 完成（遗留术语 `fluid keyword`） | Jan 6, 2019 |
 | Chapter 12. System Operations                 ||||
 | Chapter 13. Storage Management                ||||
 | Chapter 14. Expression Editor                 ||||
 | Chapter 15. Thread System                     ||||
-| Chapter 16. Compatibility Features            ||||
+| [Chapter 16. Compatibility Features](16.CompatibilityFeatures.md) | [Faiz](https://github.com/faiz-lisp) | 认领了 16.兼容功能 | Jan 14, 2020 |
 
 
 ## 结算
@@ -51,7 +53,7 @@
 平均段落长度：44
 平均句子长度：16
 
-=> 265元 （未认领）
+=> 265元 （flowingfirefly认领）
 ```
 
 第七章
@@ -64,7 +66,7 @@
 平均段落长度：11
 平均句子长度：7
 
-=> 1643元 （未认领）
+=> 1643元 （xashes认领）
 ```
 
 第八章
@@ -77,7 +79,7 @@
 平均段落长度：9
 平均句子长度：7
 
-=> 612元 （未认领）
+=> 612元 （xashes认领）
 ```
 
 第十一章
@@ -90,7 +92,46 @@
 平均段落长度：11
 平均句子长度：8
 
-=> 853元 （未认领）
+=> 853元 （DeathKing认领）
+```
+
+第十二章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （未认领）
+```
+
+第十四章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （未认领）
+```
+
+第十六章
+
+```
+字数：?
+
+段落数：?
+句数：?
+平均段落长度：?
+平均句子长度：?
+
+=> ?元 （Faiz认领）
 ```
 
 
