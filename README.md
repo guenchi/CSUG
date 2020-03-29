@@ -3,7 +3,7 @@
 
 请访问 https://guenchi.gitlab.io/CSUG 获得最佳阅读体验
 
-GitHub镜像 https://guenchi.github.io/CSUG
+GitHub Pages镜像 https://guenchi.github.io/CSUG
 
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
