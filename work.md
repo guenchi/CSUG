@@ -1,14 +1,6 @@
-# *Chez Scheme Version 9.5 User's Guide* 中文版
-
-
-[GitBook电子书](https://guenchi.gitlab.io/CSUG) [GitHubPages镜像](https://guenchi.github.io/CSUG)
-
-
-翻译活动经费由@guenchi出资赞助： 1000字/100元
+## 翻译任务清单
 
 源文档：https://cisco.github.io/ChezScheme/csug9.5/csug.html
-
-## 翻译任务清单
 
 注：想认领章节翻译的同学可以到Issues中提一个任务领取的Issue，提的时候最好能同时给一个预估的翻译截止时间。
 
