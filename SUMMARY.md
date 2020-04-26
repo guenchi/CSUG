@@ -2,8 +2,6 @@
 
 * [首页](README.md)
 
-* [翻译任务清单](work.md)
-
 * [00. 术语表](00.Terminology.md)
 
 * [01. 简介](01.Introduction.md)
