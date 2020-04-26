@@ -1,8 +1,7 @@
 # Chez Scheme 用户手册
 
 
-[GitBook镜像](https://guenchi.gitlab.io/CSUG) [GitHub镜像](https://guenchi.github.io/CSUG)
-
+[GitHub镜像](https://guenchi.github.io/CSUG) [GitLab镜像](https://guenchi.gitlab.io/CSUG)
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
 
