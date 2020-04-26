@@ -1,6 +1,12 @@
 # Chez Scheme 用户手册（中文版）
 
-[GitLab镜像](https://guenchi.gitlab.io/CSUG)
+
+[GitBook镜像](https://guenchi.gitlab.io/CSUG) [GitHub镜像](https://guenchi.github.io/CSUG)
+
+
+翻译活动经费由@guenchi出资赞助： 1000字/100元
+
+### [翻译任务清单](work.md)
 
 ```
 原著：Kent R. Dybvig
