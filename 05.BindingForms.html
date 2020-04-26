@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05. 绑定 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06.ControlStructures.html" />
+    
+    
+    <link rel="prev" href="04.ForeignInterface.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.Terminology.html">
+            
+                <a href="00.Terminology.html">
+            
+                    
+                    00. 术语表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01.Introduction.html">
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    01. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02.UsingChezScheme.html">
+            
+                <a href="02.UsingChezScheme.html">
+            
+                    
+                    02. 使用Chez Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03.Debugging.html">
+            
+                <a href="03.Debugging.html">
+            
+                    
+                    03. Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04.ForeignInterface.html">
+            
+                <a href="04.ForeignInterface.html">
+            
+                    
+                    04. 外部接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="05.BindingForms.html">
+            
+                <a href="05.BindingForms.html">
+            
+                    
+                    05. 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06.ControlStructures.html">
+            
+                <a href="06.ControlStructures.html">
+            
+                    
+                    06. 控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07.OperationsOnObjects.html">
+            
+                <a href="07.OperationsOnObjects.html">
+            
+                    
+                    07. 对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08.NumericOperations.html">
+            
+                <a href="08.NumericOperations.html">
+            
+                    
+                    08. 数字操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09.InputOutputOperations.html">
+            
+                <a href="09.InputOutputOperations.html">
+            
+                    
+                    09. 输入输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10.LibrariesAndTop-levelPrograms.html">
+            
+                <a href="10.LibrariesAndTop-levelPrograms.html">
+            
+                    
+                    10. 库和顶层程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="11.SyntacticExtensionAndModules.html">
+            
+                <a href="11.SyntacticExtensionAndModules.html">
+            
+                    
+                    11. 语法扩展和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="12.SystemOperations.html">
+            
+                <a href="12.SystemOperations.html">
+            
+                    
+                    12. 系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="13.StorageManagement.html">
+            
+                <a href="13.StorageManagement.html">
+            
+                    
+                    13. 存储系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="14.ExpressionEditor.html">
+            
+                <a href="14.ExpressionEditor.html">
+            
+                    
+                    14. 扩展编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="15.ThreadSystem.html">
+            
+                <a href="15.ThreadSystem.html">
+            
+                    
+                    15. 线程系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="16.CompatibilityFeatures.html">
+            
+                <a href="16.CompatibilityFeatures.html">
+            
+                    
+                    16. 兼容功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >05. 绑定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Chapter 5. Binding Forms
+This chapter describes Chez Scheme extensions to the set of Revised6 Report binding forms. See Chapter 4 of The Scheme Programming Language, 4th Edition or the Revised6 Report for a description of standard binding forms.</p>
+<p>Section 5.1. Definitions
+A definition in Revised6 Report Scheme is a variable definition, keyword definition, or derived definition, i.e., a syntactic extension that expands into a definition. In addition, the forms within a begin expression appearing after a sequence of definitions is spliced onto the end of the sequence of definitions so that definitions at the front of the begin expression are treated as if they were part of the outer sequence of definitions. A let-syntax or letrec-syntax form is treated similarly, so that definitions at the front of the body are treated as if they were part of the outer sequence of definitions, albeit scoped where the bindings of the let-syntax or letrec-syntax form are visible.</p>
+<p>Chez Scheme extends the set of definitions to include module forms, import forms, import-only forms, meta definitions, and alias forms, although the module, import, import-only, meta, and alias keywords are not available in a library or RNRS top-level program unless the scheme library is included in the library or top-level programs imports. These forms are described in Chapter 11.</p>
+<p>In Revised6 Report Scheme, definitions can appear at the front of a lambda or similar body (e.g., a let or letrec body), at the front of a library body, or intermixed with expressions within an RNRS top-level program body. In Chez Scheme, definitions may also be used in the interactive top-level, i.e., they can be intermixed with expressions in the REPL or in program text to be loaded from a file via load (Section 12.4). The Revised6 Report does not mandate the existence nor specify the semantics of an interactive top-level, nor of a load procedure.</p>
+<p>The macro expander uses the same two-pass algorithm for expanding top-level begin expressions as it uses for a lambda, library, or top-level program body. (This algorithm is described in Section 8.1 of The Scheme Programming Language, 4th Edition.) As a result,</p>
+<p>(begin
+  (define-syntax a (identifier-syntax 3))
+  (define x a))</p>
+<p>and</p>
+<p>(begin
+  (define x a)
+  (define-syntax a (identifier-syntax 3)))</p>
+<p>both result in the giving x the value 3, even though an unbound variable reference to a would result if the two forms within the latter begin expression were run independently at top level.</p>
+<p>Similarly, the begin form produced by a use of</p>
+<p>(define-syntax define-constant
+  (syntax-rules ()
+    [(_ x e)
+     (begin
+       (define t e)
+       (define-syntax x (identifier-syntax t)))]))</p>
+<p>and the begin form produced by a use of</p>
+<p>(define-syntax define-constant
+  (syntax-rules ()
+    [(_ x e)
+     (begin
+       (define-syntax x (identifier-syntax t))
+       (define t e))]))</p>
+<p>are equivalent.</p>
+<p>The Revised6 Report specifies that internal variable definitions be treated like letrec<em>, while earlier reports required internal variable definitions to be treated like letrec. By default, Chez Scheme implements the Revised6 Report semantics for internal variable definitions, as for all other things, but this behavior may be overridden via the internal-defines-as-letrec</em> parameter.</p>
+<p>thread parameter: internal-defines-as-letrec* 
+libraries: (chezscheme)</p>
+<p>When this parameter is set to #t (the default), internal variable definitions are evaluated using letrec* semantics. It may be set to #f to revert to the letrec semantics for internal variable definitions, for backward compatibility.</p>
+<p>Section 5.2. Multiple-value Definitions
+syntax: (define-values formals expr) 
+libraries: (chezscheme)</p>
+<p>A define-values form is a definition and can appear anywhere other definitions can appear. It is like a define form but permits an arbitrary formals list (like lambda) on the left-hand side. It evaluates expr and binds the variables appearing in formals to the resulting values, in the same manner as the formal parameters of a procedure are bound to its arguments.</p>
+<p>(let ()
+  (define-values (x y) (values 1 2))
+  (list x y)) <graphic> (1 2)
+(let ()
+  (define-values (x y . z) (values 1 2 3 4))
+  (list x y z)) <graphic> (1 2 (3 4))</graphic></graphic></p>
+<p>A define-values form expands into a sequence of definitions, the first for a hidden temporary bound to a data structure holding the values returned by expr and the remainder binding each of the formals to the corresponding value or list of values, extracted from the data structure via a reference to the temporary. Because the temporary must be defined before the other variables are defined, this works for internal define-values forms only if internal-defines-as-letrec* is set to the default value #t.</p>
+<p>Section 5.3. Recursive Bindings
+syntax: (rec var expr) 
+returns: value of expr 
+libraries: (chezscheme)</p>
+<p>The syntactic form rec creates a recursive object from expr by establishing a binding of var within expr to the value of expr. In essence, it is a special case of letrec for self-recursive objects.</p>
+<p>This form is useful for creating recursive objects (especially procedures) that do not depend on external variables for the recursion, which are sometimes undesirable because the external bindings can change. For example, a recursive procedure defined at top level depends on the value of the top-level variable given as its name. If the value of this variable should change, the meaning of the procedure itself would change. If the procedure is defined instead with rec, its meaning is independent of the variable to which it is bound.</p>
+<p>(map (rec sum
+       (lambda (x)
+         (if (= x 0)
+             0
+             (+ x (sum (- x 1))))))
+     &apos;(0 1 2 3 4 5)) <graphic> (0 1 3 6 10 15) </graphic></p>
+<p>(define cycle
+  (rec self
+    (list (lambda () self)))) </p>
+<p>(eq? ((car cycle)) cycle) <graphic> #t</graphic></p>
+<p>The definition below expands rec in terms of letrec.</p>
+<p>(define-syntax rec
+  (syntax-rules ()
+    [(_ x e) (letrec ((x e)) x)]))</p>
+<p>Section 5.4. Fluid Bindings
+syntax: (fluid-let ((var expr) ...) body1 body2 ...) 
+returns: the values of the body body1 body2 ... 
+libraries: (chezscheme)</p>
+<p>The syntactic form fluid-let provides a way to temporarily assign values to a set of variables. The new values are in effect only during the evaluation of the body of the fluid-let expression. The scopes of the variables are not determined by fluid-let; as with set!, the variables must be bound at top level or by an enclosing lambda or other binding form. It is possible, therefore, to control the scope of a variable with lambda or let while establishing a temporary value with fluid-let.</p>
+<p>Although it is similar in appearance to let, its operation is more like that of set!. Each var is assigned, as with set!, to the value of the corresponding expr within the body body1 body2 .... Should the body exit normally or by invoking a continuation made outside of the body (see call/cc), the values in effect before the bindings were changed are restored. Should control return back to the body by the invocation of a continuation created within the body, the bindings are changed once again to the values in effect when the body last exited.</p>
+<p>Fluid bindings are most useful for maintaining variables that must be shared by a group of procedures. Upon entry to the group of procedures, the shared variables are fluidly bound to a new set of initial values so that on exit the original values are restored automatically. In this way, the group of procedures itself can be reentrant; it may call itself directly or indirectly without affecting the values of its shared variables.</p>
+<p>Fluid bindings are similar to special bindings in Common Lisp [30], except that (1) there is a single namespace for both lexical and fluid bindings, and (2) the scope of a fluidly bound variable is not necessarily global.</p>
+<p>(let ([x 3])
+  (+ (fluid-let ([x 5])
+       x)
+     x)) <graphic> 8 </graphic></p>
+<p>(let ([x &apos;a])
+  (letrec ([f (lambda (y) (cons x y))])
+    (fluid-let ([x &apos;b])
+      (f &apos;c)))) <graphic> (b . c) </graphic></p>
+<p>(let ([x &apos;a])
+  (call/cc
+    (lambda (k)
+       (fluid-let ([x &apos;b])
+         (letrec ([f (lambda (y) (k &apos;<em>))])
+           (f &apos;</em>)))))
+  x) <graphic> a</graphic></p>
+<p>fluid-let may be defined in terms of dynamic-wind as follows.</p>
+<p>(define-syntax fluid-let
+  (lambda (x)
+    (syntax-case x ()
+      [(<em> () b1 b2 ...) #&apos;(let () b1 b2 ...)]
+      [(</em> ((x e) ...) b1 b2 ...)
+       (andmap identifier? #&apos;(x ...))
+       (with-syntax ([(y ...) (generate-temporaries #&apos;(x ...))])</p>
+<pre><code>     #&apos;(let ([y e] ...)
+         (let ([swap (lambda ()
+                       (let ([t x]) (set! x y) (set! y t))
+                       ...)])
+           (dynamic-wind swap (lambda () b1 b2 ...) swap))))])))
+</code></pre><p>Section 5.5. Top-Level Bindings
+The procedures described in this section allow the direct manipulation of top-level bindings for variables and keywords. They are intended primarily to support the definition of interpreters or compilers for Scheme in Scheme but may be used to access or alter top-level bindings anywhere within a program whether at top level or not.</p>
+<p>procedure: (define-top-level-value symbol obj) 
+procedure: (define-top-level-value symbol obj env) 
+returns: unspecified 
+libraries: (chezscheme)</p>
+<p>define-top-level-value is used to establish a binding for the variable named by symbol to the value obj in the environment env. If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>An exception is raised with condition type &amp;assertion if env is not mutable.</p>
+<p>A call to define-top-level-value is similar to a top-level define form, except that a call to define-top-level-value need not occur at top-level and the variable for which the binding is to be established can be determined at run time, as can the environment.</p>
+<p>(begin
+  (define-top-level-value &apos;xyz &quot;hi&quot;)
+  xyz) <graphic> &quot;hi&quot; </graphic></p>
+<p>(let ([var &apos;xyz])
+  (define-top-level-value var &quot;mom&quot;)
+  (list var xyz)) <graphic> (xyz &quot;mom&quot;)</graphic></p>
+<p>procedure: (set-top-level-value! symbol obj) 
+procedure: (set-top-level-value! symbol obj env) 
+returns: unspecified 
+libraries: (chezscheme)</p>
+<p>set-top-level-value! assigns the variable named by symbol to the value obj in the environment env. If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>An exception is raised with condition type &amp;assertion if the identifier named by symbol is not defined as a variable in env or if the variable or environment is not mutable.</p>
+<p>set-top-level-value! is similar to set! when set! is used on top-level variables except that the variable to be assigned can be determined at run time, as can the environment.</p>
+<p>(let ([v (let ([cons list])
+           (set-top-level-value! &apos;cons +)
+           (cons 3 4))])
+  (list v (cons 3 4))) <graphic> ((3 4) 7)</graphic></p>
+<p>procedure: (top-level-value symbol) 
+procedure: (top-level-value symbol env) 
+returns: the top-level value of the variable named by symbol in env 
+libraries: (chezscheme)</p>
+<p>If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>An exception is raised with condition type &amp;assertion if the identifier named by symbol is not defined as a variable in env.</p>
+<p>top-level-value is similar to a top-level variable reference except that the variable to be referenced can be determined at run time, as can the environment.</p>
+<p>(let ([cons +])
+  (list (cons 3 4)
+        ((top-level-value &apos;cons) 3 4))) <graphic> (7 (3 . 4)) </graphic></p>
+<p>(define e (copy-environment (scheme-environment)))
+(define-top-level-value &apos;pi 3.14 e)
+(top-level-value &apos;pi e) <graphic> 3.14
+(set-top-level-value! &apos;pi 3.1416 e)
+(top-level-value &apos;pi e) <graphic> 3.1416</graphic></graphic></p>
+<p>procedure: (top-level-bound? symbol) 
+procedure: (top-level-bound? symbol env) 
+returns: #t if symbol is defined as a variable in env, #f otherwise 
+libraries: (chezscheme)</p>
+<p>If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>This predicate is useful in an interpreter to check for the existence of a top-level binding before requesting the value with top-level-value.</p>
+<p>(top-level-bound? &apos;xyz) <graphic> #f </graphic></p>
+<p>(begin
+  (define-top-level-value &apos;xyz 3)
+  (top-level-bound? &apos;xyz)) <graphic> #t </graphic></p>
+<p>(define e (copy-environment (interaction-environment)))
+(define-top-level-value &apos;pi 3.14 e)
+(top-level-bound? &apos;pi) <graphic> #f
+(top-level-bound? &apos;pi e) <graphic> #t</graphic></graphic></p>
+<p>procedure: (top-level-mutable? symbol) 
+procedure: (top-level-mutable? symbol env) 
+returns: #t if symbol is mutable in env, #f otherwise 
+libraries: (chezscheme)</p>
+<p>If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>This predicate is useful in an interpreter to check whether a variable can be assigned before assigning it with set-top-level-value!.</p>
+<p>(define xyz 3)
+(top-level-mutable? &apos;xyz) <graphic> #t
+(set-top-level-value! &apos;xyz 4)
+(top-level-value &apos;xyz) <graphic> 4 </graphic></graphic></p>
+<p>(define e (copy-environment (interaction-environment) #f))
+(top-level-mutable? &apos;xyz e) <graphic> #f
+(set-top-level-value! &apos;xyz e) <graphic> exception: xyz is immutable</graphic></graphic></p>
+<p>procedure: (define-top-level-syntax symbol obj) 
+procedure: (define-top-level-syntax symbol obj env) 
+returns: unspecified 
+libraries: (chezscheme)</p>
+<p>define-top-level-syntax is used to establish a top-level binding for the identifier named by symbol to the value of obj in the environment env. The value must be a procedure, the result of a call to make-variable-transformer, or the result of a call to top-level-syntax. If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>An exception is raised with condition type &amp;assertion if env is not mutable.</p>
+<p>A call to define-top-level-syntax is similar to a top-level define-syntax form, except that a call to define-top-level-syntax need not occur at top-level and the identifier for which the binding is to be established can be determined at run time, as can the environment.</p>
+<p>(define-top-level-syntax &apos;let1
+  (syntax-rules ()
+    [(_ x e b1 b2 ...) (let ([x e]) b1 b2 ...)]))
+(let1 a 3 (+ a 1)) <graphic> 4</graphic></p>
+<p>define-top-level-syntax can also be used to attach to an identifier arbitrary compile-time bindings obtained via top-level-syntax.</p>
+<p>procedure: (top-level-syntax symbol) 
+procedure: (top-level-syntax symbol env) 
+returns: unspecified 
+libraries: (chezscheme)</p>
+<p>top-level-syntax is used to retrieve the transformer, compile-time value, or other compile-time binding to which the identifier named by symbol is bound in the environment env. If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3). All identifiers bound in an environment have compile-time bindings, including variables.</p>
+<p>An exception is raised with condition type &amp;assertion if the identifier named by symbol is not defined as a keyword in env.</p>
+<p>(define-top-level-syntax &apos;also-let (top-level-syntax &apos;let))
+(also-let ([x 3] [y 4]) (+ x y)) <graphic> 7 </graphic></p>
+<p>(define foo 17)
+(define-top-level-syntax &apos;also-foo (top-level-syntax &apos;foo))
+also-foo <graphic> 17
+(set! also-foo 23)
+also-foo <graphic> 23
+foo <graphic> 23</graphic></graphic></graphic></p>
+<p>The effect of the last example can be had more clearly with alias:</p>
+<p>(define foo 17)
+(alias also-foo foo)
+also-foo <graphic> 17
+(set! also-foo 23)
+also-foo <graphic> 23
+foo <graphic> 23</graphic></graphic></graphic></p>
+<p>procedure: (top-level-syntax? symbol) 
+procedure: (top-level-syntax? symbol env) 
+returns: #t if symbol is bound as a keyword in env, #f otherwise 
+libraries: (chezscheme)</p>
+<p>If env is not provided, it defaults to the value of interaction-environment, i.e., the top-level evaluation environment (Section 12.3).</p>
+<p>All identifiers bound in an environment have compile-time bindings, including variables, so this predicate amounts to a bound check, but is more general than top-level-bound?, which returns true only for bound variables.</p>
+<p>(define xyz &apos;hello)
+(top-level-syntax? &apos;cons) <graphic> #t
+(top-level-syntax? &apos;lambda) <graphic> #t
+(top-level-syntax? &apos;hello) <graphic> #t </graphic></graphic></graphic></p>
+<p>(top-level-syntax? &apos;cons (scheme-environment)) <graphic> #t
+(top-level-syntax? &apos;lambda (scheme-environment)) <graphic> #t
+(top-level-syntax? &apos;hello (scheme-environment)) <graphic> #f</graphic></graphic></graphic></p>
+<p>Chez Scheme Version 9 User&apos;s Guide
+Copyright &#xA9; 2019 Cisco Systems, Inc.
+Licensed under the Apache License Version 2.0 (full copyright notice.).
+Revised January 2020 for Chez Scheme Version 9.5.3
+about this book</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04.ForeignInterface.html" class="navigation navigation-prev " aria-label="Previous page: 04. 外部接口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06.ControlStructures.html" class="navigation navigation-next " aria-label="Next page: 06. 控制结构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05. 绑定","level":"1.7","depth":1,"next":{"title":"06. 控制结构","level":"1.8","depth":1,"path":"06.ControlStructures.md","ref":"06.ControlStructures.md","articles":[]},"previous":{"title":"04. 外部接口","level":"1.6","depth":1,"path":"04.ForeignInterface.md","ref":"04.ForeignInterface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05.BindingForms.md","mtime":"2020-04-26T22:38:54.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T22:39:25.823Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,539 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02. 使用Chez Scheme · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03.Debugging.html" />
+    
+    
+    <link rel="prev" href="01.Introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.Terminology.html">
+            
+                <a href="00.Terminology.html">
+            
+                    
+                    00. 术语表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01.Introduction.html">
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    01. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="02.UsingChezScheme.html">
+            
+                <a href="02.UsingChezScheme.html">
+            
+                    
+                    02. 使用Chez Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03.Debugging.html">
+            
+                <a href="03.Debugging.html">
+            
+                    
+                    03. Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04.ForeignInterface.html">
+            
+                <a href="04.ForeignInterface.html">
+            
+                    
+                    04. 外部接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05.BindingForms.html">
+            
+                <a href="05.BindingForms.html">
+            
+                    
+                    05. 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06.ControlStructures.html">
+            
+                <a href="06.ControlStructures.html">
+            
+                    
+                    06. 控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07.OperationsOnObjects.html">
+            
+                <a href="07.OperationsOnObjects.html">
+            
+                    
+                    07. 对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08.NumericOperations.html">
+            
+                <a href="08.NumericOperations.html">
+            
+                    
+                    08. 数字操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09.InputOutputOperations.html">
+            
+                <a href="09.InputOutputOperations.html">
+            
+                    
+                    09. 输入输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10.LibrariesAndTop-levelPrograms.html">
+            
+                <a href="10.LibrariesAndTop-levelPrograms.html">
+            
+                    
+                    10. 库和顶层程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="11.SyntacticExtensionAndModules.html">
+            
+                <a href="11.SyntacticExtensionAndModules.html">
+            
+                    
+                    11. 语法扩展和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="12.SystemOperations.html">
+            
+                <a href="12.SystemOperations.html">
+            
+                    
+                    12. 系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="13.StorageManagement.html">
+            
+                <a href="13.StorageManagement.html">
+            
+                    
+                    13. 存储系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="14.ExpressionEditor.html">
+            
+                <a href="14.ExpressionEditor.html">
+            
+                    
+                    14. 扩展编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="15.ThreadSystem.html">
+            
+                <a href="15.ThreadSystem.html">
+            
+                    
+                    15. 线程系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="16.CompatibilityFeatures.html">
+            
+                <a href="16.CompatibilityFeatures.html">
+            
+                    
+                    16. 兼容功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >02. 使用Chez Scheme</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F7F;&#x7528;-chez-scheme">&#x4F7F;&#x7528; Chez Scheme</h1>
+<p><em>Chez Scheme</em> &#x5E38;&#x5E38;&#x4EE5;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x652F;&#x6301;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x548C;&#x6392;&#x9664;&#x9519;&#x8BEF;&#xFF0C;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x975E;&#x4EA4;&#x4E92;&#x7EC4;&#x4EF6;&#x6765;&#x521B;&#x5EFA;
+&#x72EC;&#x7ACB;&#x5E94;&#x7528;&#x3002;&#x672C;&#x7AE0;&#x63CF;&#x8FF0;&#x4E86; <em>Chez Scheme</em> &#x4E00;&#x8D2F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#xFF0C;&#x66F4;&#x4E00;&#x822C;&#x5730;&#x8BB2;&#xFF0C;&#x662F;&#x5982;&#x4F55;&#x5145;&#x5206;&#x5229;&#x7528;&#x7CFB;&#x7EDF;&#x3002;
+2.1&#xFF0C;2.2 &#x548C; 2.3 &#x8282;&#x63CF;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x4EA4;&#x4E92;&#x5730;&#x4F7F;&#x7528; <em>Chez Scheme</em>&#x3002;2.4 &#x8282;&#x8BA8;&#x8BBA;&#x4E86;&#x5728; <em>Chez Scheme</em>
+ &#x4E2D;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5E93;&#x548C; RNRS &#x9876;&#x7EA7;&#x7A0B;&#x5E8F;&#x3002;2.5 &#x8282;&#x5305;&#x542B;&#x4E86;&#x652F;&#x6301;&#x5199;&#x548C;&#x8FD0;&#x884C;&#x7F16;&#x8BD1;&#x7684;&#x811A;&#x672C;&#x548C;&#x7F16;&#x8BD1;&#x7684; RNRS &#x9876;&#x7EA7;&#x7A0B;&#x5E8F;&#x3002;
+2.6 &#x8282;&#x63CF;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x7EC4;&#x7EC7;&#x548C;&#x7F16;&#x8BD1;&#x5E94;&#x7528;&#x6765;&#x5C3D;&#x53EF;&#x80FD;&#x5145;&#x5206;&#x5229;&#x7528;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x4EE3;&#x7801;&#x3002;2.7 &#x8282;&#x63CF;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x5B9A;&#x5236;&#x542F;&#x52A8;
+&#x8FC7;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6539;&#x53D8;&#x6216;&#x6392;&#x9664;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#xFF0C;&#x9884;&#x52A0;&#x8F7D; Scheme &#x6216;&#x5916;&#x90E8;&#x4EE3;&#x7801;&#xFF0C;&#x6216;&#x5C06; <em>Chez Scheme</em> &#x4F5C;&#x4E3A;
+&#x53E6;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x4F4E;&#x7EA7;&#x522B;&#x7A0B;&#x5E8F;&#x6765;&#x8FD0;&#x884C;&#x3002;2.8 &#x8282;&#x63CF;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x7528; <em>Petite Chez Scheme</em> &#x4F5C;&#x4E3A;&#x8FD0;&#x884C;&#x65F6;&#x6765;&#x652F;&#x6301;
+ <em>Chez Scheme</em> &#x6784;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x3002;&#x6700;&#x540E;&#xFF0C;2.9 &#x8282;&#x5305;&#x542B;&#x4E86;&#x8C03;&#x7528; <em>Chez Scheme</em> &#x65F6;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x3002;</p>
+<h2 id="21-&#x8282;-&#x548C;-chez-scheme-&#x4EA4;&#x4E92;">2.1 &#x8282; &#x548C; Chez Scheme &#x4EA4;&#x4E92;</h2>
+<p>&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x548C;&#x9AD8;&#x6548;&#x7684;&#x4E66;&#x5199;&#x548C;&#x6D4B;&#x8BD5; Scheme &#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x50CF; <code>vi</code> &#x6216; <code>emacs</code> &#x548C;&#x5728;&#x8FD0;&#x884C;&#x4E86;
+ <em>Chez Scheme</em> &#x7684; shell &#x7A97;&#x53E3;&#x91CC;&#x4EA4;&#x4E92;&#x5730;&#x6D4B;&#x8BD5;&#x3002;&#x5982;&#x679C; <em>Chez Scheme</em> &#x6309;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x5B89;&#x88C5;&#xFF0C;&#x5728; shell &#x63D0;&#x793A;&#x7B26;
+&#x4E2D;&#x952E;&#x5165; <code>scheme</code> &#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x7684; Scheme &#x4F1A;&#x8BDD;&#x3002;&#x5728; <em>Petite Chez Scheme</em> &#x4E2D;&#xFF0C;<code>petite</code> &#x547D;&#x4EE4;
+&#x505A;&#x4E86;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x5728;&#x952E;&#x5165;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x5E94;&#x8BE5;&#x4F1A;&#x770B;&#x5230;&#x7B80;&#x77ED;&#x7684;&#x95EE;&#x5019;&#x540E;&#x8DDF;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5C16;&#x62EC;&#x53F7;&#x7684;&#x4E00;&#x884C;&#xFF0C;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-scheme">Chez Scheme Version 9.5.1
+Copyright 1984-2017 Cisco Systems, Inc.  
+
+&gt;
+</code></pre>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x4E5F;&#x770B;&#x89C1;&#x4E86;&#x4F4D;&#x4E8E;&#x5C16;&#x62EC;&#x53F7;&#x53F3;&#x4FA7;&#x7684;&#x5149;&#x6807;&#x3002;&#x8FD9;&#x4E2A;&#x5C16;&#x62EC;&#x53F7;&#x662F;&#x7CFB;&#x7EDF;&#x7684; REPL &#x53D1;&#x51FA;&#x7684;&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x4E86; &#x201C;&#x8BFB;&#xFF08;R&#xFF09;&#x6C42;&#x503C;&#xFF08;E&#xFF09;&#x6253;&#x5370;&#xFF08;P&#xFF09;&#x5FAA;&#x73AF;&#xFF08;L&#xFF09;&#x201D;&#xFF0C;
+&#x5982;&#x6B64;&#x79F0;&#x8C13;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x8BFB;&#xFF0C;&#x6C42;&#x503C;&#x5E76;&#x6253;&#x5370;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x5FAA;&#x73AF;&#x56DE;&#x4E0B;&#x4E00;&#x8F6E;&#x8BFB;&#xFF0C;&#x6C42;&#x503C;&#xFF0C;&#x6253;&#x5370;&#xFF0C;&#x8BF8;&#x5982;&#x6B64;&#x7C7B;&#x3002;&#xFF08;&#x5728; <em>Chez Scheme</em> &#x91CC;&#xFF0C;
+ REPL &#x4E5F;&#x88AB;&#x79F0;&#x4E3A; waiter&#xFF09;</p>
+<p>&#x4E3A;&#x56DE;&#x5E94;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x952E;&#x5165;&#x4EFB;&#x4F55; Scheme &#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x7B26;&#x5408;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x7684;&#xFF0C;REPL &#x4F1A;&#x8FD0;&#x884C;&#x8868;&#x8FBE;&#x5F0F;&#x5E76;&#x6253;&#x5370;&#x5176;&#x503C;&#x3002;
+&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; 3
+3
+&gt; (+ 3 4)
+7
+&gt; (cons &apos;a &apos;(b c d))
+(a b c d)
+</code></pre>
+<p>REPL &#x4F7F;&#x7528;&#x7684; reader &#x6BD4;&#x666E;&#x901A;&#x7684; reader &#x66F4;&#x590D;&#x6742;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x6210;&#x719F;&#x7684;&#xFF0C;&#x50CF;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x4F46;&#x4E00;&#x6B21;&#x53EA;&#x80FD;&#x7F16;&#x8F91;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;
+&#x7684;&#x201C;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x8F91;&#x5668;&#x201D;&#xFF08;&#x7B80;&#x5199;&#x4E3A; &#x201C;expeditor&#x201D;&#xFF09;&#x3002;&#x4E00;&#x4EF6;&#x4F60;&#x9A6C;&#x4E0A;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x7684;&#x4E8B;&#x662F;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x7F29;&#x8FDB;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7B2C;&#x4E8C;&#x53CA;&#x540E;&#x7EED;&#x7684;&#x884C;&#x3002;
+&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x60F3;&#x5B9A;&#x4E49; <code>fact</code>&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86;&#x9636;&#x4E58;&#x51FD;&#x6570;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x952E;&#x5165; <code>(define fact</code> &#x540E;&#x8DDF;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x5149;&#x6807;&#x5E94;&#x8BE5;
+&#x4F4D;&#x4E8E; <code>define</code> &#x7684;&#x7B2C;&#x4E00;&#x4E2A; <code>e</code> &#x4E0B;&#x9762;&#xFF0C;&#x81F3;&#x6B64;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x952E;&#x5165; <code>(lambda (x)</code> &#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x770B;&#x5230;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (x)
+</code></pre>
+<p>expeditor &#x4E5F;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x5185;&#x56DB;&#x5904;&#x79FB;&#x52A8;&#xFF08;&#x5373;&#x4F7F;&#x8DE8;&#x591A;&#x884C;&#xFF09;&#xFF0C;&#x7F16;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x4FEE;&#x6B63;&#x9519;&#x8BEF;&#x3002;&#x63A5;&#x7740;&#x952E;&#x5165;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (x)
+      (if (= n 0)
+          0
+          (* n (fact
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x8BB8;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x547D;&#x540D;&#x4E3A; <code>x</code>&#xFF0C;&#x4F46;&#x5DF2;&#x88AB;&#x6211;&#x4EEC;&#x5F15;&#x7528;&#x4E3A;&#x4E86; <code>n</code>&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x7BAD;&#x5934;&#x952E;&#x79FB;&#x56DE;&#x7B2C;&#x4E8C;&#x884C;&#xFF0C;&#x7528;&#x9000;&#x683C;&#x952E;&#x5220;&#x9664;&#x8FD9;&#x4E2A;&#x60F9;&#x9EBB;&#x70E6;&#x7684; <code>x</code>&#xFF0C;
+&#x66FF;&#x6362;&#x5B83;&#x4E3A; <code>n</code>&#x3002;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (n)
+      (if (= n 0)
+          0
+          (* n (fact
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x4E0B;&#x53EF;&#x4EE5;&#x7528;&#x7BAD;&#x5934;&#x952E;&#x56DE;&#x5230;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x5C3E;&#xFF0C;&#x5E76;&#x5B8C;&#x6210;&#x5B9A;&#x4E49;&#x3002;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (n)
+      (if (= n 0)
+          0
+          (* n (fact (- n 1))))))
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x5706;&#x62EC;&#x53F7;&#x5E73;&#x8861;&#x7684;&#x5B8C;&#x5168;&#x5F62;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x521A;&#x5728;&#x6700;&#x540E;&#x7684;&#x5706;&#x62EC;&#x53F7;&#x4E4B;&#x540E;&#x7684;&#x5149;&#x6807;&#x5904;&#x6572;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#xFF0C;expeditor &#x5C06;&#x628A;&#x5B83;&#x9001;&#x7ED9;&#x6C42;&#x503C;&#x5668;&#x3002;
+&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x53F3;&#x5C16;&#x62EC;&#x53F7;&#x63D0;&#x793A;&#x7B26;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x77E5;&#x9053;&#x5B83;&#x5DF2;&#x88AB;&#x63A5;&#x53D7;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x4E00;&#x4E9B;&#x4E1C;&#x897F;&#x6765;&#x6D4B;&#x8BD5;&#x6211;&#x4EEC;&#x7684;&#x5B9A;&#x4E49;&#x4E86;&#xFF0C;&#x8BF4; <code>(fact 6)</code> &#x6765;&#x83B7;&#x5F97;&#x63D0;&#x793A;&#x7B26;&#x7684;&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (fact 6)
+0
+</code></pre>
+<p>&#x6253;&#x5370;&#x7684;&#x503C;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x5E0C;&#x671B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x662F; 6 &#x800C;&#x5B9E;&#x9645;&#x4E0A;&#x662F; 720&#x3002;&#x95EE;&#x9898;&#x663E;&#x7136;&#x51FA;&#x5728;&#x57FA;&#x7840;&#x60C5;&#x51B5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F; 0 &#x800C;&#x4E0D;&#x662F; 1&#x3002;&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;
+&#x4E3A;&#x4E86;&#x4FEE;&#x6B63;&#x9519;&#x8BEF;&#x800C;&#x91CD;&#x65B0;&#x952E;&#x5165;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x3002;&#x66FF;&#x4EE3;&#x5730;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; expeditor &#x7684;&#x5386;&#x53F2;&#x673A;&#x5236;&#x53D6;&#x56DE;&#x65E9;&#x524D;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x4E0A;&#x7BAD;&#x5934;&#x952E;&#x53EF;&#x4EE5;&#x8D2F;&#x7A7F;&#x5386;&#x53F2;&#x5411;&#x540E;&#x79FB;&#x52A8;&#x3002;
+&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x6309;&#x4E0A;&#x7BAD;&#x5934;&#x952E;&#x4F1A;&#x53D6;&#x56DE; <code>(fact 6)</code>&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x4F1A;&#x53D6;&#x56DE; <code>fact</code> &#x7684;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5411;&#x540E;&#x79FB;&#x52A8;&#x5386;&#x53F2;&#x65F6;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x8F91;&#x5668;&#x53EA;&#x7ED9;&#x6211;&#x4EEC;&#x663E;&#x793A;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4E24;&#x6B21;&#x5411;&#x4E0A;&#x7BAD;&#x5934;&#x540E;&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x770B;&#x89C1;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x90E8;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x952E;&#x5165; <code>^L</code> &#xFF08;control L&#xFF0C;&#x4E5F;&#x5C31;&#x662F; control &#x548C; L &#x952E;&#x4E00;&#x8D77;&#x6309;&#xFF09;&#x5F3A;&#x5236; expeditor &#x663E;&#x793A;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (n)
+      (if (= n 0)
+          0
+          (* n (fact (- n 1))))))
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x79FB;&#x52A8;&#x81F3;&#x7B2C;&#x56DB;&#x884C;&#x5E76;&#x5C06; 0 &#x6539;&#x6210; 1&#x3002;</p>
+<pre><code class="lang-scheme">&gt; (define fact
+    (lambda (n)
+      (if (= n 0)
+          1
+          (* n (fact (- n 1))))))
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;&#x6B63;&#x786E;&#x7684;&#x5B9A;&#x4E49;&#x4E86;&#x3002;&#x5982;&#x679C;&#x5149;&#x6807;&#x5728;&#x7B2C;&#x56DB;&#x884C;&#x6211;&#x4EEC;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x7136;&#x800C;&#x5B83;&#x53EA;&#x4F1A;&#x5728;&#x65E7;&#x7684;&#x7B2C;&#x56DB;&#x884C;&#x548C;&#x7B2C;&#x4E94;&#x884C;&#x4E4B;&#x95F4;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x884C;&#x3002;
+&#x8FD9;&#x5728;&#x5176;&#x5B83;&#x72B6;&#x51B5;&#x4E0B;&#x53EF;&#x80FD;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x73B0;&#x5728;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7528;&#x7BAD;&#x5934;&#x952E;&#x79FB;&#x52A8;&#x5230;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x5C3E;&#x6765;&#x53D8;&#x901A;&#xFF0C;&#x4F46;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x952E;&#x5165; <code>^J</code>
+ &#xFF0C;&#x8FD9;&#x5C06;&#x5F3A;&#x5236;&#x8868;&#x8FBE;&#x5F0F;&#x7ACB;&#x5373;&#x88AB;&#x8F93;&#x5165;&#x800C;&#x65E0;&#x8BBA;&#x5149;&#x6807;&#x5728;&#x4F55;&#x5904;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.Introduction.html" class="navigation navigation-prev " aria-label="Previous page: 01. 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03.Debugging.html" class="navigation navigation-next " aria-label="Next page: 03. Debugging">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02. 使用Chez Scheme","level":"1.4","depth":1,"next":{"title":"03. Debugging","level":"1.5","depth":1,"path":"03.Debugging.md","ref":"03.Debugging.md","articles":[]},"previous":{"title":"01. 简介","level":"1.3","depth":1,"path":"01.Introduction.md","ref":"01.Introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.UsingChezScheme.md","mtime":"2020-04-26T22:38:54.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T22:39:25.823Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1155 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08. 数字操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="09.InputOutputOperations.html" />
+    
+    
+    <link rel="prev" href="07.OperationsOnObjects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.Terminology.html">
+            
+                <a href="00.Terminology.html">
+            
+                    
+                    00. 术语表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01.Introduction.html">
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    01. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02.UsingChezScheme.html">
+            
+                <a href="02.UsingChezScheme.html">
+            
+                    
+                    02. 使用Chez Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03.Debugging.html">
+            
+                <a href="03.Debugging.html">
+            
+                    
+                    03. Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04.ForeignInterface.html">
+            
+                <a href="04.ForeignInterface.html">
+            
+                    
+                    04. 外部接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05.BindingForms.html">
+            
+                <a href="05.BindingForms.html">
+            
+                    
+                    05. 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06.ControlStructures.html">
+            
+                <a href="06.ControlStructures.html">
+            
+                    
+                    06. 控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07.OperationsOnObjects.html">
+            
+                <a href="07.OperationsOnObjects.html">
+            
+                    
+                    07. 对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="08.NumericOperations.html">
+            
+                <a href="08.NumericOperations.html">
+            
+                    
+                    08. 数字操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09.InputOutputOperations.html">
+            
+                <a href="09.InputOutputOperations.html">
+            
+                    
+                    09. 输入输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10.LibrariesAndTop-levelPrograms.html">
+            
+                <a href="10.LibrariesAndTop-levelPrograms.html">
+            
+                    
+                    10. 库和顶层程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="11.SyntacticExtensionAndModules.html">
+            
+                <a href="11.SyntacticExtensionAndModules.html">
+            
+                    
+                    11. 语法扩展和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="12.SystemOperations.html">
+            
+                <a href="12.SystemOperations.html">
+            
+                    
+                    12. 系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="13.StorageManagement.html">
+            
+                <a href="13.StorageManagement.html">
+            
+                    
+                    13. 存储系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="14.ExpressionEditor.html">
+            
+                <a href="14.ExpressionEditor.html">
+            
+                    
+                    14. 扩展编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="15.ThreadSystem.html">
+            
+                <a href="15.ThreadSystem.html">
+            
+                    
+                    15. 线程系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="16.CompatibilityFeatures.html">
+            
+                <a href="16.CompatibilityFeatures.html">
+            
+                    
+                    16. 兼容功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >08. 数字操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chapter-8-&#x6570;&#x5B57;&#x64CD;&#x4F5C;">Chapter 8. &#x6570;&#x5B57;&#x64CD;&#x4F5C;</h1>
+<p>&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86; Chez Scheme &#x5BF9;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x6807;&#x51C6;&#x64CD;&#x4F5C;&#x96C6;&#x7684;&#x6269;&#x5C55;&#x3002;&#x53C2;&#x89C1;&quot;The Scheme Programming Language, &#x7B2C; 4 &#x7248;&quot;, &#x7B2C; 6 &#x7AE0;&#xFF0C;&#x6216; R<sup>6</sup>RS &#x4E2D;&#x5BF9;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x4E0A;&#x6807;&#x51C6;&#x64CD;&#x4F5C;&#x7684;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>Chez Scheme &#x652F;&#x6301;&#x5168;&#x90E8; Scheme &#x6570;&#x5B57;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;&#x7CBE;&#x786E;&#x548C;&#x4E0D;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF0C;&#x6709;&#x7406;&#x6570;&#xFF0C;&#x5B9E;&#x6570;&#xFF0C;&#x53CA;&#x590D;&#x6570;&#x3002;&#x5E76;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x652F;&#x6301;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p>Fixnums
+    &#x5728; fixnum &#x8303;&#x56F4;&#x5185;&#x8868;&#x793A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF08;&#x53C2;&#x89C1; <code>most-negative-fixnum</code> &#x548C; <code>most-positive-fixnum</code> &#xFF09;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5411;&#x91CF;&#x6216; fxvector &#x7684;&#x957F;&#x5EA6;&#x5747;&#x88AB;&#x9650;&#x5B9A;&#x4E3A; fixnum.</p>
+<p>Bignums
+    &#x8868;&#x793A; fixnum &#x8303;&#x56F4;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x7684;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;</p>
+<p>Ratnums
+    &#x8868;&#x793A;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x7684;&#x7CBE;&#x786E;&#x6709;&#x7406;&#x6570;&#x3002;&#x6BCF;&#x4E2A;&#x6709;&#x7406;&#x6570;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x5206;&#x5B50;&#xFF08;fixnum &#x6216; bignum&#xFF09;&#x548C;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x5206;&#x6BCD;&#x3002;&#x5206;&#x6570;&#x603B;&#x662F;&#x88AB;&#x7EA6;&#x5206;&#x4E3A;&#x6700;&#x7B80;&#x5F62;&#x5F0F;&#xFF0C;&#x5206;&#x6BCD;&#x4ECE;&#x4E0D;&#x4E3A; 1&#xFF0C;&#x800C;&#x5206;&#x5B50;&#x6C38;&#x4E0D;&#x4F1A;&#x4E3A; 0.</p>
+<p>Flonums
+    &#x8868;&#x793A;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x5B9E;&#x6570;&#x3002;Flonums &#x662F; IEEE 64 &#x4F4D;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#xFF08;&#x7531;&#x4E8E; flonums &#x4E0D;&#x80FD;&#x8868;&#x793A;&#x65E0;&#x7406;&#x6570;&#xFF0C;&#x6240;&#x6709;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x5B9E;&#x6570;&#x5B9E;&#x9645;&#x53EA;&#x662F;&#x6307;&#x6709;&#x7406;&#x6570;&#xFF0C;&#x867D;&#x7136;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x8FD1;&#x4F3C;&#x4E8E;&#x65E0;&#x7406;&#x6570;&#x7684;&#x6570;&#x503C;&#xFF09;&#x3002;</p>
+<p>Exact complexnums
+    &#x8868;&#x793A;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x3002;&#x6BCF;&#x4E2A;&#x590D;&#x6570;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6709;&#x7406;&#x6570;&#xFF08;fixnum, bignum, &#x6216; ratnum&#xFF09;&#x7684;&#x5B9E;&#x90E8;&#xFF0C;&#x548C;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6709;&#x7406;&#x6570;&#x7684;&#x865A;&#x90E8;&#x3002;</p>
+<p>Inexact complexnums
+    &#x8868;&#x793A;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x3002;&#x6BCF;&#x4E2A;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x5B9E;&#x90E8;&#x548C;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x865A;&#x90E8;&#x3002;</p>
+<p>&#x5927;&#x591A;&#x6570;&#x6570;&#x5B57;&#x53EA;&#x80FD;&#x4EE5;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x8868;&#x793A;&#xFF1B;&#x4E0D;&#x8FC7;&#xFF0C;&#x5B9E;&#x6570;&#x6709;&#x65F6;&#x4F1A;&#x8868;&#x793A;&#x4E3A;&#x865A;&#x90E8;&#x4E3A; 0 &#x7684;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x3002;</p>
+<p>Chez Scheme &#x5BF9;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x4E86;&#x6269;&#x5C55;&#xFF0C;&#x5305;&#x62EC; 2 &#x81F3; 36 &#x7684;&#x4EFB;&#x610F;&#x57FA;&#x6570;&#xFF0C;&#x975E;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x79D1;&#x5B66;&#x8868;&#x793A;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA; IEEE &#x65E0;&#x7A77;&#x6570;&#x548C; NAN&#xFF08;NAN &#x662F; &quot;not-a-number&quot; &#x7684;&#x7F29;&#x5199;&#xFF09;&#x7684;&#x6253;&#x5370;&#x5F62;&#x5F0F;&#x3002;</p>
+<p>&#x4EFB;&#x610F;&#x57FA;&#x6570;&#x7531;&#x524D;&#x7F00; <code>#nr</code> &#x6307;&#x5B9A;&#xFF0C; <code>n</code> &#x7684;&#x8303;&#x56F4;&#x662F; 2 &#x81F3; 36. &#x5927;&#x4E8E; 9 &#x7684;&#x6570;&#x5B57;&#x7528;&#x5B57;&#x6BCD; <code>a</code> &#x81F3; <code>z</code> &#x6307;&#x5B9A;&#xFF08;&#x5927;&#x5199;&#x5C0F;&#x5199;&#x5747;&#x53EF;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF0C; ~#2r101 ~ &#x662F; 510, &#x800C; ~#36rZ ~ &#x662F; 3510.</p>
+<p>&#x5BF9;&#x4E8E;&#x8F83;&#x5927;&#x7684;&#x57FA;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x7279;&#x5B9A;&#x5B57;&#x6BCD;&#x7684;&#x89E3;&#x8BFB;&#x4F1A;&#x51FA;&#x73B0;&#x6B67;&#x4E49;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C; <code>e</code> &#xFF0C; &#x4F5C;&#x4E3A;&#x6570;&#x5B57;&#x8FD8;&#x662F;&#x4F5C;&#x4E3A;&#x6307;&#x6570;&#x6307;&#x793A;&#x7B26;&#xFF1B;&#x5728;&#x8FD9;&#x7C7B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B57;&#x6BCD;&#x88AB;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728; <code>#x3.2e5</code> &#x4E2D;&#xFF0C; <code>e</code> &#x88AB;&#x89E3;&#x8BFB;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x800C;&#x4E0D;&#x4F5C;&#x4E3A;&#x6307;&#x6570;&#x6807;&#x8BB0;&#x3002;&#x800C;&#x5728; <code>3.2e5</code> &#x4E2D;&#xFF0C; <code>e</code> &#x5219;&#x88AB;&#x5F53;&#x4F5C;&#x6307;&#x6570;&#x6807;&#x8BB0;&#x3002;</p>
+<p>IEEE &#x65E0;&#x7A77;&#x6570;&#x88AB;&#x6253;&#x5370;&#x4E3A;+inf.0 &#x548C;-inf.0, &#x800C; IEEE NANs &#x88AB;&#x6253;&#x5370;&#x4E3A; +nan.0 &#x6216;-nan.0. (+nan.0 &#x88AB;&#x7528;&#x4F5C;&#x6240;&#x6709; NANs &#x7684;&#x8F93;&#x51FA;&#xFF09;</p>
+<pre><code>(/ 1.0 0.0) =&gt; +inf.0
+(/ 1.0 -0.0) =&gt; -inf.0
+(/ 0.0 0.0) =&gt; +nan.0
+(/ +inf.0 -inf.0) =&gt; +nan.0
+</code></pre><p>&#x672C;&#x7AE0;&#x7B2C; 1 &#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x8C13;&#x8BCD;&#x3002;8.2 &#x81F3; 8.4 &#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x5E94;&#x7528;&#x4E8E; fixnums, flonums, &#x548C;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#xFF08;flonums &#x548C;/&#x6216;&#x4E0D;&#x7CBE;&#x786E;&#x7684; complexnums&#xFF09;&#x4E0A;&#x7684;&#x5FEB;&#x901F;&#x7684;&#xFF0C;&#x7C7B;&#x578B;&#x4E13;&#x7528;&#x7684;&#x6570;&#x5B57;&#x64CD;&#x4F5C;&#x3002;&#x4E13;&#x7528;&#x4E8E; fixnum &#x7684;&#x7248;&#x672C;&#xFF0C;&#x5E94;&#x53EA;&#x7528;&#x4E8E;&#x7A0B;&#x5E8F;&#x5458;&#x786E;&#x5B9A;&#x64CD;&#x4F5C;&#x6570;&#x548C;&#x7ED3;&#x679C;&#x90FD;&#x4F1A;&#x662F; fixnum &#x65F6;&#xFF0C;&#x5373;&#xFF0C;&#x6574;&#x6570;&#x5728;&#x8303;&#x56F4; <code>(most-negative-fixnum)</code> &#x81F3; <code>(most-positive-fixnum)</code> &#x4E4B;&#x95F4;&#x65F6;&#xFF08;&#x4E24;&#x7AEF;&#x5747;&#x5305;&#x542B;&#xFF09;&#x3002;&#x4E13;&#x7528;&#x4E8E; flonum &#x7684;&#x7248;&#x672C;&#xFF0C;&#x5E94;&#x53EA;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x786E;&#x5B9A;&#x4E3A; flonum &#x65F6;&#x3002;flonum/complexnum &#x6DF7;&#x5408;&#x7248;&#x672C;&#xFF0C;&#x5E94;&#x53EA;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x786E;&#x5B9A;&#x4E3A; flonum &#x6216;&#x4E0D;&#x7CBE;&#x786E;&#x7684; complexnum &#x65F6;&#x3002;8.5 &#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x652F;&#x6301;&#x628A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x6BD4;&#x7279;&#x96C6;&#x5408;&#x6216;&#x5E8F;&#x5217;&#x7684;&#xFF0C;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x548C;&#x4E13;&#x7528;&#x4E8E; fixnum &#x7684;&#x64CD;&#x4F5C;&#x3002;8.6 &#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#xFF0C;8.7 &#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x5176;&#x4F59;&#x5404;&#x79CD;&#x6570;&#x5B57;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="section-81-&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x8C13;&#x8BCD;">Section 8.1. &#x6570;&#x5B57;&#x7C7B;&#x578B;&#x8C13;&#x8BCD;</h2>
+<p>R<sup>6</sup>RS &#x533A;&#x5206;&#x4E86;&#x4E24;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#xFF1A;fixnum &#x548C; flonum. Chez Scheme &#x8FDB;&#x4E00;&#x6B65;&#x533A;&#x5206;&#x4E86; bignum&#xFF08;fixnum &#x8303;&#x56F4;&#x4E4B;&#x5916;&#x7684;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF09;&#x548C; ratnum&#xFF08;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x7684;&#x6BD4;&#x503C;&#xFF09;&#x3002;&#x5B83;&#x540C;&#x65F6;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8BC6;&#x522B; cflonum &#x7684;&#x8C13;&#x8BCD;&#xFF0C;&#x5176;&#x4E3A; flonum &#x6216;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x3002;</p>
+<p>procedure: (bignum? obj)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; <code>obj</code> &#x662F; bignum&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(bignum? 0) =&gt; #f
+(bignum? (most-positive-fixnum)) =&gt; #f
+(bignum? (most-negative-fixnum)) =&gt; #f
+(bignum? (* (most-positive-fixnum) 2)) =&gt; #t
+(bignum? 3/4) =&gt; #f
+(bignum? &apos;a) =&gt; #f
+</code></pre><p>procedure: (ratnum? obj)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; <code>obj</code> &#x662F; ratnum&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(ratnum? 0) =&gt; #f
+(ratnum? (* (most-positive-fixnum) 2)) =&gt; #f
+(ratnum? 3/4) =&gt; #t
+(ratnum? -10/2) =&gt; #f
+(ratnum? -11/2) =&gt; #t
+(ratnum? &apos;a) =&gt; #f
+</code></pre><p>procedure: (cflonum? obj)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; <code>obj</code> &#x662F;&#x4E0D;&#x7CBE;&#x786E;&#x7684; complexnum &#x6216; flonum&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(cflonum? 0) =&gt; #f
+(cflonum? 0.0) =&gt; #t
+(cflonum? 3+4i) =&gt; #f
+(cflonum? 3.0+4i) =&gt; #t
+(cflonum? +i) =&gt; #f
+(cflonum? +1.0i) =&gt; #t
+</code></pre><h2 id="section-82-fixnum-&#x64CD;&#x4F5C;">Section 8.2. Fixnum &#x64CD;&#x4F5C;</h2>
+<p>&#x4E13;&#x7528;&#x4E8E; fixnum &#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x901A;&#x8FC7;&#x4F1A;&#x68C0;&#x67E5;&#x5B83;&#x4EEC;&#x7684;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#xFF08;&#x9700;&#x8981;&#x65F6;&#xFF09;&#xFF0C;&#x4F46;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x4F18;&#x5316;&#x7EA7;&#x522B; 3 &#x4E0B;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x68C0;&#x67E5;&#x3002;</p>
+<p>procedure: (most-positive-fixnum)</p>
+<p>returns: &#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x7684;&#x6700;&#x5927;&#x6B63; fixnum</p>
+<p>procedure: (most-negative-fixnum)</p>
+<p>returns: &#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x7684;&#x6700;&#x5927;&#x8D1F; fixnum</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x548C; R<sup>6</sup>RS &#x4E2D;&#x7684; <code>greatest-fixnum</code> &#x548C; <code>least-fixnum</code> &#x8FC7;&#x7A0B;&#x4E00;&#x6837;&#x3002;</p>
+<p>procedure: (fx= fixnum1 fixnum2 &#x2026;)</p>
+<p>procedure: (fx&lt; fixnum1 fixnum2 &#x2026;)</p>
+<p>procedure: (fx&gt; fixnum1 fixnum2 &#x2026;)</p>
+<p>procedure: (fx&lt;= fixnum1 fixnum2 &#x2026;)</p>
+<p>procedure: (fx&gt;= fixnum1 fixnum2 &#x2026;)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x5173;&#x7CFB;&#x6210;&#x7ACB;&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8C13;&#x8BCD; fx=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x76F8;&#x7B49;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x8C13;&#x8BCD; fx&lt;&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x9012;&#x589E;&#x65F6;&#x8FD4;&#x56DE;#t&#xFF0C;&#x5373;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x53C2;&#x90FD;&#x5927;&#x4E8E;&#x5B83;&#x524D;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;&#x800C; fx&gt;&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x9012;&#x51CF;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x8C13;&#x8BCD; fx&lt;=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x975E;&#x9012;&#x51CF;&#x65F6;&#x8FD4;&#x56DE;#t&#xFF0C;&#x5373;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x53C2;&#x4E0D;&#x5C0F;&#x4E8E;&#x5B83;&#x524D;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;&#x800C; fx&gt;=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x975E;&#x9012;&#x589E;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x53EA;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x8C13;&#x8BCD;&#x5747;&#x8FD4;&#x56DE;#t&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x4E0E; R<sup>6</sup>RS &#x4E2D;&#x7684;&#x8FC7;&#x7A0B; fx=?, fx&lt;?, fx&gt;?, fx&lt;=?, &#x548C; fx&gt;=?&#x7C7B;&#x4F3C;&#xFF0C;&#x9664;&#x4E86; R<sup>6</sup>RS &#x4E2D;&#x7684;&#x8FC7;&#x7A0B;&#x9700;&#x8981; 2 &#x4E2A;&#x6216;&#x66F4;&#x591A;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#x90FD;&#x6709; &quot;?&quot; &#x540E;&#x7F00;&#x4EE5;&#x5916;&#x3002;</p>
+<pre><code>(fx= 0) =&gt; #t
+(fx= 0 0) =&gt; #t
+(fx&lt; (most-negative-fixnum) 0 (most-positive-fixnum)) =&gt; #t
+(let ([x 3]) (fx&lt;= 0 x 9)) =&gt; #t
+(fx&lt;= 0 3 3) =&gt; #t
+(fx&gt;= 0 0 (most-negative-fixnum)) =&gt; #t
+</code></pre><p>procedure: (fxnonpositive? fixnum)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; fixnum &#x4E0D;&#x5927;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>procedure: (fxnonnegative? fixnum)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; fixnum &#x4E0D;&#x5C0F;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>fxnonpositive?&#x7B49;&#x4EF7;&#x4E8E;(lambda (x) (fx&lt;= x 0)), &#x800C; fxnonnegative?&#x7B49;&#x4EF7;&#x4E8E;(lambda (x) (fx&gt;= x 0)).</p>
+<pre><code>(fxnonpositive? 128) =&gt; #f
+(fxnonpositive? 0) =&gt; #t
+(fxnonpositive? -1) =&gt; #t
+
+(fxnonnegative? -65) =&gt; #f
+(fxnonnegative? 0) =&gt; #t
+(fxnonnegative? 1) =&gt; #t
+</code></pre><p>procedure: (fx+ fixnum &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; fixnum &#x2026;&#x4E4B;&#x548C;</p>
+<p>libraries: (chezscheme)</p>
+<p>When called with no arguments, fx+ returns 0.
+&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C;fx+&#x8FD4;&#x56DE; 0.</p>
+<pre><code>(fx+) =&gt; 0
+(fx+ 1 2) =&gt; 3
+(fx+ 3 4 5) =&gt; 12
+(apply fx+ &apos;(1 2 3 4 5)) =&gt; 15
+</code></pre><p>procedure: (fx- fixnum1 fixnum2 &#x2026;)</p>
+<p>returns: &#x4E00;&#x4E2A; fixnum</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8C03;&#x7528;&#x65F6;&#x82E5;&#x53EA;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;fx-&#x8FD4;&#x56DE; fixnum1 &#x7684;&#x8D1F;&#x503C;&#x3002;&#x5373;&#xFF0C;(fx- fixnum1)&#x76F8;&#x5F53;&#x4E8E;(fx- 0 fixnum1).</p>
+<p>&#x8C03;&#x7528;&#x65F6;&#x82E5;&#x4F20;&#x5165; 2 &#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x5B9E;&#x53C2;&#xFF0C;fx-&#x8FD4;&#x56DE;&#x4ECE; fixnum1 &#x4E2D;&#x51CF;&#x53BB;&#x6570;&#x5B57; fixnum2 &#x2026;&#x4E4B;&#x548C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code>(fx- 3) =&gt; -3
+(fx- 4 3) =&gt; 1
+(fx- 4 3 2 1) =&gt; -2
+</code></pre><p>procedure: (fx* fixnum &#x2026;)</p>
+<p>returns: &#x53C2;&#x6570; fixnum &#x2026;&#x7684;&#x4E58;&#x79EF;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C;fx*&#x8FD4;&#x56DE; 1.</p>
+<pre><code>(fx*) =&gt; 1
+(fx* 1 2) =&gt; 2
+(fx* 3 -4 5) =&gt; -60
+(apply fx* &apos;(1 -2 3 -4 5)) =&gt; 120
+</code></pre><p>procedure: (fx/ fixnum1 fixnum2 &#x2026;)</p>
+<p>returns: &#x53C2;&#x89C1;&#x540E;&#x9762;&#x7684;&#x89E3;&#x91CA;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8C03;&#x7528;&#x65F6;&#x82E5;&#x53EA;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;fx/&#x8FD4;&#x56DE; fixnum1 &#x7684;&#x5012;&#x6570;&#x3002;&#x5373;&#xFF0C;(fx/ fixnum1)&#x76F8;&#x5F53;&#x4E8E;(fx/ 1 fixnum1&#xFF09;.</p>
+<p>&#x8C03;&#x7528;&#x65F6;&#x82E5;&#x4F20;&#x5165; 2 &#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x5B9E;&#x53C2;&#xFF0C;fx/ &#x8FD4;&#x56DE; fixnum1 &#x9664;&#x4EE5;&#x5176;&#x4F59;&#x5B9E;&#x53C2; fixnum2 &#x2026;&#x7684;&#x4E58;&#x79EF;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code>(fx/ 1) =&gt; 1
+(fx/ -17) =&gt; 0
+(fx/ 8 -2) =&gt; -4
+(fx/ -9 2) =&gt; -4
+(fx/ 60 5 3 2) =&gt; 2
+</code></pre><p>procedure: (fx1+ fixnum)</p>
+<p>procedure: (fx1- fixnum)</p>
+<p>returns: fixnum &#x52A0; 1 &#x6216; fixnum &#x51CF; 1</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(define fxplus
+  (lambda (x y)
+    (if (fxzero? x)
+        y
+        (fxplus (fx1- x) (fx1+ y)))))
+
+(fxplus 7 8) =&gt; 15
+</code></pre><p>fx1+ &#x548C; fx1- &#x53EF;&#x4F9D;&#x5982;&#x4E0B;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>(define fx1+ (lambda (x) (fx+ x 1)))
+(define fx1- (lambda (x) (fx- x 1)))
+</code></pre><p>procedure: (fxquotient fixnum1 fixnum2 &#x2026;)</p>
+<p>returns: &#x53C2;&#x89C1;&#x540E;&#x9762;&#x7684;&#x89E3;&#x91CA;</p>
+<p>libraries: (chezscheme)</p>
+<p>fxquotient &#x548C; fx/&#x4E00;&#x6837;&#x3002;&#x53C2;&#x89C1;&#x4E0A;&#x9762;&#x5173;&#x4E8E; fx/&#x7684;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>procedure: (fxremainder fixnum1 fixnum2)</p>
+<p>returns: fixnum1 &#x9664;&#x4EE5; fixnum2 &#x7684; fixnum &#x4F59;&#x6570;</p>
+<p>libraries: (chezscheme)</p>
+<p>fxremainder &#x7ED3;&#x679C;&#x7684;&#x7B26;&#x53F7;&#x4E0E; fixnum1 &#x76F8;&#x540C;&#x3002;</p>
+<pre><code>(fxremainder 16 4) =&gt; 0
+(fxremainder 5 2) =&gt; 1
+(fxremainder -45 7) =&gt; -3
+(fxremainder 10 -3) =&gt; 1
+(fxremainder -17 -9) =&gt; -8
+</code></pre><p>procedure: (fxmodulo fixnum1 fixnum2)</p>
+<p>returns: fixnum1 &#x548C; fixnum2 &#x7684; fixnum &#x6A21;&#x6570;</p>
+<p>libraries: (chezscheme)</p>
+<p>fxmodulo &#x7ED3;&#x679C;&#x7684;&#x7B26;&#x53F7;&#x4E0E; fixnum2 &#x76F8;&#x540C;&#x3002;</p>
+<pre><code>(fxmodulo 16 4) =&gt; 0
+(fxmodulo 5 2) =&gt; 1
+(fxmodulo -45 7) =&gt; 4
+(fxmodulo 10 -3) =&gt; -2
+(fxmodulo -17 -9) =&gt; -8
+</code></pre><p>procedure: (fxabs fixnum)</p>
+<p>returns: fixnum &#x7684;&#x7EDD;&#x5BF9;&#x503C;</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(fxabs 1) =&gt; 1
+(fxabs -1) =&gt; 1
+(fxabs 0) =&gt; 0
+</code></pre><h2 id="section-83-flonum-&#x64CD;&#x4F5C;">Section 8.3. Flonum &#x64CD;&#x4F5C;</h2>
+<p>&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x5B9E;&#x6570;&#x901A;&#x5E38;&#x4EE5; flonum &#x8868;&#x793A;&#x3002;flonum &#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684; 64 &#x4F4D;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x9488;&#x5BF9; flonum &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5176;&#x4E2D;&#x5927;&#x591A;&#x6570;&#x63A5;&#x53D7; flonum &#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x53C2;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE; flonum &#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x662F;&#x5185;&#x8054;&#x7F16;&#x7801;&#x6216;&#x662F;&#x5728;&#x4E0D;&#x8FDB;&#x884C;&#x5B9E;&#x53C2;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x7684;&#x4F18;&#x5316;&#x7EA7;&#x522B; 3 &#x4E0B;&#x7F16;&#x7801;&#x4E3A;&#x673A;&#x5668;&#x8BED;&#x8A00;&#x5B50;&#x7A0B;&#x5E8F;&#xFF1B;&#x5168;&#x9762;&#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x662F;&#x5728;&#x66F4;&#x4F4E;&#x7684;&#x4F18;&#x5316;&#x7EA7;&#x522B;&#x4E0B;&#x6267;&#x884C;&#x7684;&#x3002;&#x4E13;&#x7528;&#x4E8E; flonum &#x7684;&#x8FC7;&#x7A0B;&#x540D;&#x79F0;&#x5E26;&#x6709;&#x524D;&#x7F00;&quot;fl&quot;&#xFF0C;&#x4EE5;&#x533A;&#x5206;&#x4E8E;&#x5B83;&#x4EEC;&#x7684;&#x901A;&#x7528;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x5B9E;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x865A;&#x90E8;&#x4E3A; 0 &#x7684;&#x4E0D;&#x7CBE;&#x786E; complexnums &#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x79CD;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x4E0D;&#x53EF;&#x7528;&#x4E8E; flonum &#x4E13;&#x7528;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x8F93;&#x5165;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x5B57;&#x53EA;&#x4F1A;&#x5728;&#x663E;&#x5F0F;&#x8C03;&#x7528; fl-make-rectangular, make-rectangular, &#x6216; make-polar &#x65F6;&#xFF0C;&#x6216;&#x901A;&#x8FC7;&#x6781;&#x5750;&#x6807;&#x6216;&#x76F4;&#x89D2;&#x5750;&#x6807;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x5B57;&#x8F93;&#x5165;&#xFF0C;&#x7531;&#x6D89;&#x53CA;&#x865A;&#x90E8;&#x975E; 0 &#x7684;&#x590D;&#x6570;&#x64CD;&#x4F5C;&#x4E2D;&#x751F;&#x6210;&#x3002;</p>
+<p>procedure: (flonum-&gt;fixnum flonum)</p>
+<p>returns: flonum &#x7684; fixnum &#x8868;&#x793A;&#x5F62;&#x5F0F;&#xFF08;&#x88AB;&#x622A;&#x77ED;&#x7684;&#xFF09;</p>
+<p>libraries: (chezscheme)</p>
+<p>flonum &#x88AB;&#x622A;&#x77ED;&#x540E;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x843D;&#x5728; fixnum &#x8303;&#x56F4;&#x5185;&#x3002;flonum-&gt;fixnum &#x662F;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x503C;&#x7684;&#x9650;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x4F1A;&#x628A;&#x4EFB;&#x4F55;&#x6570;&#x5B57;&#x8868;&#x793A;&#x8F6C;&#x5316;&#x4E3A;&#x5B83;&#x7684;&#x7CBE;&#x786E;&#x7B49;&#x4EF7;&#x7248;&#x672C;&#x3002;</p>
+<pre><code>(flonum-&gt;fixnum 0.0) =&gt; 0
+(flonum-&gt;fixnum 3.9) =&gt; 3
+(flonum-&gt;fixnum -2.2) =&gt; -2
+</code></pre><p>procedure: (fl= flonum1 flonum2 &#x2026;)</p>
+<p>procedure: (fl&lt; flonum1 flonum2 &#x2026;)</p>
+<p>procedure: (fl&gt; flonum1 flonum2 &#x2026;)</p>
+<p>procedure: (fl&lt;= flonum1 flonum2 &#x2026;)</p>
+<p>procedure: (fl&gt;= flonum1 flonum2 &#x2026;)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x5173;&#x7CFB;&#x6210;&#x7ACB;&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8C13;&#x8BCD; fl=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x76F8;&#x7B49;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x8C13;&#x8BCD; fl&lt;&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x9012;&#x589E;&#x65F6;&#x8FD4;&#x56DE;#t&#xFF0C;&#x5373;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x53C2;&#x90FD;&#x5927;&#x4E8E;&#x5B83;&#x524D;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;&#x800C; fl&gt;&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x9012;&#x51CF;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x8C13;&#x8BCD; fl&lt;=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x975E;&#x9012;&#x51CF;&#x65F6;&#x8FD4;&#x56DE;#t&#xFF0C;&#x5373;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x53C2;&#x4E0D;&#x5C0F;&#x4E8E;&#x5B83;&#x524D;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;&#x800C; fl&gt;=&#x5728;&#x5176;&#x5B9E;&#x53C2;&#x5355;&#x8C03;&#x975E;&#x9012;&#x589E;&#x65F6;&#x8FD4;&#x56DE;#t&#x3002;&#x53EA;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x8C13;&#x8BCD;&#x5747;&#x8FD4;&#x56DE;#t&#x3002;</p>
+<p>IEEE NANs &#x4E0D;&#x5177;&#x6709;&#x53EF;&#x6BD4;&#x8F83;&#x6027;&#xFF0C;&#x5373;&#xFF0C;&#x6D89;&#x53CA; NANs &#x7684;&#x6BD4;&#x8F83;&#x603B;&#x662F;&#x8FD4;&#x56DE;#f.</p>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x4E0E; R<sup>6</sup>RS &#x4E2D;&#x7684;&#x8FC7;&#x7A0B; fl=?, fl&lt;?, fl&gt;?, fl&lt;=?, &#x548C; fl&gt;=?&#x7C7B;&#x4F3C;&#xFF0C;&#x9664;&#x4E86; R<sup>6</sup>RS &#x4E2D;&#x7684;&#x8FC7;&#x7A0B;&#x9700;&#x8981; 2 &#x4E2A;&#x6216;&#x66F4;&#x591A;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#x90FD;&#x6709; &quot;?&quot; &#x540E;&#x7F00;&#x4EE5;&#x5916;&#x3002;</p>
+<pre><code>(fl= 0.0) =&gt; #t
+(fl= 0.0 0.0) =&gt; #t
+(fl&lt; -1.0 0.0 1.0) =&gt; #t
+(fl&gt; -1.0 0.0 1.0) =&gt; #f
+(fl&lt;= 0.0 3.0 3.0) =&gt; #t
+(fl&gt;= 4.0 3.0 3.0) =&gt; #t
+(fl&lt; 7.0 +inf.0) =&gt; #t
+(fl= +nan.0 0.0) =&gt; #f
+(fl= +nan.0 +nan.0) =&gt; #f
+(fl&lt; +nan.0 +nan.0) =&gt; #f
+(fl&gt; +nan.0 +nan.0) =&gt; #f
+</code></pre><p>procedure: (flnonpositive? fl)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; fl &#x4E0D;&#x5927;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>procedure: (flnonnegative? fl)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; fl &#x4E0D;&#x5C0F;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>flnonpositive?&#x7B49;&#x4EF7;&#x4E8E;(lambda (x) (fl&lt;= x 0.0)), &#x800C; flnonnegative?&#x7B49;&#x4EF7;&#x4E8E;(lambda (x) (fl&gt;= x 0.0)).</p>
+<p>&#x867D;&#x7136; flonum &#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x533A;&#x5206;-0.0 &#x548C;+0.0&#xFF0C;&#x4F46;&#x90FD;&#x5224;&#x5B9A;&#x4E3A;&#x975E;&#x8D1F;&#x4E14;&#x975E;&#x6B63;&#x3002;</p>
+<pre><code>(flnonpositive? 128.0) =&gt; #f
+(flnonpositive? 0.0) =&gt; #t
+(flnonpositive? -0.0) =&gt; #t
+(flnonpositive? -1.0) =&gt; #t
+
+(flnonnegative? -65.0) =&gt; #f
+(flnonnegative? 0.0) =&gt; #t
+(flnonnegative? -0.0) =&gt; #t
+(flnonnegative? 1.0) =&gt; #t
+
+(flnonnegative? +nan.0) =&gt; #f
+(flnonpositive? +nan.0) =&gt; #f
+
+(flnonnegative? +inf.0) =&gt; #t
+(flnonnegative? -inf.0) =&gt; #f
+</code></pre><p>procedure: (decode-float x)</p>
+<p>returns: &#x53C2;&#x89C1;&#x4E0B;&#x6587;</p>
+<p>libraries: (chezscheme)</p>
+<p>x &#x5FC5;&#x987B;&#x662F; flonum. decode-float &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B; 3 &#x4E2A;&#x6574;&#x6570;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#xFF0C;m, e, &#x548C; s, &#x6EE1;&#x8DB3; x = sm2e. &#x5B83;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x6253;&#x5370;&#x6D6E;&#x70B9;&#x6570;&#x3002;</p>
+<pre><code>(decode-float 1.0) =&gt; #(4503599627370496 -52 1)
+(decode-float -1.0) =&gt; #(4503599627370496 -52 -1)
+
+(define slow-identity
+  (lambda (x)
+    (inexact
+     (let ([v (decode-float x)])
+       (let ([m (vector-ref v 0)]
+             [e (vector-ref v 1)]
+             [s (vector-ref v 2)])
+         (* s m (expt 2 e)))))))
+
+(slow-identity 1.0) =&gt; 1.0
+(slow-identity -1e20) =&gt; -1e20
+</code></pre><p>procedure: (fllp flonum)</p>
+<p>returns: &#x53C2;&#x89C1;&#x4E0B;&#x6587;</p>
+<p>libraries: (chezscheme)</p>
+<p>fllp &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; 12 &#x4F4D;&#x6574;&#x6570;&#xFF0C;&#x7531;&#x6307;&#x6570;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A; flonum&#xFF08;ieee 64 &#x4F4D;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#x7684;&#x6700;&#x9AD8;&#x8868;&#x793A;&#x4F4D;&#x7EC4;&#x6210;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x8BA1;&#x7B97;&#x8FD9;&#x4E2A;&#x6570;&#x7684;&#x5BF9;&#x6570;&#x7684;&#x8FD1;&#x4F3C;&#x503C;&#x3002;</p>
+<pre><code>(fllp 0.0) =&gt; 0
+(fllp 1.0) =&gt; 2046
+(fllp -1.0) =&gt; 2046
+
+(fllp 1.5) =&gt; 2047
+
+(fllp +inf.0) =&gt; 4094
+(fllp -inf.0) =&gt; 4094
+
+(fllp #b1.0e-1111111111) =&gt; 1
+(fllp #b1.0e-10000000000) =&gt; 0
+</code></pre><h2 id="section-84-&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x7684;&#x64CD;&#x4F5C;">Section 8.4. &#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x7684;&#x64CD;&#x4F5C;</h2>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x7684;&#x8FC7;&#x7A0B;&#x63D0;&#x4F9B;&#x4E86;&#x521B;&#x5EFA;&#x548C;&#x64CD;&#x4F5C;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x7684;&#x673A;&#x5236;&#x3002;&#x865A;&#x90E8;&#x975E; 0 &#x7684;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x8868;&#x793A;&#x4E3A;&#x4E0D;&#x7CBE;&#x786E;&#x7684; complexnums. &#x4E0D;&#x7CBE;&#x786E;&#x7684; complexnum &#x5305;&#x542B; 2 &#x4E2A; 64 &#x4F4D;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x865A;&#x90E8;&#x4E3A; 0 &#x7684;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#xFF08;&#x5373;&#xFF0C; &#x4E0D;&#x7CBE;&#x786E;&#x5B9E;&#x6570;&#xFF09;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#x4E0D;&#x7CBE;&#x786E; complexnums &#x6216; flonums. &#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x7684;&#x64CD;&#x4F5C;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;&#x4E0D;&#x7CBE;&#x786E; complexnum &#x548C; flonum&#xFF08;&#x5408;&#x79F0;&#x4E3A;&quot;cflonums&quot;&#xFF09;&#x5B9E;&#x53C2;&#x7684;&#x7EC4;&#x5408;&#x3002;</p>
+<p>&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x5728;&#x4F18;&#x5316;&#x7EA7;&#x522B; 3 &#x6267;&#x884C;&#x6700;&#x5C11;&#x5316;&#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#xFF1B;&#x5728;&#x66F4;&#x4F4E;&#x7684;&#x4F18;&#x5316;&#x7EA7;&#x522B;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x5168;&#x9762;&#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x8FC7;&#x7A0B;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x524D;&#x7F00; &quot;cfl&quot; &#x5F00;&#x59CB;&#xFF0C;&#x4EE5;&#x533A;&#x5206;&#x4E8E;&#x5B83;&#x4EEC;&#x5BF9;&#x5E94;&#x7684;&#x901A;&#x7528;&#x7248;&#x672C;&#x3002;</p>
+<p>procedure: (fl-make-rectangular flonum1 flonum2)</p>
+<p>returns: &#x4E00;&#x4E2A;&#x4E0D;&#x7CBE;&#x786E; complexnum</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x901A;&#x8FC7; fl-make-rectangular &#x751F;&#x6210;&#x7684;&#x4E0D;&#x7CBE;&#x786E; complexnum&#xFF0C;&#x5B9E;&#x90E8;&#x7B49;&#x4E8E; flonum1, &#x800C;&#x865A;&#x90E8;&#x7B49;&#x4E8E; flonum2.</p>
+<pre><code>(fl-make-rectangular 2.0 -3.0) =&gt; 2.0-3.0i
+(fl-make-rectangular 2.0 0.0) =&gt; 2.0+0.0i
+(fl-make-rectangular 2.0 -0.0) =&gt; 2.0-0.0i
+</code></pre><p>procedure: (cfl-real-part cflonum)</p>
+<p>returns: cflonum &#x7684;&#x5B9E;&#x90E8;</p>
+<p>procedure: (cfl-imag-part cflonum)</p>
+<p>returns: cflonum &#x7684;&#x865A;&#x90E8;</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(cfl-real-part 2.0-3.0i) =&gt; 2.0
+(cfl-imag-part 2.0-3.0i) =&gt; -3.0
+(cfl-imag-part 2.0-0.0i) =&gt; -0.0
+(cfl-imag-part 2.0-inf.0i) =&gt; -inf.0
+</code></pre><p>procedure: (cfl= cflonum &#x2026;)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x5B9E;&#x53C2;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(cfl= 7.0+0.0i 7.0) =&gt; #t
+(cfl= 1.0+2.0i 1.0+2.0i) =&gt; #t
+(cfl= 1.0+2.0i 1.0-2.0i) =&gt; #f
+</code></pre><p>procedure: (cfl+ cflonum &#x2026;)</p>
+<p>procedure: (cfl* cflonum &#x2026;)</p>
+<p>procedure: (cfl- cflonum1 cflonum2 &#x2026;)</p>
+<p>procedure: (cfl/ cflonum1 cflonum2 &#x2026;)</p>
+<p>returns: &#x4E00;&#x4E2A; cflonum</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x8BA1;&#x7B97;&#x4E0D;&#x7CBE;&#x786E;&#x590D;&#x6570;&#x6570;&#x503C;&#x7684;&#x548C;&#xFF0C;&#x5DEE;&#xFF0C;&#x79EF;&#x6216;&#x5546;&#xFF0C;&#x4E0D;&#x8BBA;&#x8FD9;&#x4E9B;&#x6570;&#x503C;&#x662F;&#x4EE5; flonums &#x8868;&#x793A;&#xFF0C;&#x6216;&#x4EE5;&#x4E0D;&#x7CBE;&#x786E; complexnums &#x8868;&#x793A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C; cfl+&#x6536;&#x5230; 2 &#x4E2A; flonum &#x5B9E;&#x53C2; a &#x548C; b&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x5B83;&#x4EEC;&#x7684;&#x548C; a + b; &#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x548C; fl+ &#x7684;&#x884C;&#x4E3A;&#x4E00;&#x6837;&#x3002;&#x82E5; 2 &#x4E2A;&#x5B9E;&#x53C2;&#x4E3A;&#x4E0D;&#x7CBE;&#x786E; complexnum a + bi &#x548C; c + di, &#x5B83;&#x8FD4;&#x56DE;&#x548C; (a + c) + (b + d)i. &#x82E5; 1 &#x4E2A;&#x5B9E;&#x53C2;&#x4E3A; flonum a&#xFF0C;&#x800C;&#x53E6;&#x4E00;&#x4E2A;&#x4E3A;&#x4E0D;&#x7CBE;&#x786E; complexnum c + di, cfl+ &#x8FD4;&#x56DE; (a + c) + di.</p>
+<p>&#x5F53;&#x4F20;&#x5165; 0 &#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;cfl+ &#x8FD4;&#x56DE; 0.0&#xFF0C;&#x800C; cfl* &#x8FD4;&#x56DE; 1.0. &#x5F53;&#x4F20;&#x5165; 1 &#x4E2A;&#x5B9E;&#x53C2;&#xFF0C;cfl- &#x8FD4;&#x56DE;&#x5B9E;&#x53C2;&#x7684;&#x52A0;&#x6CD5;&#x9006;&#x5143;&#xFF0C;&#x800C; cfl/ &#x8FD4;&#x56DE;&#x5B9E;&#x53C2;&#x7684;&#x4E58;&#x6CD5;&#x9006;&#x5143;&#x3002;&#x5F53;&#x4F20;&#x5165; 3 &#x4E2A;&#x6216;&#x66F4;&#x591A;&#x5B9E;&#x53C2;&#xFF0C;cfl- &#x8FD4;&#x56DE;&#x5176;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x4E0E;&#x5176;&#x4F59;&#x5B9E;&#x53C2;&#x4E4B;&#x548C;&#x7684;&#x5DEE;&#xFF0C;&#x800C; cfl/ &#x8FD4;&#x56DE;&#x5176;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x4E0E;&#x5176;&#x4F59;&#x5B9E;&#x53C2;&#x4E4B;&#x79EF;&#x7684;&#x5546;&#x3002;</p>
+<pre><code>(cfl+) =&gt; 0.0
+(cfl*) =&gt; 1.0
+(cfl- 5.0+1.0i) =&gt; -5.0-1.0i
+(cfl/ 2.0+2.0i) =&gt; 0.25-0.25i
+
+(cfl+ 1.0+2.2i -3.7+5.3i) =&gt; -2.7+7.5i
+(cfl+ 1.0 -5.3) =&gt; -4.3
+(cfl+ 1.0 2.0 -5.3i) =&gt; 3.0-5.3i
+(cfl- 1.0+2.5i -3.7) =&gt; 4.7+2.5i
+(cfl* 1.0+2.0i 3.0+4.0i) =&gt; -5.0+10.0i
+(cfl/ -5.0+10.0i 1.0+2.0i 2.0) =&gt; 1.5+2.0i
+</code></pre><p>procedure: (cfl-conjugate cflonum)</p>
+<p>returns: cflonum &#x7684;&#x5171;&#x8F6D;&#x590D;&#x6570;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5F53;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x5B9E;&#x53C2; a + bi &#x65F6;&#xFF0C;&#x8FC7;&#x7A0B; cfl-conjugate &#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x5171;&#x8F6D;&#x590D;&#x6570; a + (-b)i.</p>
+<p>&#x53C2;&#x89C1; conjugate, &#x5176;&#x4E3A;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x901A;&#x7528;&#x7248;&#x672C;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x590D;&#x6570;&#x7684;&#x4EFB;&#x4F55;&#x6709;&#x6548;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x5171;&#x8F6D;&#x590D;&#x6570;&#x3002;</p>
+<pre><code>(cfl-conjugate 3.0) =&gt; 3.0
+(cfl-conjugate 3.0+4.0i) =&gt; 3.0-4.0i
+(cfl-conjugate 1e-20-2e-30i) =&gt; 1e-20+2e-30i
+</code></pre><p>procedure: (cfl-magnitude-squared cflonum)</p>
+<p>returns: cflonum &#x7684;&#x6A21;&#x7684;&#x5E73;&#x65B9;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5F53;&#x4F20;&#x5165; 1 &#x4E2A;&#x4E0D;&#x7CBE;&#x786E;&#x7684;&#x590D;&#x6570;&#x5B9E;&#x53C2; a + bi, &#x8FC7;&#x7A0B; cfl-magnitude-squared &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x6B64;&#x5B9E;&#x53C2;&#x7684;&#x6A21;&#x7684;&#x5E73;&#x65B9;&#x7684; flonum, &#x5373;&#xFF0C;a<sup>2</sup> + b<sup>2</sup>.</p>
+<p>&#x53C2;&#x89C1; magnitude-squared, &#x5176;&#x4E3A;&#x6B64;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x901A;&#x7528;&#x7248;&#x672C;&#xFF0C;&#x5BF9;&#x4E8E; 1 &#x4E2A;&#x590D;&#x6570;&#x7684;&#x4EFB;&#x4F55;&#x6709;&#x6548;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x6A21;&#x7684;&#x5E73;&#x65B9;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x7C7B;&#x4F3C;&#x4E8E;&#x8FC7;&#x7A0B; magnitude, &#x5176;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x590D;&#x6570;&#x5B9E;&#x53C2;&#x7684;&#x6A21;&#xFF0C;sqrt(a2 + b2).</p>
+<pre><code>(cfl-magnitude-squared 3.0) =&gt; 9.0
+(cfl-magnitude-squared 3.0-4.0i) =&gt; 25.0
+</code></pre><h2 id="section-85-&#x4F4D;&#x548C;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;">Section 8.5. &#x4F4D;&#x548C;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;</h2>
+<p>Chez Scheme &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x4EE5;&#x652F;&#x6301;&#x628A;&#x7CBE;&#x786E;&#x6574;&#x6570; (fixnums &#x548C; bignums) &#x4F5C;&#x4E3A;&#x4F4D;&#x96C6;&#x5408;&#x6216;&#x4F4D;&#x5E8F;&#x5217;&#x6765;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#x5305;&#x62EC; logand&#xFF08;&#x9010;&#x4F4D;&#x7684;&#x903B;&#x8F91;&#x4E0E;&#xFF09;&#xFF0C;logior&#xFF08;&#x9010;&#x4F4D;&#x7684;&#x903B;&#x8F91;&#x6216;&#xFF09;&#xFF0C;logxor&#xFF08;&#x9010;&#x4F4D;&#x7684;&#x903B;&#x8F91;&#x5F02;&#x6216;&#xFF09;&#xFF0C;lognot&#xFF08;&#x9010;&#x4F4D;&#x7684;&#x903B;&#x8F91;&#x975E;&#xFF09;&#xFF0C;logtest&#xFF08;&#x6D4B;&#x8BD5;&#x591A;&#x4F4D;&#xFF09;&#xFF0C;logbit?&#xFF08;&#x6D4B;&#x8BD5;&#x5355;&#x4E2A;&#x4F4D;&#xFF09;&#xFF0C;logbit0&#xFF08;&#x91CD;&#x7F6E;&#x5355;&#x4E2A;&#x4F4D;&#xFF09;&#xFF0C;logbit1&#xFF08;&#x8BBE;&#x7F6E;&#x5355;&#x4E2A;&#x4F4D;&#xFF09;&#xFF0C;&#x4EE5;&#x53CA; ash&#xFF08;&#x7B97;&#x672F;&#x79FB;&#x4F4D;&#xFF09;&#x3002;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#x5747;&#x628A;&#x5B83;&#x7684;&#x5B9E;&#x53C2;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x8BBA;&#x8FD9;&#x4E9B;&#x5B9E;&#x53C2;&#x7684;&#x5E95;&#x5C42;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x8FD9;&#x79CD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x53EF;&#x88AB;&#x5229;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x65E0;&#x7A77;&#x96C6;&#x5408;&#xFF1A;a negative number represents an infinite number of one bits beyond the leftmost zero, and a nonnegative number represents an infinite number of zero bits beyond the leftmost one bit.</p>
+<p>&#x4E5F;&#x63D0;&#x4F9B;&#x4E86; fixnum &#x76F8;&#x5E94;&#x7248;&#x672C;&#x7684;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x6BD4;&#x5982; fxlogand, fxlogior, fxlogxor, fxlognot, fxlogtest, fxlogbit?, fxlogbit0, &#x4EE5;&#x53CA; fxlogbit1. &#x8FD8;&#x6709;&#x4E09;&#x4E2A;&#x7528;&#x4E8E;&#x79FB;&#x4F4D;&#x7684; fixnum &#x64CD;&#x4F5C;&#x7B26;: fxsll&#xFF08;&#x903B;&#x8F91;&#x5DE6;&#x79FB;&#x4F4D;&#xFF09;&#xFF0C;fxsrl&#xFF08;&#x903B;&#x8F91;&#x53F3;&#x79FB;&#x4F4D;&#xFF09;&#xFF0C;fxsra&#xFF08;&#x7B97;&#x672F;&#x53F3;&#x79FB;&#x4F4D;&#xFF09;&#x3002;&#x903B;&#x8F91;&#x548C;&#x7B97;&#x672F;&#x79FB;&#x4F4D;&#x53EA;&#x5728;&#x53F3;&#x79FB;&#x4F4D;&#x4E0A;&#x6709;&#x5DEE;&#x522B;&#x3002;&#x903B;&#x8F91;&#x53F3;&#x79FB;&#x4F4D;&#x5728;&#x6700;&#x5DE6;&#x7AEF;&#x586B;&#x5145; 0&#xFF0C;&#x800C;&#x7B97;&#x672F;&#x53F3;&#x79FB;&#x4F4D;&#x5219;&#x590D;&#x5236;&#x7B26;&#x53F7;&#x4F4D;&#x3002;</p>
+<p>&#x5BF9;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x903B;&#x8F91;&#x79FB;&#x4F4D;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x6570;&#x6CA1;&#x6709;&#x5FC5;&#x987B;&#x79FB;&#x4F4D;&#x7684;&#x201C;&#x6700;&#x5DE6;&#x7AEF;&#x201D;&#x3002;</p>
+<p>procedure: (logand int &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; int &#x2026;&#x7684;&#x903B;&#x8F91;&#x4E0E;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;logand &#x8FD4;&#x56DE;-1&#xFF0C;&#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x8BBE;&#x4E3A; 1.</p>
+<pre><code>(logand) =&gt; -1
+(logand 15) =&gt; 15
+(logand -1 -1) =&gt; -1
+(logand -1 0) =&gt; 0
+(logand 5 3) =&gt; 1
+(logand #x173C8D95 7) =&gt; 5
+(logand #x173C8D95 -8) =&gt; #x173C8D90
+(logand #b1100 #b1111 #b1101) =&gt; #b1100
+</code></pre><p>procedure: (logior int &#x2026;)</p>
+<p>procedure: (logor int &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; int &#x2026;&#x7684;&#x903B;&#x8F91;&#x6216;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;logior &#x8FD4;&#x56DE; 0&#xFF0C;&#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x88AB;&#x91CD;&#x7F6E;&#x3002;</p>
+<pre><code>(logior) =&gt; 0
+(logior 15) =&gt; 15
+(logior -1 -1) =&gt; -1
+(logior -1 0) =&gt; -1
+(logior 5 3) =&gt; 7
+(logior #b111000 #b101010) =&gt; #b111010
+(logior #b1000 #b0100 #b0010) =&gt; #b1110
+(apply logior &apos;(1 2 4 8 16)) =&gt; 31
+</code></pre><p>procedure: (logxor int &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; int &#x2026;&#x7684;&#x903B;&#x8F91;&#x5F02;&#x6216;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;logxor &#x8FD4;&#x56DE; 0&#xFF0C;&#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x88AB;&#x91CD;&#x7F6E;&#x3002;</p>
+<pre><code>(logxor) =&gt; 0
+(logxor 15) =&gt; 15
+(logxor -1 -1) =&gt; 0
+(logxor -1 0) =&gt; -1
+(logxor 5 3) =&gt; 6
+(logxor #b111000 #b101010) =&gt; #b010010
+(logxor #b1100 #b0100 #b0110) =&gt; #b1110
+</code></pre><p>procedure: (lognot int)</p>
+<p>returns: int &#x7684;&#x903B;&#x8F91;&#x975E;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<pre><code>(lognot -1) =&gt; 0
+(lognot 0) =&gt; -1
+(lognot 7) =&gt; -8
+(lognot -8) =&gt; 7
+</code></pre><p>procedure: (logbit? index int)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x6307;&#x5B9A;&#x4F4D;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; 1&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728; int &#x7684;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;logbit? &#x8FD4;&#x56DE;#t, &#x5426;&#x5219;&#x8FD4;&#x56DE;#f. &#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x6700;&#x4F4E;&#x4F4D;&#x5411;&#x6700;&#x9AD8;&#x4F4D;&#x6570;&#x3002;&#x7D22;&#x5F15;&#x6CA1;&#x6709;&#x4E0A;&#x9650;&#xFF1B;&#x5BF9;&#x4E8E;&#x975E;&#x8D1F;&#x7684; int&#xFF0C;&#x5728;&#x6700;&#x9AD8;&#x7684;&#x8BBE;&#x7F6E;&#x4F4D;&#x4EE5;&#x4E0A;&#x7684;&#x4F4D;&#x5747;&#x88AB;&#x5F53;&#x4F5C; 0&#xFF0C;&#x800C;&#x5BF9;&#x8D1F;&#x503C;&#xFF0C;&#x5728;&#x6700;&#x9AD8;&#x7684;&#x91CD;&#x7F6E;&#x4F4D;&#x4EE5;&#x4E0A;&#x7684;&#x4F4D;&#x90FD;&#x88AB;&#x5F53;&#x4F5C; 1.</p>
+<p>logbit? &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (k n) (not (zero? (logand n (ash 1 k)))))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(logbit? 0 #b1110) =&gt; #f
+(logbit? 1 #b1110) =&gt; #t
+(logbit? 2 #b1110) =&gt; #t
+(logbit? 3 #b1110) =&gt; #t
+(logbit? 4 #b1110) =&gt; #f
+(logbit? 100 #b1110) =&gt; #f
+
+(logbit? 0 -6) =&gt; #f  ; the two&apos;s complement of -6 is 1...1010
+(logbit? 1 -6) =&gt; #t
+(logbit? 2 -6) =&gt; #f
+(logbit? 3 -6) =&gt; #t
+(logbit? 100 -6) =&gt; #t
+
+(logbit? (random 1000000) 0) =&gt; #f
+(logbit? (random 1000000) -1) =&gt; #t
+
+(logbit? 20000 (ash 1 20000)) =&gt; #t
+</code></pre><p>procedure: (logtest int1 int2)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x4EFB;&#x4F55;&#x5171;&#x540C;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x7684;&#x6574;&#x6570;&#xFF08;fixnums &#x6216; bignums&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6709;&#x4EFB;&#x4F55;&#x4F4D;&#x5728;&#x4E24;&#x4E2A;&#x5B9E;&#x53C2;&#x4E2D;&#x90FD;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5219; logtest &#x8FD4;&#x56DE;#t. &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5B9E;&#x53C2;&#x4E2D;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5171;&#x540C;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5219;&#x8FD4;&#x56DE;#f.</p>
+<p>logtest &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (n1 n2) (not (zero? (logand n1 n2))))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(logtest #b10001 #b1110) =&gt; #f
+(logtest #b10101 #b1110) =&gt; #t
+(logtest #b111000 #b110111) =&gt; #t
+
+(logtest #b101 -6) =&gt; #f  ; the two&apos;s complement of -6 is 1...1010
+(logtest #b1000 -6) =&gt; #t
+(logtest 100 -6) =&gt; #t
+
+(logtest (+ (random 1000000) 1) 0) =&gt; #f
+(logtest (+ (random 1000000) 1) -1) =&gt; #t
+
+(logtest (ash #b101 20000) (ash #b111 20000)) =&gt; #t
+</code></pre><p>procedure: (logbit0 index int)</p>
+<p>returns: &#x628A; int &#x5728;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x6E05; 0 &#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<p>libraries: (chezscheme)</p>
+<p>index &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x8D1F;&#x7684;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;int &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF08;fixnum &#x6216; bignum&#xFF09;&#xFF0C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x4F4E;&#x4F4D;&#x5230;&#x9AD8;&#x4F4D;&#x8BA1;&#x6570;&#x3002;&#x548C; logbit?&#x4E00;&#x6837;&#xFF0C;&#x7D22;&#x5F15;&#x6CA1;&#x6709;&#x4E0A;&#x9650;&#x3002;</p>
+<p>logbit0 &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (i n) (logand (lognot (ash 1 i)) n))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(logbit0 3 #b10101010) =&gt; #b10100010
+(logbit0 4 #b10101010) =&gt; #b10101010
+(logbit0 0 -1) =&gt; -2
+</code></pre><p>procedure: (logbit1 index int)</p>
+<p>returns: &#x628A; int &#x5728;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x8BBE;&#x4E3A; 1 &#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<p>libraries: (chezscheme)</p>
+<p>index &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x8D1F;&#x7684;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;int &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF08;fixnum &#x6216; bignum&#xFF09;&#xFF0C;&#x4E14;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x4F4E;&#x4F4D;&#x5230;&#x9AD8;&#x4F4D;&#x8BA1;&#x6570;&#x3002;&#x548C; logbit?&#x4E00;&#x6837;&#xFF0C;&#x7D22;&#x5F15;&#x6CA1;&#x6709;&#x4E0A;&#x9650;&#x3002;</p>
+<p>logbit1 &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (i n) (logor (ash 1 i) n))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(logbit1 3 #b10101010) =&gt; #b10101010
+(logbit1 4 #b10101010) =&gt; #b10111010
+(logbit1 4 0) =&gt; #b10000
+(logbit1 0 -2) =&gt; -1
+</code></pre><p>procedure: (ash int count)</p>
+<p>returns: int &#x7B97;&#x672F;&#x5DE6;&#x79FB; count &#x4F4D;&#x7684;&#x7ED3;&#x679C;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x4E24;&#x4E2A;&#x5B9E;&#x53C2;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x5982;&#x679C; count &#x662F;&#x8D1F;&#x6570;&#xFF0C;&#x5219; int &#x53F3;&#x79FB; -count &#x4F4D;&#x3002;</p>
+<pre><code>(ash 8 0) =&gt; 8
+(ash 8 2) =&gt; 32
+(ash 8 -2) =&gt; 2
+(ash -1 2) =&gt; -4
+(ash -1 -2) =&gt; -1
+</code></pre><p>procedure: (fxlogand fixnum &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; fixnum &#x2026;&#x7684;&#x903B;&#x8F91;&#x4E0E;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5747;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;fxlogand &#x8FD4;&#x56DE; -1, &#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x8BBE;&#x4E3A; 1.</p>
+<pre><code>(fxlogand) =&gt; -1
+(fxlogand 15) =&gt; 15
+(fxlogand -1 -1) =&gt; -1
+(fxlogand -1 0) =&gt; 0
+(fxlogand 5 3) =&gt; 1
+(fxlogand #b111000 #b101010) =&gt; #b101000
+(fxlogand #b1100 #b1111 #b1101) =&gt; #b1100
+</code></pre><p>procedure: (fxlogior fixnum &#x2026;)</p>
+<p>procedure: (fxlogor fixnum &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; fixnum &#x2026;&#x7684;&#x903B;&#x8F91;&#x6216;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5747;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;fxlogior &#x8FD4;&#x56DE; 0, &#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x88AB;&#x91CD;&#x7F6E;&#x3002;</p>
+<pre><code>(fxlogior) =&gt; 0
+(fxlogior 15) =&gt; 15
+(fxlogior -1 -1) =&gt; -1
+(fxlogior -1 0) =&gt; -1
+(fxlogior #b111000 #b101010) =&gt; #b111010
+(fxlogior #b1000 #b0100 #b0010) =&gt; #b1110
+(apply fxlogior &apos;(1 2 4 8 16)) =&gt; 31
+</code></pre><p>procedure: (fxlogxor fixnum &#x2026;)</p>
+<p>returns: &#x5B9E;&#x53C2; fixnum &#x2026;&#x7684;&#x903B;&#x8F91;&#x5F02;&#x6216;</p>
+<p>libraries: (chezscheme)</p>
+<p>The arguments are treated as two&apos;s complement integers, regardless of the underlying representation. With no arguments, fxlogxor returns 0, i.e., all bits reset.
+&#x5B9E;&#x53C2;&#x5747;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4E0D;&#x4F20;&#x5165;&#x5B9E;&#x53C2;&#x65F6;&#xFF0C;fxlogxor &#x8FD4;&#x56DE; 0, &#x5373;&#xFF0C;&#x6240;&#x6709;&#x4F4D;&#x90FD;&#x88AB;&#x91CD;&#x7F6E;&#x3002;</p>
+<pre><code>(fxlogxor) =&gt; 0
+(fxlogxor 15) =&gt; 15
+(fxlogxor -1 -1) =&gt; 0
+(fxlogxor -1 0) =&gt; -1
+(fxlogxor 5 3) =&gt; 6
+(fxlogxor #b111000 #b101010) =&gt; #b010010
+(fxlogxor #b1100 #b0100 #b0110) =&gt; #b1110
+</code></pre><p>procedure: (fxlognot fixnum)</p>
+<p>returns: fixnum &#x7684;&#x903B;&#x8F91;&#x975E;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<pre><code>(fxlognot -1) =&gt; 0
+(fxlognot 0) =&gt; -1
+(fxlognot 1) =&gt; -2
+(fxlognot -2) =&gt; 1
+</code></pre><p>procedure: (fxlogbit? index fixnum)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x6307;&#x5B9A;&#x4F4D;&#x662F; 1, &#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>index &#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F; fixnum. fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x5982;&#x679C; fixnum &#x5728;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5219; fxlogbit? &#x8FD4;&#x56DE; #t, &#x5426;&#x5219;&#x8FD4;&#x56DE;#f. &#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x6700;&#x4F4E;&#x4F4D;&#x5411;&#x6700;&#x9AD8;&#x4F4D;&#x8BA1;&#x6570;&#x3002;&#x7D22;&#x5F15;&#x53EA;&#x53D7;&#x9650; fixnum &#x7684;&#x8303;&#x56F4;&#xFF1B;&#x5BF9;&#x4E8E;&#x975E;&#x8D1F;&#x7684; int&#xFF0C;&#x5728;&#x6700;&#x9AD8;&#x7684;&#x8BBE;&#x7F6E;&#x4F4D;&#x4EE5;&#x4E0A;&#x7684;&#x4F4D;&#x5747;&#x88AB;&#x5F53;&#x4F5C; 0&#xFF0C;&#x800C;&#x5BF9;&#x8D1F;&#x503C;&#xFF0C;&#x5728;&#x6700;&#x9AD8;&#x7684;&#x91CD;&#x7F6E;&#x4F4D;&#x4EE5;&#x4E0A;&#x7684;&#x4F4D;&#x90FD;&#x88AB;&#x5F53;&#x4F5C; 1.</p>
+<pre><code>(fxlogbit? 0 #b1110) =&gt; #f
+(fxlogbit? 1 #b1110) =&gt; #t
+(fxlogbit? 2 #b1110) =&gt; #t
+(fxlogbit? 3 #b1110) =&gt; #t
+(fxlogbit? 4 #b1110) =&gt; #f
+(fxlogbit? 100 #b1110) =&gt; #f
+
+(fxlogbit? 0 -6) =&gt; #f  ; the two&apos;s complement of -6 is 1...1010
+(fxlogbit? 1 -6) =&gt; #t
+(fxlogbit? 2 -6) =&gt; #f
+(fxlogbit? 3 -6) =&gt; #t
+(fxlogbit? 100 -6) =&gt; #t
+
+(fxlogbit? (random 1000000) 0) =&gt; #f
+(fxlogbit? (random 1000000) -1) =&gt; #t
+</code></pre><p>procedure: (fxlogtest fixnum1 fixnum2)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x4EFB;&#x4F55;&#x5171;&#x540C;&#x4F4D;&#x4E3A; 1&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5B9E;&#x53C2;&#x5747;&#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6709;&#x4EFB;&#x4F55;&#x4F4D;&#x5728;&#x4E24;&#x4E2A;&#x5B9E;&#x53C2;&#x4E2D;&#x5747;&#x4E3A; 1&#xFF0C;&#x5219; fxlogtest &#x8FD4;&#x56DE; #t. &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5B9E;&#x53C2;&#x4E2D;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5171;&#x540C;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5219;&#x8FD4;&#x56DE; #f.</p>
+<pre><code>(fxlogtest #b10001 #b1110) =&gt; #f
+(fxlogtest #b10101 #b1110) =&gt; #t
+(fxlogtest #b111000 #b110111) =&gt; #t
+
+(fxlogtest #b101 -6) =&gt; #f  ; the two&apos;s complement of -6 is 1...1010
+(fxlogtest #b1000 -6) =&gt; #t
+(fxlogtest 100 -6) =&gt; #t
+
+(fxlogtest (+ (random 1000000) 1) 0) =&gt; #f
+(fxlogtest (+ (random 1000000) 1) -1) =&gt; #t
+</code></pre><p>procedure: (fxlogbit0 index fixnum)</p>
+<p>returns: fixnum &#x5728;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x88AB;&#x6E05;&#x96F6;&#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<p>libraries: (chezscheme)</p>
+<p>fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;index &#x5FC5;&#x987B;&#x975E;&#x8D1F;&#xFF0C;&#x4E14;&#x5C0F;&#x4E8E;&#x4E00;&#x4E2A; fixnum &#x4E2D;&#x7684;&#x4F4D;&#x6570;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7B26;&#x53F7;&#x4F4D;&#xFF09;&#xFF0C;&#x5373;&#xFF0C;&#x5C0F;&#x4E8E; (integer-length (most-positive-fixnum)).&#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x6700;&#x4F4E;&#x4F4D;&#x5411;&#x6700;&#x9AD8;&#x4F4D;&#x8BA1;&#x6570;&#x3002;</p>
+<p>fxlogbit0 &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (i n) (fxlogand (fxlognot (fxsll 1 i)) n))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(fxlogbit0 3 #b10101010) =&gt; #b10100010
+(fxlogbit0 4 #b10101010) =&gt; #b10101010
+(fxlogbit0 0 -1) =&gt; -2
+</code></pre><p>procedure: (fxlogbit1 index fixnum)</p>
+<p>returns: fixnum &#x5728;&#x7D22;&#x5F15; index &#x5904;&#x7684;&#x4F4D;&#x88AB;&#x8BBE;&#x4E3A; 1 &#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<p>libraries: (chezscheme)</p>
+<p>fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;index &#x5FC5;&#x987B;&#x975E;&#x8D1F;&#xFF0C;&#x4E14;&#x5C0F;&#x4E8E;&#x4E00;&#x4E2A; fixnum &#x4E2D;&#x7684;&#x4F4D;&#x6570;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7B26;&#x53F7;&#x4F4D;&#xFF09;&#xFF0C;&#x5373;&#xFF0C;&#x5C0F;&#x4E8E; (integer-length (most-positive-fixnum)).&#x7D22;&#x5F15;&#x57FA;&#x4E8E; 0&#xFF0C;&#x4ECE;&#x6700;&#x4F4E;&#x4F4D;&#x5411;&#x6700;&#x9AD8;&#x4F4D;&#x8BA1;&#x6570;&#x3002;</p>
+<p>fxlogbit1 &#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code>(lambda (i n) (fxlogor (fxsll 1 i) n))
+</code></pre><p>&#x4F46;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(fxlogbit1 3 #b10101010) =&gt; #b10101010
+(fxlogbit1 4 #b10101010) =&gt; #b10111010
+(fxlogbit1 4 0) =&gt; #b10000
+(fxlogbit1 0 -2) =&gt; -1
+</code></pre><p>procedure: (fxsll fixnum count)</p>
+<p>returns: fixnum &#x5DE6;&#x79FB; count &#x4F4D;</p>
+<p>libraries: (chezscheme)</p>
+<p>fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;count &#x5FC5;&#x987B;&#x975E;&#x8D1F;&#xFF0C;&#x4E14;&#x4E0D;&#x5927;&#x4E8E;&#x4E00;&#x4E2A; fixnum &#x4E2D;&#x7684;&#x4F4D;&#x6570;&#xFF0C;&#x5373;&#xFF0C;(+ (integer-length (most-positive-fixnum)) 1). &#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x4E3A; fixnum&#xFF0C;&#x5219;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x7C7B;&#x578B;&#x7684; &amp;implementation-restriction &#x5F02;&#x5E38;&#x3002;</p>
+<pre><code>(fxsll 1 2) =&gt; 4
+(fxsll -1 2) =&gt; -4
+</code></pre><p>procedure: (fxsrl fixnum count)</p>
+<p>returns: fixnum &#x903B;&#x8F91;&#x53F3;&#x79FB; count &#x4F4D;</p>
+<p>libraries: (chezscheme)</p>
+<p>fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;count &#x5FC5;&#x987B;&#x975E;&#x8D1F;&#xFF0C;&#x4E14;&#x4E0D;&#x5927;&#x4E8E;&#x4E00;&#x4E2A; fixnum &#x4E2D;&#x7684;&#x4F4D;&#x6570;&#xFF0C;&#x5373;&#xFF0C;(+ (integer-length (most-positive-fixnum)) 1).</p>
+<pre><code>(fxsrl 4 2) =&gt; 1
+(= (fxsrl -1 1) (most-positive-fixnum)) =&gt; #t
+</code></pre><p>procedure: (fxsra fixnum count)</p>
+<p>returns: fixnum &#x7B97;&#x672F;&#x53F3;&#x79FB; count &#x4F4D;</p>
+<p>libraries: (chezscheme)</p>
+<p>fixnum &#x88AB;&#x4F5C;&#x4E3A;&#x8865;&#x7801;&#x6574;&#x6570;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x5E95;&#x5C42;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x3002;count &#x5FC5;&#x987B;&#x975E;&#x8D1F;&#xFF0C;&#x4E14;&#x4E0D;&#x5927;&#x4E8E;&#x4E00;&#x4E2A; fixnum &#x4E2D;&#x7684;&#x4F4D;&#x6570;&#xFF0C;&#x5373;&#xFF0C;(+ (integer-length (most-positive-fixnum)) 1).</p>
+<pre><code>(fxsra 64 3) =&gt; 8
+(fxsra -1 1) =&gt; -1
+(fxsra -64 3) =&gt; -8
+</code></pre><h2 id="section-86-&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;">Section 8.6. &#x968F;&#x673A;&#x6570;&#x751F;&#x6210;</h2>
+<p>procedure: (random real)</p>
+<p>returns: &#x5C0F;&#x4E8E; real &#x7684;&#x4E00;&#x4E2A;&#x975E;&#x8D1F;&#x4F2A;&#x968F;&#x673A;&#x6570;</p>
+<p>libraries: (chezscheme)</p>
+<p>real &#x5FC5;&#x987B;&#x662F;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x6216;&#x6B63;&#x7684;&#x4E0D;&#x7CBE;&#x786E;&#x5B9E;&#x6570;&#x3002;</p>
+<pre><code>(random 1) =&gt; 0
+(random 1029384535235) =&gt; 1029384535001, every now and then
+(random 1.0) =&gt; 0.5, every now and then
+</code></pre><p>thread parameter: random-seed</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x652F;&#x6301;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x5BF9;&#x8C61; random-seed &#x83B7;&#x53D6;&#x548C;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7684;&#x968F;&#x673A;&#x6570;&#x79CD;&#x5B50;&#x3002;</p>
+<p>&#x4E0D;&#x5E26;&#x5B9E;&#x53C2;&#x8C03;&#x7528;&#x65F6;&#xFF0C;random-seed &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x968F;&#x673A;&#x6570;&#x79CD;&#x5B50;&#x3002;&#x5F53;&#x5E26; 1 &#x4E2A;&#x5B9E;&#x53C2;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5B9E;&#x53C2;&#x5FC5;&#x987B;&#x662F; 1 &#x81F3; 2<sup>32</sup> -1 &#x4E4B;&#x95F4;&#x7684;&#x975E;&#x8D1F;&#x7CBE;&#x786E;&#x6574;&#x6570;&#xFF0C;&#x800C; random-seed &#x628A;&#x5F53;&#x524D;&#x7684;&#x968F;&#x673A;&#x6570;&#x79CD;&#x5B50;&#x8BBE;&#x4E3A;&#x6B64;&#x5B9E;&#x53C2;&#x7684;&#x503C;&#x3002;</p>
+<pre><code>(let ([s (random-seed)])
+  (let ([r1 (random 1.0)])
+    (random-seed s)
+    (eqv? (random 1.0) r1))) =&gt; #t
+</code></pre><h2 id="section-87-&#x5176;&#x5B83;&#x5404;&#x7C7B;&#x6570;&#x5B57;&#x64CD;&#x4F5C;">Section 8.7. &#x5176;&#x5B83;&#x5404;&#x7C7B;&#x6570;&#x5B57;&#x64CD;&#x4F5C;</h2>
+<p>procedure: (= num1 num2 num3 &#x2026;)</p>
+<p>procedure: (&lt; real1 real2 real3 &#x2026;)</p>
+<p>procedure: (&gt; real1 real2 real3 &#x2026;)</p>
+<p>procedure: (&lt;= real1 real2 real3 &#x2026;)</p>
+<p>procedure: (&gt;= real1 real2 real3 &#x2026;)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C;&#x5173;&#x7CFB;&#x6210;&#x7ACB;&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FD9;&#x4E9B;&#x8C13;&#x8BCD;&#x548C; R<sup>6</sup>RS &#x4E2D;&#x7684;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x5B83;&#x4EEC;&#x88AB;&#x6269;&#x5C55;&#x4E3A;&#x53EF;&#x63A5;&#x53D7; 1 &#x4E2A;&#x4EE5;&#x4E0A;&#x53C2;&#x6570;&#xFF0C;&#x800C;&#x975E; 2 &#x4E2A;&#x4EE5;&#x4E0A;&#x53C2;&#x6570;&#x3002;&#x5F53;&#x4F20;&#x5165; 1 &#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x8C13;&#x8BCD;&#x5747;&#x8FD4;&#x56DE; #t.</p>
+<pre><code>(&gt; 3/4) =&gt; #t
+(&lt; 3/4) =&gt; #t
+(= 3/4) =&gt; #t
+</code></pre><p>procedure: (1+ num)</p>
+<p>procedure: (add1 num)</p>
+<p>procedure: (1- num)</p>
+<p>procedure: (-1+ num)</p>
+<p>procedure: (sub1 num)</p>
+<p>returns: num &#x52A0; 1 &#x6216; num &#x51CF; 1</p>
+<p>libraries: (chezscheme)</p>
+<p>1+ &#x548C; add1 &#x7B49;&#x4EF7;&#x4E8E; (lambda (x) (+ x 1)); 1-, -1+, &#x548C; sub1 &#x7B49;&#x4EF7;&#x4E8E; (lambda (x) (- x 1)).</p>
+<pre><code>(define plus
+                                        ; x should be a nonnegative integer
+  (lambda (x y)
+    (if (zero? x)
+        y
+        (plus (1- x) (1+ y)))))
+
+(plus 7 8) =&gt; 15
+
+(define double
+                                        ; x should be a nonnegative integer
+  (lambda (x)
+    (if (zero? x)
+        0
+        (add1 (add1 (double (sub1 x)))))))
+
+(double 7) =&gt; 14
+</code></pre><p>procedure: (expt-mod int1 int2 int3)</p>
+<p>returns: int1 &#x7684; int2 &#x6B21;&#x65B9;&#xFF0C;&#x518D;&#x5BF9; int3 &#x53D6;&#x6A21;</p>
+<p>libraries: (chezscheme)</p>
+<p>int1, int2 &#x548C; int3 &#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x3002;expt-mod &#x91C7;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x4F7F;&#x5F97;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x6BD4; int3 &#x5927;&#x592A;&#x591A;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5F53; int2 &#x5F88;&#x5927;&#x65F6;&#xFF0C;expt-mod &#x8981;&#x6BD4;&#x7B49;&#x4EF7;&#x8FC7;&#x7A0B; (lambda (x y z) (modulo (expt x y) z)) &#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;</p>
+<pre><code>(expt-mod 2 4 3) =&gt; 1
+(expt-mod 2 76543 76543) =&gt; 2
+</code></pre><p>procedure: (isqrt n)</p>
+<p>returns: n &#x7684;&#x6574;&#x6570;&#x5E73;&#x65B9;&#x6839;</p>
+<p>libraries: (chezscheme)</p>
+<p>n &#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x3002;The integer square root of n is defined to be =&gt;.TODO</p>
+<pre><code>(isqrt 0) =&gt; 0
+(isqrt 16) =&gt; 4
+(isqrt 16.0) =&gt; 4.0
+(isqrt 20) =&gt; 4
+(isqrt 20.0) =&gt; 4.0
+(isqrt (* 2 (expt 10 20))) =&gt; 14142135623
+</code></pre><p>procedure: (integer-length n)</p>
+<p>returns: &#x53C2;&#x89C1;&#x4E0B;&#x6587;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FC7;&#x7A0B; integer-length &#x8FD4;&#x56DE; n &#x7684;&#x6700;&#x5C0F;&#x8865;&#x7801;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x7684;&#x4F4D;&#x6570;&#x957F;&#x5EA6;&#xFF0C;&#x5E76;&#x5047;&#x8BBE;&#x8D1F;&#x6570;&#x524D;&#x9762;&#x6709;&#x4E00;&#x4E2A;&#x4E3A; 1 &#x7684;&#x7B26;&#x53F7;&#x4F4D;&#x3002;&#x5BF9;&#x4E8E; 0&#xFF0C;integer-length &#x8FD4;&#x56DE; 0.</p>
+<pre><code>(integer-length 0) =&gt; 0
+(integer-length 1) =&gt; 1
+(integer-length 2) =&gt; 2
+(integer-length 3) =&gt; 2
+(integer-length 4) =&gt; 3
+(integer-length #b10000000) =&gt; 8
+(integer-length #b11111111) =&gt; 8
+(integer-length -1) =&gt; 0
+(integer-length -2) =&gt; 1
+(integer-length -3) =&gt; 2
+(integer-length -4) =&gt; 2
+</code></pre><p>procedure: (nonpositive? real)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; real &#x4E0D;&#x5927;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>nonpositive? &#x7B49;&#x4EF7;&#x4E8E; (lambda (x) (&lt;= x 0)).</p>
+<pre><code>(nonpositive? 128) =&gt; #f
+(nonpositive? 0.0) =&gt; #t
+(nonpositive? 1.8e-15) =&gt; #f
+(nonpositive? -2/3) =&gt; #t
+</code></pre><p>procedure: (nonnegative? real)</p>
+<p>&#x8FD4;&#x56DE;: &#x5982;&#x679C; real &#x4E0D;&#x5C0F;&#x4E8E; 0&#xFF0C;&#x5219;&#x4E3A; <code>#t</code>, &#x5426;&#x5219;&#x4E3A; <code>#f</code>.</p>
+<p>libraries: (chezscheme)</p>
+<p>nonnegative? &#x7B49;&#x4EF7;&#x4E8E; (lambda (x) (&gt;= x 0)).</p>
+<pre><code>(nonnegative? -65) =&gt; #f
+(nonnegative? 0) =&gt; #t
+(nonnegative? -0.0121) =&gt; #f
+(nonnegative? 15/16) =&gt; #t
+</code></pre><p>procedure: (conjugate num)</p>
+<p>returns: num &#x7684;&#x5171;&#x8F6D;&#x590D;&#x6570;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5F53;&#x8FC7;&#x7A0B; conjugate &#x4F20;&#x5165;&#x590D;&#x6570;&#x5B9E;&#x53C2; a + bi &#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x5171;&#x8F6D;&#x590D;&#x6570; a + (-b)i.</p>
+<pre><code>(conjugate 3.0+4.0i) =&gt; 3.0-4.0i
+(conjugate 1e-20-2e-30i) =&gt; 1e-20+2e-30i
+(conjugate 3) =&gt; 3
+</code></pre><p>procedure: (magnitude-squared num)</p>
+<p>returns: num &#x7684;&#x6A21;&#x7684;&#x5E73;&#x65B9;</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x5BF9;&#x8FC7;&#x7A0B; magnitude-squared &#x4F20;&#x5165;&#x590D;&#x6570;&#x5B9E;&#x53C2; a + bi &#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x6A21;&#x7684;&#x5E73;&#x65B9;&#xFF0C;&#x5373;&#xFF0C;a<sup>2</sup> + b<sup>2</sup>.</p>
+<pre><code>(magnitude-squared 3.0-4.0i) =&gt; 25.0
+(magnitude-squared 3.0) =&gt; 9.0
+</code></pre><p>procedure: (sinh num)</p>
+<p>procedure: (cosh num)</p>
+<p>procedure: (tanh num)</p>
+<p>returns: num &#x7684; hyperbolic sine, cosine, &#x6216; tangent</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(sinh 0.0) =&gt; 0.0
+(cosh 0.0) =&gt; 1.0
+(tanh -0.0) =&gt; -0.0
+</code></pre><p>procedure: (asinh num)</p>
+<p>procedure: (acosh num)</p>
+<p>procedure: (atanh num)</p>
+<p>returns: num &#x7684; hyperbolic arc sine, arc cosine, &#x6216; arc tangent</p>
+<p>libraries: (chezscheme)</p>
+<pre><code>(acosh 0.0) =&gt; 0.0+1.5707963267948966i
+(acosh 1.0) =&gt; 0.0
+(atanh -1.0) =&gt; -inf.0
+</code></pre><p>procedure: (string-&gt;number string)</p>
+<p>procedure: (string-&gt;number string radix)</p>
+<p>returns: string &#x6240;&#x8868;&#x793A;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x6216; #f</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x548C; R<sup>6</sup>RS &#x7248;&#x672C;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;&#x57FA;&#x6570;&#x53EF;&#x4EE5;&#x662F; 2 &#x81F3; 36&#xFF08;&#x4E24;&#x7AEF;&#x5305;&#x542B;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x610F;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;R<sup>6</sup>RS &#x7248;&#x672C;&#x8981;&#x6C42;&#x57FA;&#x6570;&#x5C5E;&#x4E8E;&#x96C6;&#x5408; {2,8,10,16}.</p>
+<pre><code>(string-&gt;number &quot;211012&quot; 3) =&gt; 559
+(string-&gt;number &quot;tobeornottobe&quot; 36) =&gt; 140613689159812836698
+</code></pre><p>procedure: (number-&gt;string num)</p>
+<p>procedure: (number-&gt;string num radix)</p>
+<p>procedure: (number-&gt;string num radix precision)</p>
+<p>returns: &#x4F5C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x79CD; num &#x7684;&#x5916;&#x90E8;&#x8868;&#x793A;&#x5F62;&#x5F0F;
+an external representation of num as a string</p>
+<p>libraries: (chezscheme)</p>
+<p>&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x548C; R<sup>6</sup>RS &#x7248;&#x672C;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;&#x57FA;&#x6570;&#x53EF;&#x4EE5;&#x662F; 2 &#x81F3; 36&#xFF08;&#x4E24;&#x7AEF;&#x5305;&#x542B;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x610F;&#x7CBE;&#x786E;&#x6574;&#x6570;&#x3002;R<sup>6</sup>RS &#x7248;&#x672C;&#x8981;&#x6C42;&#x57FA;&#x6570;&#x5C5E;&#x4E8E;&#x96C6;&#x5408; {2,8,10,16}.</p>
+<pre><code>(number-&gt;string 10000 4) =&gt; &quot;2130100&quot;
+(number-&gt;string 10000 27) =&gt; &quot;DJA&quot;
+</code></pre><p>Chez Scheme Version 9 User&apos;s Guide
+Copyright &#xA9; 2018 Cisco Systems, Inc.
+Licensed under the Apache License Version 2.0 (full copyright notice.).
+Revised January 2019 for Chez Scheme Version 9.5.1
+about this book </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="07.OperationsOnObjects.html" class="navigation navigation-prev " aria-label="Previous page: 07. 对象操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="09.InputOutputOperations.html" class="navigation navigation-next " aria-label="Next page: 09. 输入输出操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08. 数字操作","level":"1.10","depth":1,"next":{"title":"09. 输入输出操作","level":"1.11","depth":1,"path":"09.InputOutputOperations.md","ref":"09.InputOutputOperations.md","articles":[]},"previous":{"title":"07. 对象操作","level":"1.9","depth":1,"path":"07.OperationsOnObjects.md","ref":"07.OperationsOnObjects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08.NumericOperations.md","mtime":"2020-04-26T22:38:54.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T22:39:25.823Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,769 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>16. 兼容功能 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="15.ThreadSystem.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.Terminology.html">
+            
+                <a href="00.Terminology.html">
+            
+                    
+                    00. 术语表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01.Introduction.html">
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    01. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02.UsingChezScheme.html">
+            
+                <a href="02.UsingChezScheme.html">
+            
+                    
+                    02. 使用Chez Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03.Debugging.html">
+            
+                <a href="03.Debugging.html">
+            
+                    
+                    03. Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04.ForeignInterface.html">
+            
+                <a href="04.ForeignInterface.html">
+            
+                    
+                    04. 外部接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05.BindingForms.html">
+            
+                <a href="05.BindingForms.html">
+            
+                    
+                    05. 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06.ControlStructures.html">
+            
+                <a href="06.ControlStructures.html">
+            
+                    
+                    06. 控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07.OperationsOnObjects.html">
+            
+                <a href="07.OperationsOnObjects.html">
+            
+                    
+                    07. 对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08.NumericOperations.html">
+            
+                <a href="08.NumericOperations.html">
+            
+                    
+                    08. 数字操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09.InputOutputOperations.html">
+            
+                <a href="09.InputOutputOperations.html">
+            
+                    
+                    09. 输入输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10.LibrariesAndTop-levelPrograms.html">
+            
+                <a href="10.LibrariesAndTop-levelPrograms.html">
+            
+                    
+                    10. 库和顶层程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="11.SyntacticExtensionAndModules.html">
+            
+                <a href="11.SyntacticExtensionAndModules.html">
+            
+                    
+                    11. 语法扩展和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="12.SystemOperations.html">
+            
+                <a href="12.SystemOperations.html">
+            
+                    
+                    12. 系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="13.StorageManagement.html">
+            
+                <a href="13.StorageManagement.html">
+            
+                    
+                    13. 存储系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="14.ExpressionEditor.html">
+            
+                <a href="14.ExpressionEditor.html">
+            
+                    
+                    14. 扩展编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="15.ThreadSystem.html">
+            
+                <a href="15.ThreadSystem.html">
+            
+                    
+                    15. 线程系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18" data-path="16.CompatibilityFeatures.html">
+            
+                <a href="16.CompatibilityFeatures.html">
+            
+                    
+                    16. 兼容功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >16. 兼容功能</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;16&#x7AE0;-&#x517C;&#x5BB9;&#x529F;&#x80FD;-compatibility-features">&#x7B2C;16&#x7AE0; &#x517C;&#x5BB9;&#x529F;&#x80FD; (Compatibility Features)</h1>
+<p>&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684; Chez Scheme&#x4E2D;&#x5305;&#x542B;&#x7684;&#x51E0;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x4E0E;&#x8F83;&#x65E9;&#x7248;&#x672C;&#x7684;&#x7CFB;&#x7EDF;&#x517C;&#x5BB9;&#x3002;</p>
+<p><a href="#16.1">16.1&#x8282;</a> &#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x8868;&#x63A5;&#x53E3;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x4ECE;&#x73B0;&#x5728;&#x8D77;&#x88AB; R6RS&#x54C8;&#x5E0C;&#x8868;&#x63A5;&#x53E3;&#x6240;&#x53D6;&#x4EE3;&#x3002;<a href="#16.2">16.2&#x8282;</a> &#x63CF;&#x8FF0;&#x4E86;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x5B8F;&#x3002;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684; Chez Scheme&#x76F4;&#x63A5;&#x652F;&#x6301;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x5728;&#x5C06;&#x6765;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x53EF;&#x80FD;&#x4E0D;&#x518D;&#x652F;&#x6301;&#x3002;&#x65B0;&#x7A0B;&#x5E8F;&#x5E94;&#x6539;&#x7528; The Scheme Programming Language&#xFF0C;&#x7B2C;4&#x7248; [11]&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x6807;&#x51C6;&#x673A;&#x5236;&#x3002;</p>
+<p><a href="#16.3">16.3&#x8282;</a> &#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7C7B;&#x4F3C;&#x8BB0;&#x5F55;&#x7684;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x4E3A;&#x5411;&#x91CF;&#x800C;&#x4E0D;&#x662F;&#x65B0;&#x7684;&#x552F;&#x4E00;&#x7C7B;&#x578B;&#x7684;&#x673A;&#x5236;&#x3002;&#x65B0;&#x7A0B;&#x5E8F;&#x5E94;&#x6539;&#x7528; <code>define-record</code> (&#x5728;<a href="(../CSUG/07.OperationsOnObjects.html#7.15">7.15&#x8282;</a>)&#x4E2D;&#x4ECB;&#x7ECD;)&#x3002;</p>
+<p><a href="#16.4">16.4&#x8282;</a> &#x63CF;&#x8FF0;&#x4E86;&#x4E0E; Chez Scheme&#x4E00;&#x8D77;&#x5206;&#x53D1;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B; Chez Scheme&#x4E0D;&#x518D;&#x76F4;&#x63A5;&#x652F;&#x6301;&#x7684;&#x8868;&#x5355;&#x548C;&#x8FC7;&#x7A0B;&#x7684;&#x5B9A;&#x4E49;&#x3002;<!--Section 16.4 describes a compatibility file distributed with Chez Scheme that contains definitions for forms and procedures no longer supported directly by Chez Scheme.--></p>
+<p></p><h2 id="16.1">16.1&#x8282; &#x54C8;&#x5E0C;&#x8868; (Hash Tables)</h2>
+&#x8FD9;&#x91CC;&#x7684;&#x54C8;&#x5E0C;&#x8868;&#x8FC7;&#x7A0B;&#x88AB;<a href="../CSUG/07.OperationsOnObjects.html#7.12">&#x7B2C;7.12&#x8282;</a>&#x4E2D;&#x5217;&#x51FA;&#x7684;&#x65B0;&#x54C8;&#x5E0C;&#x8868;&#x8FC7;&#x7A0B;&#x6240;&#x53D6;&#x4EE3; (&#x539F;&#x6587;&#x662F; &quot;be obviated&quot;)&#x3002;<p></p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(make-hash-table)</code>
+<br>&#x8FC7;&#x7A0B;&#xFF1A;<code>(make-hash-table weak?)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x54C8;&#x5E0C;&#x8868;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86; <code>weak?</code>&#x53C2;&#x6570;&#x4E14;&#x8BE5;&#x53C2;&#x6570;&#x4E0D;&#x662F; <code>#f</code>&#xFF0C;&#x90A3;&#x4E48;&#x54C8;&#x5E0C;&#x8868;&#x662F;&#x5F31;&#x54C8;&#x5E0C;&#x8868;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5B83;&#x4E0D;&#x4FDD;&#x62A4;&#x5BC6;&#x94A5;&#x4E0D;&#x53D7;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;&#x7684;&#x5F71;&#x54CD;&#x3002;&#x5783;&#x573E;&#x56DE;&#x6536;&#x5668;&#x56DE;&#x6536;&#x7684;&#x952E;&#x5C06;&#x4ECE;&#x8868;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5173;&#x8054;&#x503C;&#x5C06;&#x5728;&#x4E0B;&#x6B21;&#x4FEE;&#x6539;&#x8868;&#x65F6;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x66F4;&#x65E9;&#x7684;&#x8BDD;&#xFF09;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(hash-table? obj)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x5982;&#x679C; <code>obj</code>&#x662F;&#x54C8;&#x5E0C;&#x8868;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>#t</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code>
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(put-hash-table! ht k v)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x672A;&#x6307;&#x5B9A;&#x7684;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p>ht&#x5FC5;&#x987B;&#x662F;&#x54C8;&#x5E0C;&#x8868;&#x3002;k&#x548C; v&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55; Scheme&#x503C;&#x3002;</p>
+<p><code>put-hash-table!</code> &#x4F1A;&#x5728; ht&#x4E2D;&#x5173;&#x8054;&#x503C; v&#x4E0E;&#x952E; k</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(get-hash-table ht k d)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p><code>get-hash-table</code>&#x8FD4;&#x56DE; ht&#x4E2D;&#x4E0E; k&#x5173;&#x8054;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C; ht&#x4E2D;&#x6CA1;&#x6709;&#x4E0E; k&#x76F8;&#x5173;&#x8054;&#x7684;&#x503C;&#xFF0C;&#x5219; <code>get-hash-table</code>&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C; d&#x3002;</p>
+<p>&#x952E;&#x4E4B;&#x95F4;&#x901A;&#x8FC7; <code>eq?</code>&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x88AB;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;&#x79FB;&#x52A8;&#xFF0C;&#x6240;&#x4EE5; <code>get-hash-table</code> &#x53EF;&#x80FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x54C8;&#x5E0C;&#x4E00;&#x4E9B;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x5F15;&#x8D77;&#x526F;&#x4F5C;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F7F;&#x7528; <code>get-hash-table</code>&#x4ECE;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5BF9;&#x540C;&#x4E00;&#x54C8;&#x5E0C;&#x8868;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x8BBF;&#x95EE;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(remove-hash-table! ht k)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x672A;&#x6307;&#x5B9A;&#x7684;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p><code>remove-hash-table!</code>&#x4ECE; ht&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x4F55;&#x4E0E; k&#x7684;&#x5173;&#x8054;&#x3002;</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(hash-table-map ht p)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x53C2;&#x89C1;&#x4EE5;&#x4E0B;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p><code>hash-table-map</code>&#x5C06; p&#x5E94;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x952E;&#xFF0C;&#x4EE5; ht&#x7684;&#x503C;&#x5173;&#x8054;(&#x4E0D;&#x6309;&#x7279;&#x5B9A;&#x987A;&#x5E8F;)&#xFF0C;&#x5E76;&#x518D;&#x6B21;&#x4EE5;&#x4E0D;&#x7279;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x503C;&#x7684;&#x5217;&#x8868;&#x3002;p&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x952E;&#x548C;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x8FC7;&#x7A0B;&#xFF1A;<code>(hash-table-for-each ht p)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x672A;&#x6307;&#x5B9A;&#x7684;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p>&#x6BCF;&#x4E2A;&#x54C8;&#x5E0C;&#x8868;&#x5C06; p&#x5E94;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x952E;&#xFF0C;&#x4EE5; ht&#x8868;&#x793A;&#x7684;&#x503C;&#x5173;&#x8054;&#xFF0C;&#x6CA1;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x4E0E; <code>hash-table-map</code>&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x4E0D;&#x521B;&#x5EFA;&#x503C;&#x5217;&#x8868;&#xFF1B;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x3002;p&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x952E;&#x548C;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<p></p><h2 id="16.2">16.2&#x8282; &#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x5B8F; (Extend-Syntax Macros)</h2>
+&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E86; <code>extend-syntax</code>&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x4E14;&#x6613;&#x4E8E;&#x4F7F;&#x7528;&#x7684;&#x57FA;&#x4E8E; &#x6A21;&#x5F0F;&#x5339;&#x914D;[27]&#x3002;&#x4F7F;&#x7528; <code>extend-syntax</code>&#x7F16;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x4E0E;&#x4F7F;&#x7528; <code>define-syntax</code>&#x548C; <code>syntax-case</code>&#x7F16;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x8F6C;&#x6362; &#x76F8;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#xFF0C;<code>extend-syntax</code>&#x4EA7;&#x751F;&#x7684;&#x8F6C;&#x6362;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x9075;&#x5FAA;&#x8BCD;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x3002;<p></p>
+<p>&#x901A;&#x5E38;&#x4E0D;&#x53EF;&#x80FD;&#x65E0;&#x7F1D;&#x5730;&#x5C06;&#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x5927;&#x5C0F;&#x5199;&#x7F16;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x62BD;&#x8C61;&#x4E0E;&#x4F7F;&#x7528;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x7F16;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x62BD;&#x8C61;&#x6DF7;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x901A;&#x5E38;&#x4F18;&#x9009;&#x5728;&#x4EFB;&#x4F55;&#x53EF;&#x80FD;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x3002;&#x5728;&#x8BED;&#x6CD5;&#x7528;&#x4F8B;&#x6269;&#x5C55;&#x5668;&#x4E2D;&#x5BF9;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x7684;&#x652F;&#x6301;&#x4EC5;&#x662F;&#x4F5C;&#x4E3A;&#x8FC1;&#x79FB;&#x5230;&#x8BED;&#x6CD5;&#x7528;&#x4F8B;&#x7684;&#x8F85;&#x52A9;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>(extend-syntax (name key ...) (pat fender template) ...)</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x672A;&#x6307;&#x5B9A;&#x7684;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p>&#x6807;&#x8BC6;&#x7B26;&#x540D;&#x79F0;&#x662F;&#x8981;&#x5B9A;&#x4E49;&#x7684;&#x8BED;&#x6CD5;&#x6269;&#x5C55;&#x540D;&#x7684;&#x540D;&#x79F0;&#x6216;&#x8BED;&#x6CD5;&#x5173;&#x952E;&#x5B57;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x6269;&#x5C55;&#x5668;&#x5904;&#x7406; <code>car</code>&#x4E3A; name&#x7684;&#x4EFB;&#x4F55;&#x5217;&#x8868;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x6B64;&#x8868;&#x8FBE;&#x5F0F;&#x8C03;&#x7528;&#x7531; <code>extend-syntax</code>&#x751F;&#x6210;&#x7684;&#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x3002;&#x5269;&#x4F59;&#x7684;&#x6807;&#x8BC6;&#x7B26; <code>key ...</code>&#x662F;&#x5728;&#x5C55;&#x5F00;&#x671F;&#x95F4;&#x8981;&#x5728;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x8BC6;&#x522B;&#x7684;&#x9644;&#x52A0;&#x5173;&#x952E;&#x5B57;&#xFF08;&#x4F8B;&#x5982; <code>cond</code>&#x6216;<code>case</code>&#x4E2D;&#x7684; <code>else</code>&#xFF09;&#x3002;</p>
+<p>key&#x5217;&#x8868;&#x4E4B;&#x540E;&#x7684;&#x6BCF;&#x4E2A;&#x5B50;&#x53E5;&#x90FD;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F; <code>pat</code>&#xFF0C;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x6321;&#x677F; <code>fender</code>&#x548C;&#x6A21;&#x677F; <code>template</code>&#x3002;&#x53EF;&#x9009;&#x7684; <code>fender</code>&#x7ECF;&#x5E38;&#x88AB;&#x7701;&#x7565;&#x3002;<code>pat</code>&#x6307;&#x5B9A;&#x8981;&#x9009;&#x62E9;&#x7684;&#x5B50;&#x53E5;&#x7684;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x6A21;&#x5F0F;&#x4E2D;&#x4E0D;&#x662F;&#x5173;&#x952E;&#x5B57;&#xFF08;&#x5373;&#x6A21;&#x5F0F; <code>pat</code>&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#xFF09;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x7ED1;&#x5B9A;&#x5230;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x76F8;&#x5E94;&#x90E8;&#x5206;&#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF0C;<code>fender</code>&#x662F;&#x4E00;&#x4E2A; Scheme&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;&#x901A;&#x8FC7;&#x6A21;&#x5F0F;&#x53D8;&#x91CF;&#x8BBF;&#x95EE;&#xFF09;&#x4E0A;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x7684;&#x9644;&#x52A0;&#x7EA6;&#x675F;&#xFF0C;&#x4EE5;&#x4FBF;&#x9009;&#x62E9;&#x5B50;&#x53E5;&#x3002;&#x6A21;&#x677F;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x6839;&#x636E;&#x6A21;&#x5F0F;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x5728;&#x6269;&#x5C55;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B; <code>extend-syntax</code>&#x4F1A;&#x751F;&#x6210;&#x5C1D;&#x8BD5;&#x4EE5;&#x5B50;&#x53E5;&#x7ED9;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x5C06;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x4E0E;&#x6BCF;&#x4E2A;&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x4E0E;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x5C06;&#x6A21;&#x5F0F;&#x53D8;&#x91CF;&#x7ED1;&#x5B9A;&#x5230;&#x8F93;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x76F8;&#x5E94;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x5BF9;&#x5B50;&#x53E5;&#x7684; <code>fender</code>(&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;)&#x8FDB;&#x884C;&#x6C42;&#x503C;&#x3002;&#x5982;&#x679C; <code>fender</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x771F;&#x503C;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x7ED9;&#x5B9A;&#x7684;&#x6269;&#x5C55;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x4E0E;&#x6A21;&#x5F0F;&#x4E0D;&#x5339;&#x914D;&#x6216; <code>fender</code>&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x503C;&#xFF0C;&#x5219;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x5C06;&#x5C1D;&#x8BD5;&#x4E0B;&#x4E00;&#x4E2A;&#x5B50;&#x53E5;&#x3002;&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x9009;&#x62E9;&#x4EFB;&#x4F55;&#x5B50;&#x53E5;&#xFF0C;&#x5219;&#x4F1A;&#x5F15;&#x53D1;&#x6761;&#x4EF6;&#x7C7B;&#x578B; <code>&amp;assertion</code>&#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x5728;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x7701;&#x7565;&#x53F7;&#xFF08;...&#xFF09;&#x53EF;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x524D;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#x7247;&#x6BB5;&#x6216;&#x539F;&#x578B;&#x7684;&#x96F6;&#x6B21;&#x6216;&#x591A;&#x6B21;&#x51FA;&#x73B0;&#x3002;&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x4F7F;&#x7528;&#x7701;&#x7565;&#x53F7;&#x6765;&#x6307;&#x5B9A;&#x96F6;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6269;&#x5C55;&#x539F;&#x578B;&#x7684;&#x6784;&#x9020;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6269;&#x5C55;&#x539F;&#x578B;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x8F93;&#x5165;&#x6A21;&#x5F0F;&#x539F;&#x578B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x6A21;&#x5F0F;&#x3001;&#x6A21;&#x677F;&#x3001;&#x6A21;&#x677F;&#x5185;&#x7684;&#x7701;&#x7565;&#x53F7;&#x548C;&#x6321;&#x677F;&#x7684;&#x4F7F;&#x7528;&#x5C06;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x793A;&#x4F8B;&#x4E2D;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5B9A;&#x4E49; <code>rec</code>&#xFF0C;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57; <code>rec</code>&#xFF0C;&#x4E00;&#x4E2A;&#x6CA1;&#x6709; <code>fender</code>&#x7684;&#x5B50;&#x53E5;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x4F7F;&#x7528;&#x7701;&#x7565;&#x53F7;&#x3002;</p>
+<pre><code>(extend-syntax (rec)
+  [(rec id val)
+   (let ([id #f])
+      (set! id val)
+        id)] )
+</code></pre><p>&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5B9A;&#x4E49; <code>when</code>&#xFF0C;&#x5C55;&#x793A;&#x4E86;&#x7701;&#x7565;&#x53F7;&#x7684;&#x7528;&#x6CD5;&#x3002;</p>
+<pre><code>(extend-syntax (when)
+  [(when test exp1 exp2 ...)
+   (if test (begin exp1 exp2 ...) #f)])
+</code></pre><p>&#x4E0B;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x663E;&#x793A;&#x4E86; <code>let</code>&#x3002;<code>let</code>&#x7684;&#x5B9A;&#x4E49;&#x663E;&#x793A;&#x4E86;&#x591A;&#x4E2A;&#x7701;&#x7565;&#x53F7;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x7684;&#x5E8F;&#x5BF9;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4E3B;&#x4F53;&#x4E2D;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x5B83;&#x8FD8;&#x8868;&#x660E;&#x539F;&#x578B;&#x4E0D;&#x5FC5;&#x662F;&#x5355;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x5E76;&#x4E14;&#x539F;&#x578B;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5F7C;&#x6B64;&#x5206;&#x5F00;&#x3002;</p>
+<pre><code>(extend-syntax (let)
+  [(let ([x e] ...) b1 b2 ...)
+   ((lambda (x ...) b1 b2 ...) e ...)])
+</code></pre><p>&#x4E0B;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x663E;&#x793A; <code>let*</code>&#xFF0C;&#x5176;&#x8BED;&#x6CD5;&#x4E0E; <code>let</code>&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x5B83;&#x662F;&#x7528;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#xFF08;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x9012;&#x5F52;&#x6B65;&#x9AA4;&#xFF09;&#x9012;&#x5F52;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5FC5;&#x987B;&#x751F;&#x6210;&#x5D4C;&#x5957;&#x7ED3;&#x6784;&#x3002;</p>
+<pre><code>(extend-syntax (let*)
+  [(let* () b1 b2 ...)
+   (let () b1 b2 ...)]
+  [(let* ([x e] more ...) b1 b2 ...)
+   (let ([x e]) (let* (more ...) b1 b2 ...))])
+</code></pre><p>&#x7B2C;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;/&#x6A21;&#x677F;&#x5E8F;&#x5BF9;&#x4F1A;&#x5339;&#x914D;&#x6CA1;&#x6709;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5E8F;&#x5BF9;&#x7684;&#x4EFB;&#x4F55; <code>let*</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6620;&#x5C04;&#x5230;&#x7B49;&#x6548;&#x7684; <code>begin</code>&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x3002;&#x8FD9;&#x662F;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x6A21;&#x5F0F;/&#x6A21;&#x677F;&#x5E8F;&#x5BF9;&#x5C06;&#x4EFB;&#x4F55; <code>let*</code>&#x8868;&#x8FBE;&#x5F0F;&#x4E0E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5E8F;&#x5BF9;&#x5339;&#x914D;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x7ED1;&#x5B9A;&#x7B2C;&#x4E00;&#x4E2A;&#x5E8F;&#x5BF9;&#x7684; <code>let</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4E3B;&#x4F53;&#x7684;&#x4E3B;&#x4F53;&#x662F; <code>let*</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5176;&#x7ED1;&#x5B9A;&#x5176;&#x4F59;&#x5E8F;&#x5BF9;&#x3002;&#x8FD9;&#x662F;&#x9012;&#x5F52;&#x6B65;&#x9AA4;&#xFF0C;&#x6700;&#x7EC8;&#x5C06;&#x6211;&#x4EEC;&#x5F15;&#x5411;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x6BCF;&#x4E00;&#x6B65;&#x90FD;&#x5220;&#x9664;&#x4E86;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5E8F;&#x5BF9;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x6A21;&#x5F0F;&#x66F4;&#x591A;&#x5730;&#x4F7F;&#x7528;&#x4E86;&#x6A21;&#x5F0F;&#x53D8;&#x91CF;&#x7528;&#x4E8E;&#x7B2C;&#x4E8C;&#x548C;&#x4EE5;&#x540E;&#x7684;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5E8F;&#x5BF9;&#xFF1B;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x6A21;&#x5F0F;&#x548C;&#x6A21;&#x677F;&#x7684;&#x6DF7;&#x4E71;&#x7A0B;&#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x5730;&#x770B;&#x5230;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5E8F;&#x5BF9;&#x88AB;&#x660E;&#x786E;&#x5904;&#x7406;&#x3002;</p>
+<p><code>and</code>&#x7684;&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x4E09;&#x4E2A;&#x5B50;&#x53E5;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x53E5;&#x662F;&#x8BC6;&#x522B;<code>(and)</code>&#x6240;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x540E;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x9012;&#x5F52;&#x5730;&#x5B9A;&#x4E49;&#x5176;&#x4ED6; <code>and</code>&#x7684;&#x5F62;&#x5F0F;&#x3002;</p>
+<pre><code>(extend-syntax (and)
+  [(and) #t]
+  [(and x) x]
+  [(and x y ...) (if x (and y ...) #f)])
+</code></pre><p><code>cond</code> &#x7684;&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x56DB;&#x4E2A;&#x5B50;&#x53E5;&#x3002;&#x4E0E; <code>let*</code>&#x4E00;&#x6837;&#xFF0C;&#x5FC5;&#x987B;&#x5BF9; <code>cond</code>&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x63CF;&#x8FF0;&#xFF0C;&#x90E8;&#x5206;&#x539F;&#x56E0;&#x662F;&#x5B83;&#x4F1A;&#x4EA7;&#x751F;&#x5D4C;&#x5957;&#x7684; <code>if</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x90E8;&#x5206;&#x539F;&#x56E0;&#x662F;&#x4E00;&#x4E2A;&#x7701;&#x7565;&#x53F7;&#x539F;&#x578B;&#x4E0D;&#x8DB3;&#x4EE5;&#x63CF;&#x8FF0;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684; <code>cond</code>&#x5B50;&#x53E5;&#x3002;<code>cond</code>&#x7684;&#x5B9A;&#x4E49;&#x8FD8;&#x8981;&#x6C42;&#x9664;&#x4E86; <code>cond</code>&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x8981;&#x5C06; <code>else</code>&#x6307;&#x5B9A;&#x4E3A;&#x5173;&#x952E;&#x5B57;&#x3002;&#x8FD9;&#x662F;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>(extend-syntax (cond else)
+  [(cond) #f]
+  [(cond (else e1 e2 ...))
+   (begin e1 e2 ...)]
+  [(cond (test) more ...)
+   (or test (cond more ...))]
+  [(cond (test e1 e2 ...) more ...)
+   (if test
+       (begin e1 e2 ...)
+       (cond more ...))])
+</code></pre><p>&#x5176;&#x4E2D;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x662F;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#xFF0C;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x662F;&#x9012;&#x5F52;&#x6B65;&#x9AA4;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#x662F;&#x7A7A;&#x7684;&#x6761;&#x4EF6;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>cond</code>&#x7684;&#x503C;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x56E0;&#x6B64; #f&#x7684;&#x9009;&#x62E9; &#x6709;&#x4E9B;&#x968F;&#x610F;&#x3002;&#x7B2C;&#x4E8C;&#x79CD;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#x662F;&#x53EA;&#x5305;&#x542B; else&#x5B50;&#x53E5;&#x7684; <code>cond</code>&#xFF1B;&#x5B83;&#x5C06;&#x8F6C;&#x6362;&#x4E3A;&#x7B49;&#x6548;&#x7684; begin&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x4E24;&#x4E2A;&#x9012;&#x5F52;&#x6B65;&#x9AA4;&#x5728; <code>cond</code> &#x5B50;&#x53E5;&#x4E2D;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6570;&#x91CF;&#x4E0D;&#x540C;&#x3002;&#x5F53;&#x7B2C;&#x4E00;&#x4E2A; true&#x5B50;&#x53E5;&#x4EC5;&#x5305;&#x542B;&#x6D4B;&#x8BD5;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#xFF0C;<code>cond</code>&#x7684;&#x503C;&#x5C31;&#x662F;&#x6D4B;&#x8BD5;&#x7684;&#x503C;&#x3002;&#x8FD9;&#x7C7B;&#x4F3C;&#x4E8E;&#x6216;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5C06; <code>cond</code>&#x5B50;&#x53E5;&#x6269;&#x5C55;&#x4E3A; <code>or</code>&#x6216;&#x8868;&#x8FBE;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x5F53;&#x6D4B;&#x8BD5;&#x8868;&#x8FBE;&#x5F0F;&#x4E4B;&#x540E;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4F7F;&#x7528; if&#x548C; begin&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x4F7F; <code>let</code>&#x7684;&#x8BED;&#x6CD5;&#x7EDD;&#x5BF9;&#x6B63;&#x786E;&#xFF0C;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x5FC5;&#x987B;&#x8981;&#x6C42;&#x8F93;&#x5165;&#x4E2D;&#x7684;&#x7ED1;&#x5B9A;&#x6807;&#x8BC6;&#x7B26; <code>x ...</code>&#x662F;&#x7B26;&#x53F7;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7C7B;&#x4F3C; <code>(let ([3 x]) x)</code>&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5728; <code>let</code>&#x4E2D;&#x5F97;&#x5230;&#x9519;&#x8BEF;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x6CA1;&#x53BB;&#x68C0;&#x67E5;&#x9A8C;&#x8BC1;&#x6807;&#x8BC6;&#x7B26;&#x4F4D;&#x7F6E;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x7B26;&#x53F7;; &#x90A3;&#x4E48;&#xFF0C;<code>lambda</code>&#x53EF;&#x80FD;&#x4F1A;&#x62B1;&#x6028;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x80FD;&#x662F;&#x6269;&#x5C55;&#x5B8C;&#x6210;&#x5F88;&#x4E45;&#x4E4B;&#x540E;&#x7CFB;&#x7EDF;&#x7684;&#x6C42;&#x503C;&#x5668;&#x8981;&#x62B1;&#x6028;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x5C31;&#x662F;&#x6321;&#x677F;&#x7684;&#x597D;&#x5904;&#x3002;</p>
+<pre><code>(extend-syntax (let)
+  [ (let ([x e] ...) b1 b2 ...)
+    (andmap symbol? &apos;(x ...))
+    ((lambda (x ...) b1 b2 ...) e ...) ] )
+</code></pre><p><code>andmap</code>&#x76F8;&#x5F53;&#x4E8E; <code>(compose and map)</code>, &#x4F7F;&#x7528; <code>andmap</code>&#x68C0;&#x67E5; <code>&apos;(x ...)</code>,  &#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x7ED1;&#x5B9A;&#x6807;&#x8BC6;&#x7B26;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x3002;<code>fender</code>&#x53EA;&#x662F; Scheme&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x5728;&#x8BE5;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x4F7F;&#x7528;&#x4E0E;&#x5B50;&#x53E5;&#x7684;&#x6A21;&#x677F;&#x90E8;&#x5206;&#x76F8;&#x540C;&#x7684;&#x89C4;&#x5219;&#x6765;&#x6269;&#x5C55;&#x4EFB;&#x4F55;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>&apos;(x ...)</code>&#x88AB;&#x6269;&#x5C55;&#x5230;&#x6807;&#x8BC6;&#x7B26;/&#x503C;&#x5BF9;&#x4E2D;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x60A8;&#x9700;&#x8981;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x67D0;&#x4E9B;&#x8BED;&#x6CD5;&#x6269;&#x5C55;&#x5B9A;&#x4E49;&#x8981;&#x6C42;&#x80FD;&#x591F;&#x5305;&#x542B;&#x8BC4;&#x4F30;&#x4EFB;&#x610F; Scheme&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6B64;&#x529F;&#x80FD;&#x7531;&#x63D0;&#x4F9B;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>(with ((pat expr)...) template)</code>
+&#x8FD4;&#x56DE;&#xFF1A;&#x5DF2;&#x5904;&#x7406;&#x7684;&#x6A21;&#x677F;</p>
+<p><code>with</code>&#x4EC5;&#x5728;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x5185;&#x7684;&#x6A21;&#x677F;&#x5185;&#x6709;&#x6548;&#x3002;<code>with</code>&#x6A21;&#x5F0F;&#x4E0E; <code>extend-syntax</code>&#x6A21;&#x5F0F;&#x76F8;&#x540C;&#xFF0C;<code>with</code>&#x8868;&#x8FBE;&#x5F0F;&#x4E0E; <code>extend-syntax</code>fender&#x76F8;&#x540C;&#xFF0C;<code>with</code>&#x6A21;&#x677F;&#x4E0E; <code>extend-syntax</code>&#x6A21;&#x677F;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>with</code>&#x5C06;&#x65B0;&#x7684;&#x6A21;&#x5F0F;&#x6807;&#x8BC6;&#x7B26;&#x7ED1;&#x5B9A;&#x5230;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x6A21;&#x677F;&#x4E2D;&#x7531;&#x4EFB;&#x610F;&#x65B9;&#x6848;&#x8868;&#x8FBE;&#x5F0F;&#x751F;&#x6210;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;<code>with</code>&#x53EF;&#x4EE5;&#x4ECE;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x7684;&#x58F0;&#x660E;&#x5F0F;&#x6837;&#x5F0F;&#x8F6C;&#x4E3A;&#x5B8C;&#x6574;&#x7684; Scheme&#x8FC7;&#x7A0B;&#x6837;&#x5F0F;&#x3002;</p>
+<p><code>with</code>&#x7684;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x662F;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x5165;&#x4E34;&#x65F6;&#x6807;&#x8BC6;&#x7B26;&#x6216;&#x4E34;&#x65F6;&#x6807;&#x8BC6;&#x7B26;&#x5217;&#x8868;&#x3002;<code>with</code>&#x8FD8;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x590D;&#x6742;&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x6846;&#x67B6;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x8F6C;&#x6362;&#x53EF;&#x80FD;&#x4F1A;&#x5F88;&#x7B28;&#x62D9;&#x6216;&#x6548;&#x7387;&#x4F4E;&#x4E0B;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6216;&#x8981;&#x6C42;&#x4F7F;&#x7528;&#x4E34;&#x65F6;&#x6807;&#x8BC6;&#x7B26;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x6216;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code>(extend-syntax (or)
+  [(or) #f]
+  [(or x) x]
+  [(or x y ...)
+   (let ([temp x])
+     (if temp temp (or y ...)))])
+</code></pre><p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5DE5;&#x4F5C;&#x6B63;&#x5E38;&#xFF0C;&#x76F4;&#x5230;&#x6211;&#x4EEC;&#x5C06;&#x6216;&#x8868;&#x8FBE;&#x5F0F;&#x653E;&#x7F6E;&#x5728; temp&#x53D1;&#x751F;&#x7684;&#x8303;&#x56F4;&#x4E4B;&#x524D;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x5947;&#x602A;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x56E0;&#x4E3A; <code>extend-syntax</code>&#x4E0D;&#x9075;&#x5FAA;&#x8BCD;&#x6CD5;&#x68C0;&#x67E5;&#x3002;(&#x8FD9;&#x662F; <code>define-syntax</code>&#x4F18;&#x4E8E; <code>extend-syntax</code>&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x3002;)</p>
+<pre><code>(let ([temp #t])
+  (or #f temp)) =&gt; #f
+</code></pre><p>&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x4F7F;&#x7528; <code>gensym</code>&#x548C; <code>with</code>&#x521B;&#x5EFA;&#x4E34;&#x65F6;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<pre><code>(extend-syntax (or)
+  [(or) #f]
+  [(or x) x]
+  [(or x y ...)
+   (with ([temp (gensym)])
+     (let ([temp x])
+       (if temp temp (or y ...))))])
+</code></pre><p>&#x540C;&#x6837;&#xFF0C;<code>with</code>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4EE5;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x5F0F;&#x7EC4;&#x5408;&#x8F93;&#x5165;&#x6A21;&#x5F0F;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x6298;&#x53E0;&#x52A0;&#x793A;&#x4F8B;&#x3002;</p>
+<pre><code>(extend-syntax (folding-plus)
+  [(folding-plus x y)
+   (and (number? &apos;x) (number? &apos;y))
+   (with ([val (+ &apos;x &apos;y)])
+      val)]
+  [(folding-plus x y) (+ x y)])
+</code></pre><p>&#x5982;&#x679C; x&#x548C; y&#x5747;&#x4E3A;&#x6570;&#x5B57;&#x5E38;&#x91CF;&#xFF0C;&#x5219; <code>folding-plus</code>&#x6298;&#x53E0;&#x4E3A;<code>(+ x y)</code>&#x7684;&#x503C;&#x3002;&#x5426;&#x5219;&#xFF0C;<code>folding-plus</code>&#x5C06;&#x8F6C;&#x6362;&#x4E3A;<code>(+ x y)</code>&#x4EE5;&#x4F9B;&#x4EE5;&#x540E;&#x8BC4;&#x4F30;&#x3002;fender&#x5728;&#x6269;&#x5C55;&#x65F6;&#x68C0;&#x67E5;&#x64CD;&#x4F5C;&#x6570;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;<code>with</code>&#x6267;&#x884C;&#x6C42;&#x503C;&#x3002;&#x4E0E; fender&#x4E00;&#x6837;&#xFF0C;&#x6269;&#x5C55;&#x4EC5;&#x5728;&#x5E26;&#x5F15;&#x53F7;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5185;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x4E3A; <code>quote</code>&#x5C06;&#x6570;&#x636E;&#x4E0E; Scheme&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x533A;&#x5206;&#x5F00;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x5229;&#x7528;&#x4E86;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x6A21;&#x5F0F;&#x7ED1;&#x5B9A;&#x5230;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x4E8B;&#x5B9E;&#xFF0C;&#x5C06;&#x6A21;&#x5F0F;&#x53D8;&#x91CF;&#x5217;&#x8868;&#x7ED1;&#x5B9A;&#x5230;&#x4E34;&#x65F6;&#x7B26;&#x53F7;&#x5217;&#x8868;&#x3002;&#x6B64;&#x4E34;&#x65F6;&#x5217;&#x8868;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5B9E;&#x73B0; <code>sigma</code>&#x53E5;&#x6CD5;&#x6269;&#x5C55;&#x3002;<code>sigma</code>&#x4E0E; <code>lambda</code>&#x76F8;&#x4F3C;&#xFF0C;&#x9664;&#x4E86;&#x5B83;&#x5728;&#x6807;&#x8BC6;&#x7B26;&#x5217;&#x8868;&#x4E2D;&#x5206;&#x914D;&#x6807;&#x8BC6;&#x7B26;&#x800C;&#x4E0D;&#x662F;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7ED1;&#x5B9A;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5E76;&#x884C;&#x6267;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x5206;&#x914D;&#x3002;</p>
+<pre><code>(extend-syntax (sigma)
+  [(sigma (x ...) e1 e2 ...)
+   (with ([(t ...) (map (lambda (x) (gensym)) &apos;(x ...))])
+     (lambda (t ...)
+       (set! x t) ...
+       e1 e2 ...))])
+
+(let ([x &apos;a] [y &apos;b])
+  ((sigma (x y) (list x y)) y x)) =&gt; (b a)
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4F7F;&#x7528;&#x6269;&#x5C55;&#x8BED;&#x6CD5;&#x6765;&#x5B9E;&#x73B0; <code>define-structure</code>&#xFF0C;&#x8FD9;&#x4E0E; Scheme&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7B2C;4&#x7248;&#x7B2C;8.4&#x8282;&#x4E2D;&#x4F7F;&#x7528;&#x8BED;&#x6CD5; <code>case</code>&#x7684;&#x7C7B;&#x4F3C;&#x793A;&#x4F8B;&#x76F8;&#x540C;&#x3002;</p>
+<p><code>define-structure</code> &#x7684;&#x5B9A;&#x4E49;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A; pattern / template&#x5B50;&#x53E5;&#x3002;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x6765;&#x5904;&#x7406;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53EF;&#x9009;&#x6027;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x53E5;&#x4E0E;&#x6CA1;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5F62;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x4EC5;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x5B58;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7B49;&#x6548;&#x5F62;&#x5F0F;&#xFF0C;&#x4F46;&#x4E3A;&#x7A7A;&#x3002;</p>
+<p>&#x8BE5;&#x5B9A;&#x4E49;&#x8FD8;&#x5927;&#x91CF;&#x4F7F;&#x7528; <code>with</code>&#x5728;&#x5C55;&#x5F00;&#x65F6;&#x8BA1;&#x7B97;&#x65B9;&#x6848;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x524D;&#x56DB;&#x4E2A; <code>with</code>&#x5B50;&#x53E5;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x8FD9;&#x4E9B;&#x6807;&#x8BC6;&#x7B26;&#x547D;&#x540D;&#x81EA;&#x52A8;&#x5B9A;&#x4E49;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#xFF08;&#x8FC7;&#x7A0B;&#x683C;&#x5F0F;&#x5728;&#x8FD9;&#x91CC;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x7528; <code>string-append!</code>&#x66FF;&#x6362;&#xFF0C;&#x6839;&#x636E;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>symbol-&gt;string</code>&#x3002;&#xFF09;&#x524D;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x751F;&#x6210;&#x5355;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;&#xFF08;&#x7528;&#x4E8E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x8C13;&#x8BCD;&#xFF09;&#xFF0C;&#x800C;&#x540E;&#x4E24;&#x4E2A;&#x5B50;&#x53E5;&#x751F;&#x6210;&#x6807;&#x8BC6;&#x7B26;&#x5217;&#x8868;&#xFF08;&#x7528;&#x4E8E;&#x5B57;&#x6BB5;&#x8BBF;&#x95EE;&#x548C;&#x8D4B;&#x503C;&#x8FC7;&#x7A0B;&#xFF09;&#x3002;&#x7B2C;&#x4E94;&#x4E2A; <code>with</code>&#x5B50;&#x53E5;&#xFF08;&#x5916;&#x90E8; with&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x53E5;&#xFF09;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7ED3;&#x6784;&#x7684;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x6240;&#x9700;&#x7684;&#x603B;&#x957F;&#x5EA6;&#x5411;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x5FC5;&#x987B;&#x5305;&#x62EC;&#x540D;&#x79F0;&#x548C;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x7684;&#x7A7A;&#x95F4;&#x3002;&#x6700;&#x540E;&#x7684; <code>with</code>&#x5B50;&#x53E5;&#xFF08;&#x5185;&#x90E8; <code>with</code>&#x4E2D;&#x7684;&#x552F;&#x4E00;&#x5B50;&#x53E5;&#xFF09;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5411;&#x91CF;&#x7D22;&#x5F15;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#xFF08;&#x4ECE;1&#x5F00;&#x59CB;&#xFF0C;&#x56E0;&#x4E3A;&#x7ED3;&#x6784;&#x540D;&#x79F0;&#x5360;&#x636E;&#x4F4D;&#x7F6E;0&#xFF09;&#x3002;</p>
+<pre><code>(extend-syntax (define-structure)
+  [(define-structure (name id1 ...))
+   (define-structure (name id1 ...) ())]
+  [(define-structure (name id1 ...) ([id2 val] ...))
+   (with ([constructor
+           (string-&gt;symbol (format &quot;make-~a&quot; &apos;name))]
+          [predicate
+           (string-&gt;symbol (format &quot;~a?&quot; &apos;name))]
+          [(access ...)
+           (map (lambda (x)
+                  (string-&gt;symbol
+                    (format &quot;~a-~a&quot; &apos;name x)))
+                &apos;(id1 ... id2 ...))]
+          [(assign ...)
+           (map (lambda (x)
+                  (string-&gt;symbol
+                    (format &quot;set-~a-~a!&quot; &apos;name x)))
+                &apos;(id1 ... id2 ...))]
+          [count (length &apos;(name id1 ... id2 ...))])
+     (with ([(index ...)
+             (let f ([i 1])
+               (if (= i &apos;count)
+                   &apos;()
+                   (cons i (f (+ i 1)))))])
+       (begin
+         (define constructor
+           (lambda (id1 ...)
+             (let* ([id2 val] ...)
+               (vector &apos;name id1 ... id2 ...))))
+         (define predicate
+           (lambda (obj)
+             (and (vector? obj)
+                  (= (vector-length obj) count)
+                  (eq? (vector-ref obj 0) &apos;name))))
+         (define access
+           (lambda (obj)
+             (vector-ref obj index)))
+         ...
+         (define assign
+           (lambda (obj newval)
+             (vector-set! obj index newval)))
+     )))))))))))
+</code></pre><p></p><h2 id="16.3">16.3&#x8282; &#x7ED3;&#x6784;&#x4F53; (Structures)</h2>
+&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;<a href="../CSUG/07.OperationsOnObjects.html#7.15">7.15&#x8282;</a>&#x7684; <code>record-defining</code>&#x673A;&#x5236;&#xFF0C;&#x8BE5;&#x673A;&#x5236; &#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x7684;&#x547D;&#x540D;&#x5B57;&#x6BB5;&#x96C6;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x4E0E;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#xFF0C;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x662F;&#x5B9E;&#x73B0;&#x4E3A;&#x5411;&#x91CF;&#x3002;&#x5177;&#x4F53;&#x800C;&#x8A00;&#xFF0C;&#x5C06;&#x7ED3;&#x6784;&#x5B9E;&#x73B0;&#x4E3A;&#x5411;&#x91CF;&#xFF0C;&#x5176;&#x957F;&#x5EA6;&#x6BD4;&#x5B57;&#x6BB5;&#x6570;&#x5927;&#x4E00;&#x500D;&#xFF0C;&#x5E76;&#x4E14;&#x5176;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5305;&#x542B;&#x8BE5;&#x7ED3;&#x6784;&#x7684;&#x7B26;&#x53F7;&#x540D;&#x79F0;&#x3002;<p></p>
+<p>&#x5C06;&#x7ED3;&#x6784;&#x8868;&#x793A;&#x4E3A;&#x77E2;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x7B80;&#x5316;&#x7ED3;&#x6784;&#x7684;&#x8BFB;&#x53D6;&#x548C;&#x6253;&#x5370;&#x4EE5;&#x53CA;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5DE5;&#x5177;&#x7684;&#x6269;&#x5C55;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5B83;&#x786E;&#x5B9E;&#x6709;&#x4E00;&#x4E9B;&#x7F3A;&#x70B9;&#x3002;&#x4E00;&#x4E2A;&#x662F;&#x5728;&#x4E0D;&#x9002;&#x5F53;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7ED3;&#x6784;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x9519;&#x8BEF;&#x5730;&#x89C6;&#x4E3A;&#x666E;&#x901A;&#x5411;&#x91CF;&#x3002;&#x5F53;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x5904;&#x7406;&#x7ED3;&#x6784;&#x548C;&#x5411;&#x91CF;&#x65F6;&#xFF0C;&#x5728;&#x68C0;&#x67E5;&#x66F4;&#x901A;&#x7528;&#x7684;&#x5411;&#x91CF;&#x7C7B;&#x578B;&#x4E4B;&#x524D;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x4E00;&#x7CFB;&#x5217; <code>cond</code>&#x5B50;&#x53E5;&#x4E2D;&#xFF0C;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x5BFB;&#x627E;&#x66F4;&#x5177;&#x4F53;&#x7684;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x7F3A;&#x70B9;&#x662F;&#xFF0C;&#x7ED3;&#x6784;&#x5B9E;&#x4F8B;&#x5BB9;&#x6613;&#x88AB;&#x6709;&#x610F;&#x6216;&#x65E0;&#x610F;&#x5730;&#x201C;&#x4F2A;&#x9020;&#x201D;&#x3002;&#x4E5F;&#x4E0D;&#x53EF;&#x80FD;&#x63A7;&#x5236;&#x5982;&#x4F55;&#x6253;&#x5370;&#x548C;&#x8BFB;&#x53D6;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x901A;&#x8FC7; <code>define-structure</code>&#x521B;&#x5EFA;&#x7ED3;&#x6784;&#x3002;&#x6BCF;&#x4E2A;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x90FD;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x8C13;&#x8BCD;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;&#x4EE5;&#x53CA;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x8D4B;&#x503C;&#x8FC7;&#x7A0B;&#x3002; <code>define-structure</code>&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x63A7;&#x5236;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;&#x662F;&#x6240;&#x751F;&#x6210;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;&#x7531;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#x663E;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p><code>define-structure</code>&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x8BF4;&#x8DB3;&#x591F;&#x5F3A;&#x5927;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x6269;&#x5C55;&#x4EE5;&#x5904;&#x7406;&#x8BB8;&#x591A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x7ED3;&#x6784;&#x8FD8;&#x4E0D;&#x591F;&#x3002;&#x672C;&#x8282;&#x672B;&#x5C3E;&#x7ED9;&#x51FA;&#x7684;&#x5B9A;&#x4E49;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x66F4;&#x590D;&#x6742;&#x53D8;&#x4F53;&#x7684;&#x8D77;&#x70B9;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>(define-structure (name id1 ...) ((id2 expr) ...))</code>
+<br>&#x8FD4;&#x56DE;&#xFF1A;&#x672A;&#x6307;&#x5B9A;&#x7684;
+<br>&#x6240;&#x5728;&#x5E93;&#xFF1A;(chezscheme)</p>
+<p><code>define-structure</code>&#x5F62;&#x5F0F;&#x662F;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x51FA;&#x73B0;&#x5728;&#x5176;&#x4ED6;&#x5B9A;&#x4E49;&#x51FA;&#x73B0;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<p><code>define-structure</code>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784; name&#xFF0C;&#x5E76;&#x521B;&#x5EFA;&#x4E00;&#x7EC4;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x548C;&#x64CD;&#x4F5C;&#x8BE5;&#x7ED3;&#x6784;&#x5B9E;&#x4F8B;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x6807;&#x8BC6;&#x7B26; <code>id1 ...</code>&#x548C; <code>id2 ...</code> &#x547D;&#x540D;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x8FC7;&#x7A0B;&#x7531; <code>define-structure</code>&#x5B9A;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>make-name</code>&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#xFF0C;</li>
+<li>&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>name?</code>&#x7684;&#x7C7B;&#x578B;&#x8C13;&#x8BCD;,</li>
+<li>&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;&#xFF0C;&#x5176;&#x540D;&#x79F0;&#x662F;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x540D; <code>id1 ...</code>&#x548C; <code>id2 ...</code>&#x7684; <code>name-field</code>&#xFF0C;&#x4EE5;&#x53CA;</li>
+<li>&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x540D; <code>id1 ...</code>&#x548C; <code>id2 ...</code>, &#x540D;&#x4E3A; <code>set-name-field!</code>&#x7684;&#x8D4B;&#x503C;&#x8FC7;&#x7A0B;&#x3002;</li>
+</ul>
+<p>&#x7531;&#x6807;&#x8BC6;&#x7B26; <code>id1 ...</code>&#x547D;&#x540D;&#x7684;&#x5B57;&#x6BB5;&#x662F;&#x7531;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;&#x7684;&#x3002;&#x7531;&#x6807;&#x8BC6;&#x7B26; <code>id2 ...</code>&#x547D;&#x540D;&#x7684;&#x5B57;&#x6BB5;&#x88AB;&#x663E;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F; <code>expr ...</code>&#x7684;&#x503C;&#x3002;&#x6BCF;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5728;&#x6807;&#x8BC6;&#x7B26; <code>id1 ...</code>&#x7684;&#x8303;&#x56F4;&#x5185;&#x6C42;&#x503C;&#xFF08;&#x7ED1;&#x5B9A;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#x503C;&#xFF09;&#x548C;&#x4EFB;&#x4F55;&#x6807;&#x8BC6;&#x7B26; <code>id2 ...</code>&#xFF08;&#x7ED1;&#x5B9A;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#x503C;&#xFF09;&#x51FA;&#x73B0;&#x5728;&#x5B83;&#x524D;&#x9762;&#xFF08;&#x5C31;&#x50CF;&#x5728; <code>let*</code>&#x4E2D;&#x4E00;&#x6837;&#xFF09;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x884C;&#x4E3A;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;</p>
+<pre><code>(define make-name
+  (lambda (id1 ...)
+    (let* ([id2 expr] ...)
+      body ) ) )
+</code></pre><p>&#x5176;&#x4E2D; body&#x6839;&#x636E;&#x6807;&#x8BC6;&#x7B26; <code>id1 ...</code>&#x548C; <code>id2 ...</code>&#x7684;&#x503C;&#x6784;&#x5EFA;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x9664;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5B57;&#x6BB5;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F; <code>((id2 expr) ...)</code>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5BF9;&#xFF0C;&#x5982;&#x4F55;&#x5728; Scheme&#x4E2D;&#x5B9A;&#x4E49;&#x5B83;&#x4EEC;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x7531;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<pre><code>(define-structure (pare car cdr))
+(define p (make-pare &apos;a &apos;b))
+
+(pare? p) =&gt; #t
+(pair? p) =&gt; #f
+(pare? &apos;(a . b)) =&gt; #f
+
+(pare-car p) =&gt; a
+(pare-cdr p) =&gt; b
+
+(set-pare-cdr! p (make-pare &apos;b &apos;c))
+
+(pare-car (pare-cdr p)) =&gt; b
+(pare-cdr (pare-cdr p)) =&gt; c
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x79F0;&#x4E3A;<code>stretch-string</code>&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x589E;&#x957F;&#x3002;&#x6B64;&#x793A;&#x4F8B;&#x4F7F;&#x7528;&#x663E;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4F9D;&#x8D56;&#x4E8E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x5B57;&#x6BB5;&#x503C;&#x7684;&#x503C;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code>(define-structure (stretch-string length fill)
+  ([string (make-string length fill)]))
+
+(define stretch-string-ref
+  (lambda (s i)
+    (let ([n (stretch-string-length s)])
+      (when (&gt;= i n) (stretch-stretch-string! s (+ i 1) n))
+      (string-ref (stretch-string-string s) i))))
+
+(define stretch-string-set!
+  (lambda (s i c)
+    (let ([n (stretch-string-length s)])
+      (when (&gt;= i n) (stretch-stretch-string! s (+ i 1) n))
+      (string-set! (stretch-string-string s) i c))))
+
+(define stretch-string-fill!
+  (lambda (s c)
+    (string-fill! (stretch-string-string s) c)
+    (set-stretch-string-fill! s c)))
+
+(define stretch-stretch-string!
+  (lambda (s i n)
+    (set-stretch-string-length! s i)
+    (let ([str (stretch-string-string s)]
+          [fill (stretch-string-fill s)])
+      (let ([xtra (make-string (- i n) fill)])
+        (set-stretch-string-string! s
+          (string-append str xtra))))))
+</code></pre><p>&#x901A;&#x5E38;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x81EA;&#x52A8;&#x5B9A;&#x4E49;&#x7684;&#x8FC7;&#x7A0B;&#x4EC5;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x66F4;&#x4E13;&#x95E8;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x4E3A; <code>stretch-string-ref</code>&#x548C; <code>stretch-string-set!</code>&#x3002;<code>stretch-string-length</code>&#x548C; <code>stretch-string-string</code>&#x662F;&#x552F;&#x4E00;&#x53EF;&#x80FD;&#x5728;&#x4F7F;&#x7528;&#x62C9;&#x4F38;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7684;&#x81EA;&#x52A8;&#x5B9A;&#x4E49;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre><code>(define ss (make-stretch-string 2 #\X))
+
+(stretch-string-string ss) =&gt; &quot;XX&quot;
+(stretch-string-ref ss 3) =&gt; #\X
+(stretch-string-length ss) =&gt; 4
+(stretch-string-string ss) =&gt; &quot;XXXX&quot;
+
+(stretch-string-fill! ss #\@)
+(stretch-string-string ss) =&gt; &quot;@@@@&quot;
+(stretch-string-ref ss 5) =&gt; #\@
+(stretch-string-string ss) =&gt; &quot;@@@@@@&quot;
+
+(stretch-string-set! ss 7 #\=)
+(stretch-string-length ss) =&gt; 8
+(stretch-string-string ss) =&gt; &quot;@@@@@@@=&quot;
+</code></pre><p>Scheme&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7B2C;4&#x7248;&#x7B2C;8.4&#x8282;&#x5B9A;&#x4E49;&#x4E86; define-structure&#x7684;&#x7B80;&#x5316;&#x53D8;&#x4F53;&#xFF0C;&#x4F5C;&#x4E3A;&#x4F7F;&#x7528;&#x8BED;&#x6CD5; case&#x7684;&#x793A;&#x4F8B;&#x3002;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x7684;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;&#x4E86;&#x5B8C;&#x6574;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p><code>define-structure</code>&#x6269;&#x5C55;&#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x7531;&#x7ED3;&#x6784;&#x540D;&#x79F0;&#x548C;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x751F;&#x6210;&#x7684;&#x540D;&#x79F0;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x751F;&#x6210;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x4F7F;&#x7528; <code>datum-&gt;syntax</code>&#x4F7F;&#x6807;&#x8BC6;&#x7B26;&#x5728;<code>define-structure</code>&#x5F62;&#x5F0F;&#x51FA;&#x73B0;&#x7684;&#x5730;&#x65B9;&#x53EF;&#x89C1;&#x3002;&#x7531;&#x4E8E; <code>define-structure</code>&#x8868;&#x5355;&#x6269;&#x5C55;&#x4E3A;&#x5305;&#x542B;&#x5B9A;&#x4E49;&#x7684; begin&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5B9A;&#x4E49;&#x6709;&#x6548;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code>(define-syntax define-structure
+  (lambda (x)
+    (define gen-id
+      (lambda (template-id . args)
+        (datum-&gt;syntax template-id
+          (string-&gt;symbol
+            (apply string-append
+                   (map (lambda (x)
+                          (if (string? x)
+                              x
+                              (symbol-&gt;string
+                                (syntax-&gt;datum x))))
+                        args))))))
+    (syntax-case x ()
+      ((_ (name field1 ...))
+       (andmap identifier? #&apos;(name field1 ...))
+       #&apos;(define-structure (name field1 ...) ()))
+      ((_ (name field1 ...) ((field2 init) ...))
+       (andmap identifier? #&apos;(name field1 ... field2 ...))
+       (with-syntax
+         ((constructor (gen-id #&apos;name &quot;make-&quot; #&apos;name))
+          (predicate (gen-id #&apos;name #&apos;name &quot;?&quot;))
+          ((access ...)
+           (map (lambda (x) (gen-id x #&apos;name &quot;-&quot; x))
+                #&apos;(field1 ... field2 ...)))
+          ((assign ...)
+           (map (lambda (x) (gen-id x &quot;set-&quot; #&apos;name &quot;-&quot; x &quot;!&quot;))
+                #&apos;(field1 ... field2 ...)))
+          (structure-length
+           (+ (length #&apos;(field1 ... field2 ...)) 1))
+          ((index ...)
+           (let f ([i 1] [ids #&apos;(field1 ... field2 ...)])
+             (if (null? ids)
+                 &apos;()
+                 (cons i (f (+ i 1) (cdr ids)))))))
+         #&apos;(begin
+             (define constructor
+               (lambda (field1 ...)
+                 (let* ([field2 init] ...)
+                   (vector &apos;name field1 ... field2 ...))))
+             (define predicate
+               (lambda (x)
+                 (and (vector? x)
+                      (#3%fx= (vector-length x) structure-length)
+                      (eq? (vector-ref x 0) &apos;name))))
+             (define access (lambda (x) (vector-ref x index)))
+             ...
+             (define assign
+               (lambda (x update) (vector-set! x index update)))
+             ...))))))
+</code></pre><p></p><h2 id="16.4">16.4&#x8282; &#x517C;&#x5BB9;&#x6027;&#x6587;&#x4EF6; (Compatibility File)</h2>
+Chez Scheme&#x7684;&#x5F53;&#x524D;&#x7248;&#x672C;&#x4E0E;&#x517C;&#x5BB9;&#x6027;&#x6587;&#x4EF6;&#x4E00;&#x8D77;&#x53D1;&#x5E03;&#xFF0C;&#x8BE5;&#x517C;&#x5BB9;&#x6027;&#x6587;&#x4EF6;&#x5305;&#x542B; Chez Scheme&#x65E9;&#x671F;&#x7248;&#x672C;&#x652F;&#x6301;&#x7684;&#x5404;&#x79CD;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;&#x548C;&#x8FC7;&#x7A0B;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x6B64;&#x540E;&#x4E0D;&#x518D;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x3002;&#x6B64;&#x6587;&#x4EF6; compat.ss&#x901A;&#x5E38;&#x5B89;&#x88C5;&#x5728; Chez Scheme&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684; library&#x5B50;&#x76EE;&#x5F55;&#x4E2D;&#x3002;<p></p>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7531;&#x4E8E;&#x4E0D;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; compat.ss&#x4E2D;&#x7684;&#x8868;&#x683C;&#x548C;&#x8FC7;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x76F4;&#x63A5;&#x5C06;&#x5B83;&#x4EEC;&#x5199;&#x5728; Scheme&#x4E2D;&#x3002; &#x5728;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x6539;&#x8FDB;&#x4F7F;&#x8868;&#x683C;&#x548C;&#x7A0B;&#x5E8F;&#x8FC7;&#x65F6;&#x4E86;&#x3002; &#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x7F16;&#x5199;&#x65B0;&#x4EE3;&#x7801;&#x4EE5;&#x4F7F;&#x7528;&#x8F83;&#x65B0;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x4E14;&#x5E94;&#x5C3D;&#x53EF;&#x80FD;&#x91CD;&#x5199;&#x8F83;&#x65E7;&#x7684;&#x4EE3;&#x7801;&#x4EE5;&#x4F7F;&#x7528;&#x8F83;&#x65B0;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<hr>
+<p><a href="../CSUG">Chez Scheme &#x7B2C; 9 &#x7248;&#x7528;&#x6237;&#x624B;&#x518C;</a>
+<br>&#x601D;&#x79D1;&#x7CFB;&#x7EDF;&#x6709;&#x9650;&#x516C;&#x53F8;&#x7248;&#x6743;&#x6240;&#x6709; &#xA9; 2019
+<br>&#x6309; <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License Version 2.0</a> &#x6388;&#x6743;&#xFF08;<a href="http://cisco.github.io/ChezScheme/csug9.5/canned/copyright.html" target="_blank">&#x5B8C;&#x6574;&#x7684;&#x7248;&#x6743;&#x516C;&#x544A;</a>&#xFF09;
+<br>&#x8FD9;&#x662F; 2019&#x5E74; 3&#x6708;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#x672C;, &#x5BF9;&#x5E94;&#x4E8E; Chez Scheme 9.5.2
+<br><a href="http://cisco.github.io/ChezScheme/csug9.5/canned/about.html" target="_blank">&#x5173;&#x4E8E;&#x672C;&#x4E66;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15.ThreadSystem.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 15. 线程系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"16. 兼容功能","level":"1.18","depth":1,"previous":{"title":"15. 线程系统","level":"1.17","depth":1,"path":"15.ThreadSystem.md","ref":"15.ThreadSystem.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"16.CompatibilityFeatures.md","mtime":"2020-04-26T22:38:54.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T22:39:25.823Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1035 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03. Debugging · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04.ForeignInterface.html" />
+    
+    
+    <link rel="prev" href="02.UsingChezScheme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.Terminology.html">
+            
+                <a href="00.Terminology.html">
+            
+                    
+                    00. 术语表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01.Introduction.html">
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    01. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02.UsingChezScheme.html">
+            
+                <a href="02.UsingChezScheme.html">
+            
+                    
+                    02. 使用Chez Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="03.Debugging.html">
+            
+                <a href="03.Debugging.html">
+            
+                    
+                    03. Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04.ForeignInterface.html">
+            
+                <a href="04.ForeignInterface.html">
+            
+                    
+                    04. 外部接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05.BindingForms.html">
+            
+                <a href="05.BindingForms.html">
+            
+                    
+                    05. 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06.ControlStructures.html">
+            
+                <a href="06.ControlStructures.html">
+            
+                    
+                    06. 控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07.OperationsOnObjects.html">
+            
+                <a href="07.OperationsOnObjects.html">
+            
+                    
+                    07. 对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08.NumericOperations.html">
+            
+                <a href="08.NumericOperations.html">
+            
+                    
+                    08. 数字操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09.InputOutputOperations.html">
+            
+                <a href="09.InputOutputOperations.html">
+            
+                    
+                    09. 输入输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10.LibrariesAndTop-levelPrograms.html">
+            
+                <a href="10.LibrariesAndTop-levelPrograms.html">
+            
+                    
+                    10. 库和顶层程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="11.SyntacticExtensionAndModules.html">
+            
+                <a href="11.SyntacticExtensionAndModules.html">
+            
+                    
+                    11. 语法扩展和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="12.SystemOperations.html">
+            
+                <a href="12.SystemOperations.html">
+            
+                    
+                    12. 系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="13.StorageManagement.html">
+            
+                <a href="13.StorageManagement.html">
+            
+                    
+                    13. 存储系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="14.ExpressionEditor.html">
+            
+                <a href="14.ExpressionEditor.html">
+            
+                    
+                    14. 扩展编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="15.ThreadSystem.html">
+            
+                <a href="15.ThreadSystem.html">
+            
+                    
+                    15. 线程系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="16.CompatibilityFeatures.html">
+            
+                <a href="16.CompatibilityFeatures.html">
+            
+                    
+                    16. 兼容功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >03. Debugging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x8C03;&#x8BD5;">&#x7B2C;&#x4E09;&#x7AE0; &#x8C03;&#x8BD5;</h1>
+<p><code>Chez Scheme</code> &#x6709;&#x51E0;&#x4E2A;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x7684;&#x529F;&#x80FD;&#x3002;&#x9664;&#x4E86;&#x5BF9;&#x7ECF;&#x8FC7;&#x5B8C;&#x5168;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x8FC7;&#x7684;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4F9B;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4E4B;&#x5916;&#xFF0C;<code>Chez Scheme</code> &#x4E5F;&#x652F;&#x6301;&#x5BF9;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x8DDF;&#x8E2A;&#xFF0C;&#x4E2D;&#x65AD;&#x4EFB;&#x610F;&#x8BA1;&#x7B97;&#xFF0C;&#x91CD;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x68C0;&#x67E5;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x62EC;&#x5F02;&#x5E38;&#x7684;continuation &#x548C;&#x4E2D;&#x65AD;&#x3002;</p>
+<p><code>Scheme</code> &#x6216; <code>Chez Scheme</code> &#x7684;&#x65B0;&#x624B;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x6709;&#x7ECF;&#x9A8C;&#x7684; Scheme &#x7A0B;&#x5E8F;&#x5458;&#x90FD;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x201C;How to Debug Chez Scheme Programs&#x201D; &#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#x3002;&#x5728; <a href="http://www.cs.indiana.edu/chezscheme/debug/" target="_blank">http://www.cs.indiana.edu/chezscheme/debug/</a> &#x53EF;&#x4EE5;&#x627E;&#x5230; HTML &#x548C; PDF &#x7248;&#x672C;&#x7684;&#x6559;&#x7A0B;&#x3002;(&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x6B64;&#x94FE;&#x63A5;&#x5728;&#x7FFB;&#x8BD1;&#x65F6;&#x65E0;&#x6CD5;&#x6253;&#x5F00; 2019/2/1)</p>
+<h2 id="31-&#x8DDF;&#x8E2A;">3.1 &#x8DDF;&#x8E2A;</h2>
+<p>&#x8DDF;&#x8E2A;&#x662F;&#x8C03;&#x8BD5; Scheme &#x7A0B;&#x5E8F;&#x6700;&#x6709;&#x7528;&#x7684;&#x624B;&#x6BB5;&#x4E4B;&#x4E00;&#x3002; <code>Chez Scheme</code> &#x53EF;&#x4EE5;&#x8DDF;&#x8E2A;&#x4EFB;&#x4F55;&#x5185;&#x5EFA;&#x548C;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x8DDF;&#x8E2A;&#x5E93;&#x4F1A;&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x901A;&#x8FC7;&#x7D27;&#x51D1;&#x7684;&#x7F29;&#x8FDB;&#x673A;&#x5236;&#x6765;&#x663E;&#x793A;&#x5D4C;&#x5957;&#x8C03;&#x7528;&#x7684;&#x6DF1;&#x5EA6;&#x3002;&#x6253;&#x5370;&#x975E;&#x5C3E;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x589E;&#x52A0;&#x7F29;&#x8FDB;&#x800C;&#x5C3E;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE5;&#x6B64;&#x533A;&#x5206;&#x662F;&#x5C3E;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x8FD8;&#x662F;&#x975E;&#x5C3E;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x3002;&#x5BF9;&#x4E8E;&#x5D4C;&#x5957;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; 10 &#x7684;&#x8C03;&#x7528;&#xFF0C;&#x4F1A;&#x5728;&#x7F29;&#x8FDB;&#x5904;&#x6709;&#x4E00;&#x4E2A;&#x62EC;&#x53F7;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x5D4C;&#x5957;&#x7684;&#x6DF1;&#x5EA6;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x8282;&#x4F1A;&#x6DB5;&#x76D6;&#x8DDF;&#x8E2A;&#x8FC7;&#x7A0B;&#x548C;&#x63A7;&#x5236;&#x8DDF;&#x8E2A;&#x8F93;&#x51FA;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+<ul>
+<li>&#x8BED;&#x6CD5;:       (trace-lambda name formals body1 body2 &#x2026;)</li>
+<li>&#x8FD4;&#x56DE;:       &#x4E00;&#x4E2A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:   (chezscheme)</li>
+</ul>
+<p>&#x4E00;&#x4E2A; <code>trace-lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x7B49;&#x4EF7;&#x4E8E;&#x4E00;&#x4E2A; <code>lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x52A0;&#x4E0A;&#x4E00;&#x6837;&#x7684;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;&#x4EE5;&#x53CA;&#x7A0B;&#x5E8F;&#x4F53;&#xFF0C;&#x9664;&#x4E86;&#x65E0;&#x8BBA;&#x4F55;&#x65F6;&#x8BE5;&#x8FC7;&#x7A0B;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x5411;&#x8DDF;&#x8E2A;&#x7AEF;&#x53E3;&#x8F93;&#x51FA;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x91CC;&#x4F7F;&#x7528; <code>name</code> &#x6765;&#x547D;&#x540D;&#x8BE5;&#x8FC7;&#x7A0B;&#x3002;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x4F1A;&#x663E;&#x793A;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8FC7;&#x7A0B;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5D4C;&#x5957;&#x7684;&#x8C03;&#x7528;&#x4F1A;&#x4EE5;&#x7F29;&#x8FDB;&#x663E;&#x793A;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B; <code>half</code> &#x8FD4;&#x56DE;&#x6574;&#x578B;&#x53C2;&#x6570;&#x9664;&#x4EE5; 2 &#x7684;&#x5546;&#x3002;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> half
+  (<span class="hljs-name">trace-lambda</span> half (<span class="hljs-name">x</span>)
+                (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span>
+                 [(<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> x) <span class="hljs-number">0</span>]
+                 [(<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> x) (<span class="hljs-name">half</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x <span class="hljs-number">1</span>))]
+                 [(<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> x) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">half</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x <span class="hljs-number">1</span>)) <span class="hljs-number">1</span>)])))
+</code></pre>
+<p>&#x5BF9;&#x4E8E; <code>(half 5)</code> &#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F; 2 &#x7684;&#x8C03;&#x7528;&#x8DDF;&#x8E2A;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-scheme">|(half 5)
+|(half 4)
+| (half 3)
+| (half 2)
+| |(half 1)
+| |(half 0)
+| |0
+| 1
+|2
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x8DDF;&#x8E2A;&#x5E93;&#x5BF9;&#x4E8E;&#x5C3E;&#x9012;&#x5F52;&#x548C;&#x975E;&#x5C3E;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x56E0;&#x4E3A; <code>half</code> &#x5728;&#x53C2;&#x6570;&#x662F;&#x5947;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;&#x81EA;&#x8EAB;,&#x6240;&#x4EE5; <code>(half 5)</code> &#x4E0E; <code>(half 4)</code> &#x7684;&#x7F29;&#x8FDB;&#x5C42;&#x7EA7;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53E6;&#x5916;&#xFF0C;&#x56E0;&#x4E3A; <code>(half 5)</code> &#x548C; <code>(half 4)</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x6240;&#x4EE5;&#x8FD9;&#x4E24;&#x4E2A;&#x8C03;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x3002;</p>
+<ul>
+<li>&#x8BED;&#x6CD5;:    (trace-case-lambda name clause ...)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:    &#x4E00;&#x4E2A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:    (chezscheme)</li>
+</ul>
+<p><code>trace-case-lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x7B49;&#x4EF7;&#x4E8E; <code>case-lambda</code> &#x52A0;&#x4E0A;&#x540C;&#x6837;&#x7684;&#x5B50;&#x53E5;&#xFF0C;&#x9664;&#x4E86;&#x5728;&#x8C03;&#x7528;&#x8BE5;&#x8FC7;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5411;&#x8DDF;&#x8E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x8F93;&#x51FA;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x91CC;&#x540C;&#x6837;&#x4F7F;&#x7528; <code>name</code> &#x6765;&#x6807;&#x8BB0;&#x8BE5;&#x8FC7;&#x7A0B;&#x3002;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x4F1A;&#x5C55;&#x793A;&#x6B64;&#x8FC7;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8BE5;&#x8FC7;&#x7A0B;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x540C;&#x6837;&#x4F7F;&#x7528;&#x7F29;&#x8FDB;&#x6765;&#x8868;&#x793A;&#x5D4C;&#x5957;&#x8C03;&#x7528;&#x3002;</p>
+<ul>
+<li>&#x8BED;&#x6CD5;:      (trace-let name ((var expr) &#x2026;) body1 body2 &#x2026;)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:  &#x7A0B;&#x5E8F;&#x4F53; body1 body2 ... &#x7684;&#x503C;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:  (chezscheme)</li>
+</ul>
+<p><code>trace-let</code> &#x8868;&#x8FBE;&#x5F0F;&#x7B49;&#x4EF7;&#x4E0E;&#x6709;&#x540C;&#x6837;&#x540D;&#x5B57;&#x3001;&#x7ED1;&#x5B9A;&#x548C;&#x7A0B;&#x5E8F;&#x4F53;&#x7684; <code>let</code> &#x8868;&#x8FBE;&#x5F0F;&#x9664;&#x4E86;&#x5728;&#x8FDB;&#x5165;&#x6216;&#x91CD;&#x5165;(&#x901A;&#x8FC7;&#x5BF9;&#x7ED1;&#x5B9A;&#x5728; name &#x4E0A;&#x7684;&#x8FC7;&#x7A0B;&#x7684;&#x8C03;&#x7528;)<code>trace-let</code> &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5411;&#x8DDF;&#x8E2A;&#x7AEF;&#x53E3;&#x8F93;&#x51FA;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x4EE5;&#x4E0B;&#x5F62;&#x5F0F; <code>trace-let</code> &#x7684;&#x8868;&#x8FBE;&#x5F0F;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name">trace-let</span> name ([<span class="hljs-name">var</span> expr] ...)
+           body1
+           body2
+           ...)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>trace-lambda</code> &#x91CD;&#x5199;&#x4E3A;&#x4EE5;&#x4E0B;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-scheme">((<span class="hljs-name"><span class="hljs-builtin-name">letrec</span></span> ([<span class="hljs-name">name</span>
+           (<span class="hljs-name">trace-lambda</span> name (<span class="hljs-name">var</span> ...)
+                         body1  boddy2)])
+   name)
+ expr ...)
+</code></pre>
+<p><code>trace-let</code> &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8DDF;&#x8E2A; let &#x8868;&#x8FBE;&#x5F0F;&#x4EE5;&#x53CA;&#x5177;&#x540D;&#x7684; let &#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53EA;&#x8981;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x5728; let &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7A0B;&#x5E8F;&#x4F53;&#x4E2D;&#x4E0D;&#x662F;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06; <code>trace-let</code> &#x63D2;&#x5165;&#x5230;&#x7A0B;&#x5E8F;&#x4E2D;&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x8DDF;&#x8E2A;&#x7A0B;&#x5E8F;&#x4EFB;&#x610F;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;
+&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684; <code>half</code></p>
+<pre><code class="lang-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> half
+  (<span class="hljs-name">trace-lambda</span> half (<span class="hljs-name">x</span>)
+                (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span>
+                  [(<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> x) <span class="hljs-number">0</span>]
+                  [(<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> x) (<span class="hljs-name">half</span> (<span class="hljs-name">trace-let</span> decr-value () (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x <span class="hljs-number">1</span>)))]
+                  [(<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> x) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">half</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x <span class="hljs-number">1</span>)) <span class="hljs-number">1</span>)])))
+</code></pre>
+<p>&#x8C03;&#x7528; <code>(half 5)</code> &#x4F1A;&#x6709;&#x5982;&#x4E0B;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-scheme">|(half 5)
+| (decr-value)
+| 4
+|(half 4)
+| (half 3)
+| |(decr-value)
+| |2
+| (half 2)
+| |(half 1)
+| | (decr-value)
+| | 0
+| |(half 0)
+| 1
+|2
+</code></pre>
+<ul>
+<li>&#x8BED;&#x6CD5;:     (trace-do ((var init update) &#x2026;) (test result &#x2026;) expr &#x2026;)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:   &#x6700;&#x540E;&#x4E00;&#x4E2A; result &#x7684;&#x503C;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:   (chezscheme)</li>
+</ul>
+<p><code>trace-do</code> &#x7B49;&#x4EF7;&#x4E0E;&#x62E5;&#x6709;&#x5B50;&#x8BED;&#x53E5;&#x7684;&#x7684; do &#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x9664;&#x4E86;&#x5411;&#x8DDF;&#x8E2A;&#x7AEF;&#x53E3;&#x8F93;&#x51FA;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x3002;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x5305;&#x62EC; <code>var</code> &#x2026;&#x7684;&#x503C;&#x3001;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x4EE5;&#x53CA;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x540E;&#x7684;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name">trace-do</span> ([<span class="hljs-name">old</span> &apos;(a b c) (<span class="hljs-name"><span class="hljs-builtin-name">cdr</span></span> old)]
+           [<span class="hljs-name">new</span> &apos;() (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">car</span></span> old) new)])
+          ((<span class="hljs-name"><span class="hljs-builtin-name">null?</span></span> old) new))
+</code></pre>
+<p>&#x4F1A;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x8DDF;&#x8E2A;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-scheme">|(do (a b c) ())
+|(do (b c) (a))
+|(do (c) (b a))
+|(do () (c b a))
+|(c b a)
+</code></pre>
+<p>&#x5E76;&#x4E14;&#x8FD4;&#x56DE; <code>(c b a)</code></p>
+<ul>
+<li>&#x8BED;&#x6CD5;&#xFF1A;    (trace var1 var2 &#x2026;)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:   &#x5305;&#x542B; var1 var2 &#x2026; &#x7684; list</li>
+<li>&#x8BED;&#x6CD5;:       (trace)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:  &#x5F53;&#x524D;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x6240;&#x6709;&#x9876;&#x5C42;&#x53D8;&#x91CF;&#x7EC4;&#x6210;&#x7684; list</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:  (chezscheme)</li>
+</ul>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x4E2D;&#xFF0C; <code>trace</code> &#x4F1A;&#x5C06;&#x9876;&#x5C42;&#x53D8;&#x91CF; var1&#xFF0C;var2 &#x2026;(&#x5FC5;&#x987B;&#x662F;&#x8FC7;&#x7A0B;)&#xFF0C;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x4E3A;&#x7B49;&#x4EF7;&#x7684;&#x7528;<code>trace-lambda</code>&#x5B9A;&#x4E49;&#x7684;&#x8FC7;&#x7A0B;&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x8DDF;&#x8E2A;&#x4FE1;&#x606F;&#x3002;</p>
+<p><code>trace</code> &#x4F1A;&#x5C06;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x539F;&#x6765;&#x7684;&#x503C;&#x5C01;&#x88C5;&#x3002;&#x4ED6;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#x5B9A;&#x4E49;&#xFF08;&#x5B9E;&#x9645;&#x7684;&#x7248;&#x672C;&#x4F1A;&#x8BB0;&#x5F55;&#x5E76;&#x8FD4;&#x56DE;&#x88AB;&#x8DDF;&#x8E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF09;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define-syntax</span></span> trace
+  (<span class="hljs-name"><span class="hljs-builtin-name">syntax-rules</span></span> ()
+    [(<span class="hljs-name">_</span> var ...)
+     (<span class="hljs-name"><span class="hljs-builtin-name">begin</span></span>
+       (<span class="hljs-name">set-top-level-value!</span> <span class="hljs-symbol">&apos;var</span>
+         (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> ([<span class="hljs-name">p</span> (<span class="hljs-name">top-level-value</span> <span class="hljs-symbol">&apos;var</span>)])
+           (<span class="hljs-name">trace-lambda</span> var args (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> p args))))
+       ...)]))
+</code></pre>
+<p>&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B;&#x7684;&#x8DDF;&#x8E2A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>untrace</code> &#xFF08;&#x89C1;&#x4E0B;&#x6587;&#xFF09;&#x7981;&#x7528;&#xFF0C;&#x5C06;&#x76F8;&#x5E94;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x672A;&#x8DDF;&#x8E2A;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x968F;&#x540E;&#x5BF9;&#x540C;&#x4E00;&#x53D8;&#x91CF;&#x4F7F;&#x7528;&#x8DDF;&#x8E2A;&#x3002;&#x56E0;&#x4E3A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x662F;&#x503C;&#x800C;&#x4E0D;&#x662F;&#x7ED1;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x8DDF;&#x8E2A;&#x88AB;&#x7981;&#x7528;&#x524D;&#x5DF2;&#x7ECF;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x8DDF;&#x8E2A;&#x88AB;&#x7981;&#x6B62;&#x540E;&#x8FD8;&#x662F;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#x4F9D;&#x7136;&#x4F1A;&#x88AB;&#x8DDF;&#x8E2A;&#x3002;</p>
+<p><code>trace</code> &#x4E0D;&#x5E26;&#x4EFB;&#x4F55;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x5F53;&#x524D;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x53D8;&#x91CF;&#x7684; list &#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x88AB;&#x8DDF;&#x8E2A;&#x5E76;&#x4E14;&#x968F;&#x540E;&#x6CA1;&#x6709;&#x88AB;&#x7981;&#x7528;&#x8DDF;&#x8E2A;&#x6216;&#x8005;&#x88AB;&#x8D4B;&#x4E88;&#x53E6;&#x4E00;&#x4E2A;&#x503C;&#x90A3;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4F8B;&#x4E3E;&#x4E86;&#x5982;&#x4F55;&#x5728; REPL &#x4E2D;&#x4F7F;&#x7528; <code>trace</code></p>
+<pre><code class="lang-scheme">&gt; (define half
+    (lambda (x)
+      (cond
+        [(zero? x) 0]
+        [(odd? x) (half (- x 1))]
+        [(even? x) (+ (half (- x 1)) 1)])))
+&gt; (half 5)
+2
+&gt; (trace half)
+(half)
+&gt; (half 5)
+|(half 5)
+|(half 4)
+| (half 3)
+| (half 2)
+| |(half 1)
+| |(half 0)
+| |0
+| 1
+|2
+2
+&gt; (define traced-half half)
+&gt; (untrace half)
+(half)
+&gt; (half 2)
+1
+&gt; (traced-half 2)
+|(half 2)
+|1
+1
+</code></pre>
+<ul>
+<li>&#x8BED;&#x6CD5;:     (untrace var1 var2 &#x2026;)</li>
+<li>&#x8BED;&#x6CD5;:     (untrace)</li>
+<li>&#x8FD4;&#x56DE;:     &#x4E00;&#x4E2A;&#x672A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x53D8;&#x91CF;&#x7684; list</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p><code>untrace</code> &#x5C06; var1&#x3001;var2 &#x2026; &#x8FD9;&#x4E9B;&#x5F53;&#x524D;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x9876;&#x5C42;&#x53D8;&#x91CF;&#x6062;&#x590D;&#x4E3A;&#x539F;&#x6765;&#x7684;&#xFF08; &#x88AB;<code>trace</code> &#x4E4B;&#x524D;&#x7684;&#xFF09;&#x503C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x7981;&#x6B62;&#x5BF9;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x7684;&#x8DDF;&#x8E2A;&#x3002;&#x5982;&#x679C; var1&#x3001;var2 &#x2026; &#x4E2D;&#x6709;&#x672A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x503C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x5982;&#x679C;&#x8C03;&#x7528; <code>untrace</code> &#x7684;&#x65F6;&#x5019;&#x4E0D;&#x52A0;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709;&#x5F53;&#x524D;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x53D8;&#x91CF;&#x90FD;&#x4F1A;&#x88AB;&#x590D;&#x539F;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5728; REPL &#x4E2D;&#x4F7F;&#x7528;<code>trace</code> &#x548C; <code>untrace</code> &#x8C03;&#x8BD5;&#x4E00;&#x6BB5;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x8FC7;&#x7A0B;&#x5B9A;&#x4E49;&#x3002;</p>
+<pre><code class="lang-scheme">&gt; (define square-minus-one
+    (lambda (x)
+      (- (* x x) 2)))
+&gt; (square-minus-one 3)
+7
+&gt; (trace square-minus-one * -)
+(square-minus-one * -)
+&gt; (square-minus-one 3)
+|(square-minus-one 3)
+| (* 3 3)
+| 9
+|(- 9 2)
+|7
+7
+&gt; (define square-minus-one
+    (lambda (x)
+      (- (* x x) 1))) ; change the 2 to 1
+&gt; (trace)
+(- *)
+&gt; (square-minus-one 3)
+|(* 3 3)
+|9
+|(- 9 1)
+|8
+8
+&gt; (untrace square-minus-one)
+()
+&gt; (untrace * -)
+(- *)
+&gt; (square-minus-one 3)
+8
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x5BF9;&#x4E8E; <code>square-minus-one</code> &#x7684;&#x8C03;&#x7528;&#x8BF4;&#x660E;&#x5176;&#x4E2D;&#x6709;&#x9519;&#x8BEF;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#xFF08;&#x8DDF;&#x8E2A;&#x540E;&#xFF09;&#x8868;&#x660E;&#x4E86;&#x662F;&#x5728;&#x90A3;&#x4E00;&#x6B65;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x9519;&#x8BEF;&#xFF0C;&#x7B2C;&#x4E09;&#x6B21;&#x8C03;&#x7528;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x5730;&#x4FEE;&#x590D;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x7B2C;&#x56DB;&#x6B21;&#x8C03;&#x7528;&#x8BF4;&#x660E; <code>untrace</code> &#x6CA1;&#x6709;&#x6D88;&#x9664;&#x8FD9;&#x6B21;&#x4FEE;&#x590D;&#x3002;</p>
+<ul>
+<li>&#x7EBF;&#x7A0B;&#x53C2;&#x6570;:     trace-output-port</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:         (chezscheme)</li>
+</ul>
+<p><code>trace-output-port</code> &#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x4E86;&#x8DDF;&#x8E2A;&#x7684;&#x4FE1;&#x606F;&#x4F1A;&#x88AB;&#x53D1;&#x9001;&#x7ED9;&#x54EA;&#x4E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x3002;&#x65E0;&#x53C2;&#x8C03;&#x7528;&#x65F6;&#xFF0C; <code>trace-output-port</code> &#x4F1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x8DDF;&#x8E2A;&#x7684;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x3002;&#x5F53;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x5FC5;&#x987B;&#x662F;&#x6587;&#x672C;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#xFF09;&#xFF0C; <code>trace-output-port</code> &#x4F1A;&#x6539;&#x53D8;&#x5F53;&#x524D;&#x7684;&#x8DDF;&#x8E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x3002;</p>
+<ul>
+<li>&#x7EBF;&#x7A0B;&#x53C2;&#x6570;:     trace-print</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:         (chezscheme)</li>
+</ul>
+<p><code>trace-print</code> &#x7684;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x3002;&#x8DDF;&#x8E2A;&#x5E93;&#x4F1A;&#x4F7F;&#x7528; <code>trace-print</code> &#x7684;&#x503C;&#x6765;&#x6253;&#x5370;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x8FC7;&#x7A0B;&#x7684;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x3002; <code>trace-print</code> &#x9ED8;&#x8BA4;&#x662F; <code>pretty-print</code></p>
+<p>&#x8DDF;&#x8E2A;&#x5E93;&#x4F1A;&#x5728;&#x8C03;&#x7528; <code>trace-print</code> &#x4E4B;&#x524D;&#xFF0C;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x5D4C;&#x5957;&#x5C42;&#x7EA7;&#x5C06; <code>pretty-initial-indent</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x503C;
+,&#x4EE5;&#x6B64;&#x4FDD;&#x8BC1;&#x591A;&#x884C;&#x8F93;&#x51FA;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x5730;&#x88AB;&#x7F29;&#x8FDB;&#x3002;</p>
+<ul>
+<li>&#x8BED;&#x6CD5;:    (trace-define var expr)</li>
+<li>&#x8BED;&#x6CD5;:    (trace-define (var . idspec) body1 body2 &#x2026;)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:     &#x4E0D;&#x786E;&#x5B9A;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p><code>trace-define</code> &#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x7684;&#x7B80;&#x8BB0;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5176;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x88AB;&#x8DDF;&#x8E2A;&#x7684;&#x540C;&#x6837;&#x540D;&#x5B57;&#x7684;&#x8FC7;&#x7A0B;&#x3002;
+&#x524D;&#x8005;&#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> var
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> ([<span class="hljs-name">x</span> expr])
+    (<span class="hljs-name">trace-lambda</span> var args
+      (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> x args))))
+</code></pre>
+<p>&#x540E;&#x8005;&#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code class="lang-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> var
+  (<span class="hljs-name">trace-lambda</span> var idspec
+    body1 body2 ...))
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x524D;&#x8005;&#xFF0C; <code>expr</code> &#x5FC5;&#x987B;&#x7B49;&#x4EF7;&#x4E8E;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;</p>
+<pre><code class="lang-scheme">&gt; (let ()
+    (trace-define plus
+      (lambda (x y) 
+        (+ x y)))
+    (list (plus 3 4) (+ 5 6)))
+|(plus 3 4)
+|7
+(7 11)
+</code></pre>
+<ul>
+<li>&#x8BED;&#x6CD5;:     (trace-define-syntax keyword expr)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:     &#x4E0D;&#x786E;&#x5B9A;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p><code>trace-define-syntax</code> &#x4F1A;&#x8DDF;&#x8E2A; <code>expr</code> &#x8F6C;&#x6362;&#x5668;&#x4E2D;&#x503C;&#x7684;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x9664;&#x53BB;&#x5C55;&#x5F00;&#x65F6;&#x7528;&#x4E8E;&#x7EF4;&#x62A4;&#x8BCD;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-scheme">&gt; (trace-define-syntax let*
+    (syntax-rules ()
+      [(_ () b1 b2 ...)
+       (let () b1 b2 ...)]
+      [(_ ((x e) m ...) b1 b2 ...)
+       (let ((x e))
+         (let* (m ...) b1 b2 ...))]))
+&gt; (let* ([x 3] [y (+ x x)]) (list x y))
+|(let* (let* [(x 3) (y (+ x x))] [list x y]))
+|(let ([x 3]) (let* ([y (+ x x)]) (list x y)))
+|(let* (let* [(y (+ x x))] [list x y]))
+|(let ([y (+ x x)]) (let* () (list x y)))
+|(let* (let* () [list x y]))
+|(let () (list x y))
+(3 6)
+</code></pre>
+<p>&#x53BB;&#x9664;&#x4E86;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#x4E4B;&#x540E;,&#x5C55;&#x793A;&#x7684;&#x8BED;&#x53E5;&#x66F4;&#x52A0;&#x6613;&#x8BFB;&#x4F46;&#x662F;&#x7F3A;&#x5931;&#x4E86;&#x7CBE;&#x786E;&#x6027;,&#x56E0;&#x4E3A;&#x540C;&#x6837;&#x540D;&#x5B57;&#x7684;&#x4E0D;&#x540C;&#x6807;&#x8BC6;&#x7B26;&#x96BE;&#x4EE5;&#x533A;&#x522B;&#x4E86;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-scheme">&gt; (let ([x 0])
+    (trace-define-syntax a
+      (syntax-rules ()
+        [(_ y) (eq? x y)]))
+    (let ([x 1])
+      (a x)))
+|(a (a x))
+|(eq? x x)
+#f
+</code></pre>
+<h2 id="32-&#x4EA4;&#x4E92;&#x5F0F;&#x8C03;&#x8BD5;&#x5668;">3.2 &#x4EA4;&#x4E92;&#x5F0F;&#x8C03;&#x8BD5;&#x5668;</h2>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x88AB;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x8C03;&#x7528; <code>debug</code> &#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x4EA4;&#x4E92;&#x5F0F;&#x8C03;&#x8BD5;&#x5668;&#x3002;&#x5BF9;&#x4E8E;&#x4E25;&#x91CD;&#x6216;&#x8005;&#x975E;&#x8B66;&#x544A;&#x7684;&#x72B6;&#x6001;(&#x5F02;&#x5E38;&#x72B6;&#x6001;)&#xFF0C;&#x5982;&#x679C; <code>debug-on-exception</code> &#x53C2;&#x6570;&#x662F;&#x771F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x5165;&#x3002;</p>
+<p>&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x5185;&#xFF0C;&#x547D;&#x4EE4; &#x201C;&#xFF1F;&#x201D; &#x4F1A;&#x5217;&#x51FA;&#x8C03;&#x8BD5;&#x547D;&#x4EE4;&#x9009;&#x9879;&#x3002;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x7528;&#x9014;&#x7684;&#x547D;&#x4EE4;:</p>
+<ul>
+<li>&#x68C0;&#x67E5; raise continuation</li>
+<li>&#x663E;&#x793A;&#x72B6;&#x6001;</li>
+<li>&#x68C0;&#x67E5;&#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x53CA;</li>
+<li>&#x9000;&#x51FA;&#x8C03;&#x8BD5;&#x5668;</li>
+</ul>
+<p>raise continuation &#x662F;&#x88AB;&#x5305;&#x88F9;&#x5728;&#x5F02;&#x5E38;&#x72B6;&#x6001;&#x5185;&#x7684; continuation&#xFF0C;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x3002;&#x6807;&#x51C6;&#x7684;&#x5F02;&#x5E38;&#x62A5;&#x544A;&#x8FC7;&#x7A0B;&#x3001; <code>assert</code> &#xFF0C;<code>assert-violation</code> &#x3001; <code>error</code>&#x4EE5;&#x53CA; <code>Chez Scheme</code> &#x7684;&#x8FC7;&#x7A0B; <code>assertion-violationf</code>, <code>errorf</code> &#x548C; <code>syntax-error</code> &#x90FD;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x8C03;&#x7528;&#x7528;&#x5F02;&#x5E38;&#x72B6;&#x6001;&#x5305;&#x88F9;&#x7684; continuation&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x5F85;&#x5224;&#x5B9A;&#x7A0B;&#x5E8F;&#x51FA;&#x9519;&#x3001;&#x51B2;&#x7A81;&#x3001;&#x6216;&#x8005;&#x5931;&#x8D25;&#x65AD;&#x8A00;&#x53D1;&#x751F;&#x6240;&#x5728;&#x7684;&#x5E27;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x4EA4;&#x4E92;&#x5F0F;&#x8C03;&#x8BD5;&#x5668;&#x2014;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x4E2D;&#x65AD;&#x89E6;&#x53D1;&#x9ED8;&#x8BA4;&#x7684;&#x952E;&#x76D8;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#x6216;&#x662F;&#x663E;&#x5F0F;&#x8C03;&#x7528;&#x8FC7;&#x7A0B; <code>break</code>
+&#x89E6;&#x53D1;&#x9ED8;&#x8BA4;&#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#x6765;&#x8FDB;&#x5165;&#x3002;&#x540C;&#x6837;&#x5730;&#xFF0C;&#x547D;&#x4EE4;&#x201C;&#xFF1F;&#x201D;&#x4F1A;&#x5217;&#x51FA;&#x547D;&#x4EE4;&#x9009;&#x9879;&#xFF0C;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<ul>
+<li>&#x9000;&#x51FA;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5E76;&#x7EE7;&#x7EED;</li>
+<li>&#x91CD;&#x7F6E;&#x5F53;&#x524D;&#x7684; <code>caf&#xE9;</code> (&#x8BD1;&#x6CE8;&#xFF1A;&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x6253;&#x5370; &#x5FAA;&#x73AF;)</li>
+<li>&#x7EC8;&#x6B62;&#x6574;&#x4E2A; Scheme &#x4F1A;&#x8BDD;</li>
+<li>&#x8FDB;&#x5165;&#x65B0;&#x7684; <code>caf&#xE9;</code></li>
+<li>&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x7684; continuation &#x5E76;&#x4E14;&#x8FD4;&#x56DE;</li>
+<li>&#x5C55;&#x793A;&#x7A0B;&#x5E8F;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F; &#xFF08;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x4EE5;&#x53CA;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF09;</li>
+</ul>
+<p>&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165; EOF&#xFF08;&#x6587;&#x4EF6;&#x7ED3;&#x675F;&#x7B26;&#xFF09;&#x6765;&#x9000;&#x51FA;&#x8C03;&#x8BD5;&#x5668;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x3002;&#x5728; Unix &#x4E0B;&#x662F;&#x201C;Control-D&#x201D;&#xFF0C;&#x5728; Windows &#x4E0A;&#x662F;&#x201C;Control-Z&#x201D;&#x3002;</p>
+<ul>
+<li>&#x8FC7;&#x7A0B;:    (debug)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:     &#x65E0;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p>&#x5F53;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x63A5;&#x6536;&#x5230;&#x4E25;&#x91CD;&#x6216;&#x8005;&#x975E;&#x8B66;&#x544A;&#x7684;&#x5F02;&#x5E38;&#x72B6;&#x6001;&#xFF0C;&#x5B83;&#x4F1A;&#x5C55;&#x793A;&#x8BE5;&#x72B6;&#x6001;&#x5E76;&#x4E14;&#x91CD;&#x7F6E;&#x5F53;&#x524D;&#x7684; <code>caf&#xE9;</code>&#x3002;&#x5728;&#x91CD;&#x7F6E;&#x4E4B;&#x524D;&#xFF0C;&#x5B83;&#x4F1A;&#x5C06;&#x72B6;&#x6001;&#x4FDD;&#x5B58;&#x5728;&#x53C2;&#x6570; <code>debug-condition</code> &#x3002; <code>debug</code> &#x8FC7;&#x7A0B;&#x53EF;&#x88AB;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x72B6;&#x6001;&#x3002;&#x65E0;&#x8BBA;&#x4F55;&#x65F6;&#x5185;&#x5EFA;&#x7684;&#x9519;&#x8BEF;&#x62A5;&#x544A;&#x673A;&#x5236;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x524D;&#x9519;&#x8BEF;&#x629B;&#x51FA;&#x70B9;&#x7684; continuation &#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x68C0;&#x67E5;&#x7684;&#x3002;&#x66F4;&#x5E7F;&#x4E49;&#x5730;&#x6765;&#x8BF4;&#xFF0C; <code>debug</code> &#x53EF;&#x4EE5;&#x68C0;&#x67E5; <code>make-continuation-condition</code> &#x521B;&#x5EFA;&#x7684;&#x4EFB;&#x610F; <code>continuation&#x72B6;&#x6001;</code>&#x4E2D;&#x5305;&#x542B;&#x7684; <code>continuation</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53C2;&#x6570; <code>debug-on-exception</code> &#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; <code>#t</code> &#xFF0C;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x4E25;&#x91CD;&#x548C;&#x975E;&#x8B66;&#x544A;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x673A;&#x5236;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x8C03;&#x8BD5;&#x5668;&#x3002;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570; <code>--debug-on-exception</code> &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x5C06; <code>debug-on-exception</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>#t</code>&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x8C03;&#x8BD5;&#x811A;&#x672C;&#x6216;&#x8005;&#x4F7F;&#x7528; <code>--script</code> &#x6216; <code>--program</code> &#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x8FD0;&#x884C;&#x7684;&#x9876;&#x5C42;&#x7A0B;&#x5E8F;&#x4F1A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;</p>
+<h2 id="33-&#x4EA4;&#x4E92;&#x5F0F;&#x5BA1;&#x67E5;&#x5668;">3.3 &#x4EA4;&#x4E92;&#x5F0F;&#x5BA1;&#x67E5;&#x5668;</h2>
+<p>&#x5BA1;&#x67E5;&#x5668;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8FC7;&#x7A0B; <code>inspect</code> &#x6216;&#x8005;&#x4ECE;&#x8C03;&#x8BD5;&#x5668;&#x95F4;&#x63A5;&#x542F;&#x52A8;&#x3002;&#x5B83;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x68C0;&#x67E5;&#x5FAA;&#x73AF;&#x5BF9;&#x8C61;&#x3001;&#x7AEF;&#x53E3;&#x548C;&#x8FC7;&#x7A0B;&#x8FD9;&#x7C7B;&#x6CA1;&#x6709;&#x8BFB;&#x53D6;&#x5668;&#x8BED;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#x3001;continuation &#x5BF9;&#x8C61;&#x3001;&#x7A0B;&#x5E8F;&#x5458;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x63A5;&#x89E6;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x901A;&#x5E38;&#x7684;&#x53EF;&#x4EE5;&#x88AB;&#x6253;&#x5370;&#x7684;Scheme&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x9996;&#x8981;&#x76EE;&#x7684;&#x662F;&#x68C0;&#x67E5;&#x800C;&#x4E0D;&#x662F;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x53EF;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x6709;&#x53EF;&#x80FD;&#x5728;&#x5BA1;&#x67E5;&#x5668;&#x5185;&#x88AB;&#x6539;&#x53D8;&#x3002;&#x53EF;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#x901A;&#x5E38;&#x88AB;&#x9650;&#x5236;&#x4E8E;&#x8D4B;&#x503C;&#x5728;&#x6E90;&#x7A0B;&#x5E8F;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x4EFB;&#x610F;&#x7684;&#x8FC7;&#x7A0B;&#xFF08;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x7684;&#x8FC7;&#x7A0B;&#x4F8B;&#x5982; <code>set-car!</code> &#xFF09;&#x90A3;&#x4E9B;&#x539F;&#x672C;&#x5C31;&#x662F;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x6539;&#x53D8;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x4E0D;&#x53EF;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#x3001;&#x8FC7;&#x7A0B;&#x4EE5;&#x53CA;&#x5927;&#x6570;&#xFF08;bignum&#xFF09;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E48;&#x505A;&#x8FDD;&#x53CD;&#x4E86;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5047;&#x5B9A;&#x3002;</p>
+<p>&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5305;&#x62EC;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x6253;&#x5370;&#x5C55;&#x793A;&#x7684;&#x63D0;&#x793A;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x8BDD;&#x4F1A;&#x4F7F;&#x7528;&#x7F29;&#x5199;&#x8BA9;&#x4E00;&#x884C;&#x53EF;&#x4EE5;&#x653E;&#x5F97;&#x4E0B;&#x3002;&#x5927;&#x91CF;&#x7684;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#x4EE5;&#x53CA;&#x5728;&#x5BF9;&#x8C61;&#x5185;&#x6E38;&#x8D70;&#x3002;&#x5BA1;&#x67E5;&#x5668;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x7528;&#x9009;&#x9879;&#x7684;&#x201C;&#x5728;&#x7EBF;&#x201D;&#x63CF;&#x8FF0;&#x3002;&#x547D;&#x4EE4;&quot;?&quot;&#x4F1A;&#x663E;&#x793A;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x53EF;&#x7528;&#x547D;&#x4EE4;&#x3002;&#x547D;&#x4EE4;&quot;??&quot; &#x4F1A;&#x663E;&#x793A;&#x901A;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x547D;&#x4EE4;&quot;h&quot;&#x4F1A;&#x7ED9;&#x51FA;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x7B80;&#x8981;&#x63CF;&#x8FF0;&#x3002;EOF &#x5B57;&#x7B26;&#x6216;&#x8005;&#x547D;&#x4EE4;&quot;q&quot;&#x53EF;&#x4EE5;&#x9000;&#x51FA;&#x5BA1;&#x67E5;&#x5668;&#x3002;</p>
+<ul>
+<li>&#x8FC7;&#x7A0B;&#xFF1A;    (inspect obj)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;    &#x4E0D;&#x786E;&#x5B9A;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;&#xFF1A;    (chezscheme)</li>
+</ul>
+<p>&#x5982;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x5728; <code>obj</code> &#x4E0A;&#x8C03;&#x7528;&#x5BA1;&#x67E5;&#x5668;&#x3002;&#x4F9D;&#x636E;&#x5F53;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x53EF;&#x7528;&#x547D;&#x4EE4;&#x7F57;&#x5217;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>&#x901A;&#x7528;&#x547D;&#x4EE4;</strong></p>
+<p><code>help</code> &#x6216; <code>h</code> &#x4F1A;&#x663E;&#x793A;&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x7B80;&#x8981;&#x63CF;&#x8FF0;</p>
+<p><code>?</code> &#x5C55;&#x793A;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x53EF;&#x7528;&#x9009;&#x9879;</p>
+<p><code>??</code> &#x5C55;&#x793A;&#x901A;&#x7528;&#x53C2;&#x6570;</p>
+<p><code>print</code> &#x6216; <code>p</code> &#x6253;&#x5370;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#xFF08;&#x4F7F;&#x7528; <code>pretty-print</code> &#xFF09;</p>
+<p><code>wirte</code> &#x6216; <code>w</code> &#x5199;&#x4E0B;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#xFF08;&#x4F7F;&#x7528; <code>write</code> &#xFF09;</p>
+<p><code>size</code> &#x5199;&#x4E0B;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF08;&#x901A;&#x8FC7; <code>compute-size</code> &#x786E;&#x5B9A;&#xFF09;&#xFF0C;&#x5305;&#x62EC;&#x4EFB;&#x610F;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x9664;&#x4E86;
+&#x540C;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x4F1A;&#x8BDD;&#x4E2D;&#x5DF2;&#x7ECF;&#x8BA1;&#x7B97;&#x8FC7;&#x7684;&#x3002;</p>
+<p><code>find expr[g]</code> &#x4F1A;&#x6C42;&#x503C; <code>expr</code> , <code>expr</code> &#x5E94;&#x5F53;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C; <code>find</code> &#x547D;&#x4EE4;&#x4F1A;&#x641C;&#x7D22;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x51FA;&#x73B0;&#x7684;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x5C06;&#x6B64;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x7ED9; expr &#x4F1A;&#x8FD4;&#x56DE;&#x771F;&#xFF09;&#x3002;&#x641C;&#x7D22;&#x65F6;&#x5C06;&#x7ACB;&#x5373;&#x503C;&#xFF08;&#x5982;&#xFF1A;&#x5B9A;&#x957F;&#x6570;&#xFF09;&#xFF0C;&#x6BD4; g &#x66F4;&#x8001;&#x7684;&#x503C;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x641C;&#x7D22;&#x4E2D;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x3002;&#x5982;&#x679C; <code>g</code> &#x6CA1;&#x6709;&#x7ED9;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x6700;&#x5927;&#x4EE3;&#x6570;&#xFF0C;&#x4F8B;&#x5982; <code>collect-maximum-generation</code> &#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x90A3;&#x4E48;&#xFF0C; <code>g</code> &#x5FC5;&#x987B;&#x662F;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x6700;&#x5927;&#x4EE3;&#x6570;&#xFF08;&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x6811;&#x7684;&#x6811;&#x9AD8;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x7B26;&#x53F7; <code>static</code> &#x4EE3;&#x8868;&#x9759;&#x6001;&#x751F;&#x6210;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x90A3;&#x4E48;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x7126;&#x70B9;&#x4F1A;&#x79FB;&#x52A8;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x5C31;&#x50CF;&#x4ECE;&#x539F;&#x672C;&#x7684;&#x5BF9;&#x8C61;&#x90A3;&#x91CC;&#x8D70;&#x4E86;&#x51E0;&#x6B65;&#x6765;&#x5230;&#x4E86;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64; <code>up</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x672C;&#x7684;&#x5BF9;&#x8C61;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x8981;&#x600E;&#x4E48;&#x627E;&#x5230;&#x3002;</p>
+<p><code>find-next</code> &#x91CD;&#x590D;&#x4E0A;&#x4E00;&#x4E2A; find&#xFF0C;&#x627E;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;</p>
+<p><code>up</code> &#x6216; <code>u n</code> &#x8FD4;&#x56DE;&#x4E0A; n &#x4E2A;&#x5C42;&#x7EA7;&#x3002;&#x7528;&#x4E8E;&#x5728;&#x68C0;&#x67E5;&#x5BF9;&#x8C61;&#x4E2D;&#x5411;&#x5916;&#x79FB;&#x52A8;&#xFF0C;n &#x9ED8;&#x8BA4;&#x662F; 1&#x3002;</p>
+<p><code>top</code> &#x6216; <code>t</code> &#x8FD4;&#x56DE;&#x6700;&#x5916;&#x5C42;&#x7684;&#x68C0;&#x67E5;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><code>forward</code> &#x6216; <code>f</code> &#x79FB;&#x52A8;&#x5230;&#x4E0B; n &#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x7528;&#x4E8E;&#x5728;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x5143;&#x7D20;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x4ECE;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x79FB;&#x52A8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;,&#x4F8B;&#x5982;&#xFF0C;list&#x3001;vector&#x3001;
+record&#x3001;frame &#x6216; closure&#x3002;n &#x9ED8;&#x8BA4;&#x662F; 1&#x3002;</p>
+<p><code>back</code> &#x6216; <code>b</code> &#x5411;&#x524D;&#x79FB;&#x52A8; n &#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x7528;&#x4E8E;&#x5728;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x5143;&#x7D20;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x4ECE;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x79FB;&#x52A8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#xFF0C;list&#x3001;vector&#x3001;
+record&#x3001;frame &#x6216; closure&#x3002;n &#x9ED8;&#x8BA4;&#x662F; 1&#x3002;</p>
+<p><code>=&gt; expr</code> &#x5C06;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x53D1;&#x9001;&#x7ED9;&#x8FC7;&#x7A0B; <code>expr</code> &#x3002; <code>expr</code> &#x53EF;&#x4EE5;&#x5728;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x63A5;&#x4E0B;&#x6765;&#x51E0;&#x884C;&#x5F00;&#x59CB;&#xFF0C;&#x53EF;&#x4EE5;&#x5360;&#x636E;&#x591A;&#x884C;&#x3002;</p>
+<p><code>file path</code> &#x6253;&#x5F00;&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x3002;&#x53C2;&#x6570; <code>source-directories</code> &#xFF08;&#x89C1; 12.5 &#x7AE0;&#xFF09;&#x51B3;&#x5B9A;&#x4E86;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x641C;&#x7D22;&#x8DEF;&#x5F84;</p>
+<p><code>list line count</code> &#xFF0C;&#x7F57;&#x5217;&#x4ECE;&#x7B2C; <code>line</code> &#x884C;&#x5F00;&#x59CB;&#x7684; <code>count</code> &#x884C;&#x6E90;&#x4EE3;&#x7801;&#x3002; <code>line</code> &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4E0A;&#x4E00;&#x6B21;&#x5C55;&#x793A;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;&#xFF0C;<code>count</code> &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 10 &#x6216;&#x8005;&#x4E0A;&#x4E00;&#x6B21;&#x5C55;&#x793A;&#x7684;&#x4EE3;&#x7801;&#x884C;&#x6570;&#x3002;&#x5982;&#x679C; <code>line</code> &#x662F;&#x8D1F;&#x6570;&#x90A3;&#x4E48;&#xFF0C; <code>list</code> &#x4F1A;&#x5C55;&#x793A;&#x4E0A;&#x4E00;&#x6B21;&#x5C55;&#x793A; <code>line</code> &#x884C;&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p><code>files</code> &#x5C55;&#x793A;&#x5F53;&#x524D;&#x6253;&#x5F00;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x3002;</p>
+<p><code>mark</code> &#x6216; <code>m m</code> &#x4F7F;&#x7528;&#x7B26;&#x53F7; <code>m</code> &#x6807;&#x8BB0;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C; <code>m</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x552F;&#x4E00;&#x6807;&#x5FD7;&#x6807;&#x8BB0;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>goto</code> &#x6216; <code>g m</code> &#x56DE;&#x5230;&#x6807;&#x8BB0;&#x7740; <code>m</code> &#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C; <code>m</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x5BA1;&#x67E5;&#x5668;&#x4F1A;&#x56DE;&#x5230;&#x9ED8;&#x8BA4;&#x6807;&#x5FD7;&#x6807;&#x8BB0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>new-cafe</code> &#x6216; <code>n</code> &#x8FDB;&#x5165;&#x65B0;&#x7684; &#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x6253;&#x5370; &#x5FAA;&#x73AF; &#xFF08;&#x6240;&#x8C13;&#x7684; caf&#xE9;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x901A;&#x5E38;&#x7684;&#x9876;&#x5C42;&#x73AF;&#x5883;&#x3002;</p>
+<p><code>quit</code> &#x6216; <code>q</code> &#x4ECE;&#x5BA1;&#x67E5;&#x5668;&#x9000;&#x51FA;&#x3002;</p>
+<p><code>reset</code> &#x6216; <code>r</code> &#x91CD;&#x7F6E;&#x5F53;&#x524D;&#x7684; <code>caf&#xE9;</code> &#x3002;</p>
+<p><code>abort</code> &#x6216; <code>a x</code> &#x4ECE; Scheme &#x9000;&#x51FA;&#xFF0C;&#x72B6;&#x6001;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; X&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;-1&#x3002;</p>
+<p><strong>Continuation &#x547D;&#x4EE4;</strong></p>
+<p><code>show-frames</code> &#x6216; <code>sf</code> &#x663E;&#x793A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x7B2C; n &#x4E2A;&#x5E27;&#xFF0C;&#x5982;&#x679C; <code>n</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x5C31;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x5E27;&#x3002;</p>
+<p><code>depth</code> &#x5C55;&#x793A; <code>continuation</code> &#x4E2D;&#x7684;&#x5E27;&#x7684;&#x6570;&#x91CF;</p>
+<p><code>down</code> &#x6216; <code>d n</code> &#x79FB;&#x52A8;&#x5230; continuation &#x4E2D;&#x7684;&#x4E0B; n &#x4E2A;&#x5E27;&#xFF0C;n &#x9ED8;&#x8BA4;&#x662F; 1</p>
+<p><code>show</code> &#x6216; <code>s</code> &#x5C55;&#x793A; <code>continuation</code>&#xFF08;&#x4E0B;&#x4E00;&#x4E2A;&#x5E27;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;,&#x5C55;&#x793A;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x5F85;&#x5224;&#x5B9A;&#x7684;&#x8C03;&#x7528;&#x6E90;&#x7801;&#xFF0C;&#x95ED;&#x5305;&#xFF0C;&#x5E27;&#x4EE5;&#x53CA;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x503C;&#x3002;&#x53EA;&#x6709;&#x5728;&#x7F16;&#x8BD1;&#x5BF9;&#x5E94;&#x7684; lambda &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x542F;&#x7528;&#x4E86;&#x751F;&#x6210;&#x5BA1;&#x67E5;&#x5668;&#x4FE1;&#x606F;&#x65F6;&#x624D;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6E90;&#x7801;&#x3002;</p>
+<p><code>show-local</code> &#x6216; <code>sl</code> &#x548C; <code>show</code> &#x6216; <code>s</code> &#x7C7B;&#x4F3C;&#x9664;&#x4E86;&#x4E0D;&#x5C55;&#x793A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;(&#x5982;&#x679C;&#x6709;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x68C0;&#x67E5;&#x95ED;&#x5305;&#x5F97;&#x5230;)&#x3002;</p>
+<p><code>length</code> &#x6216; <code>l</code> &#x5C55;&#x793A; continuation &#x4E2D;&#x9876;&#x5C42;&#x5E27;&#x7684;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r</code>  &#x79FB;&#x52A8;&#x5230;&#x7B2C; n &#x4E2A;&#x6216;&#x8005;&#x547D;&#x540D;&#x7684;&#x5E27;&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;&#x5982;&#x679C;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x6709;&#x540C;&#x6837;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x83B7;&#x5F97;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x3002;</p>
+<p><code>code</code> &#x6216; <code>c</code> &#x79FB;&#x52A8;&#x5230;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;</p>
+<p><code>call</code> &#x79FB;&#x52A8;&#x5230;&#x5F85;&#x8C03;&#x7528;&#x5224;&#x5B9A;&#x7684;&#x6E90;&#x4EE3;&#x7801;</p>
+<p><code>file</code> &#x6253;&#x5F00;&#x5305;&#x542B;&#x5224;&#x5B9A;&#x8C03;&#x7528;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x77E5;&#x9053;&#x7684;&#x8BDD;&#x3002; &#x53C2;&#x6570; <code>source-directories</code> &#xFF08;&#x89C1; 12.5 &#x7AE0;&#xFF09;&#x51B3;&#x5B9A;&#x4E86;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x65F6;&#x641C;&#x7D22;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; <code>/</code> &#x5F00;&#x5934;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF08;&#x6216;&#x8005; Windows &#x4F7F;&#x7528; <code>\</code> &#xFF09;&#xFF0C;&#x5BA1;&#x67E5;&#x5668;&#x4F1A;&#x5148;&#x5C1D;&#x8BD5;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8BBE;&#x5B9A;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x5C1D;&#x8BD5;&#x8DEF;&#x5F84;&#x7684;&#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#xFF09;&#x3002;&#x5BF9;&#x4E8E; <code>./</code> (Windows &#x4E0B;&#x662F; <code>.\</code>) &#x6216; <code>../</code> (Windows &#x4E0B;&#x662F; <code>..\</code> ) &#x5F00;&#x5934;&#x7684;&#x8DEF;&#x5F84;&#x540D;,&#x5BA1;&#x67E5;&#x5668;&#x9996;&#x5148;&#x68C0;&#x67E5; <code>.</code> &#x6216; <code>..</code> ,&#x7136;&#x540E;&#x5C1D;&#x8BD5;&#x8BBE;&#x5B9A;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5939;&#x4E2D; <code>.</code> &#x6216; <code>..</code> &#x5F00;&#x5934;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#x7684;&#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7684;&#xFF08;&#x76F8;&#x5BF9;&#x7684;&#xFF09;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x5BA1;&#x67E5;&#x5668;&#x4F1A;&#x5148;&#x5728;&#x8BBE;&#x5B9A;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4E2D;&#x5BFB;&#x627E;&#x6574;&#x4E2A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x7136;&#x540E;&#x662F;&#x5728;&#x8BBE;&#x5B9A;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4E2D;&#x5BFB;&#x627E;&#x6700;&#x540E;&#x7684;&#x90E8;&#x5206;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#x540D;&#x5B57;&#x76F8;&#x540C;&#x4F46;&#x662F;&#x5185;&#x5BB9;&#x4E0E;&#x539F;&#x672C;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x8DF3;&#x8FC7;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x56E0;&#x4E3A;&#x6587;&#x4EF6;&#x5728;&#x7F16;&#x8BD1;&#x4E4B;&#x540E;&#x53C8;&#x88AB;
+&#x4FEE;&#x6539;&#x8FC7;&#x3002;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x660E;&#x786E;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6765;&#x5F3A;&#x5236;&#x6253;&#x5F00;&#x7279;&#x5B9A;&#x6587;&#x4EF6;&#xFF08;&#x53C2;&#x8003;&#x4E0A;&#x9762;&#x7684;&#x901A;&#x7528;&#x547D;&#x4EE4;&#xFF09;&#x3002;</p>
+<p><code>eval</code> &#x6216; <code>e expr</code> &#x5728;&#x5305;&#x542B;&#x5E27;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x5BF9; <code>expr</code> &#x8FDB;&#x884C;&#x6C42;&#x503C;&#x3002;&#x5728;&#x88AB;&#x6C42;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5185;&#x90E8;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5E27;&#x5143;&#x7D20; <code>n</code> &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>%n</code> &#x83B7;&#x53D6;&#x3002;&#x540C;&#x6837;&#x7684;&#x5177;&#x540D;&#x5E27;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ED6;&#x4EEC;&#x7684;&#x540D;&#x5B57;&#x5F97;&#x5230;&#x3002;&#x53EA;&#x6709;&#x5728;&#x7F16;&#x8BD1;&#x5BF9;&#x5E94;&#x7684; lambda &#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#x542F;&#x7528;&#x4E86;&#x751F;&#x6210;&#x5BA1;&#x67E5;&#x5668;&#x4FE1;&#x606F;&#x65F6;&#x624D;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x540D;&#x5B57;&#x3002;</p>
+<p><code>set!</code> &#x6216; <code>!n e</code> &#x8BBE;&#x7F6E;&#x7B2C; n &#x4E2A;&#x5E27;&#x5143;&#x7D20;&#x4E3A; <code>e</code> &#xFF0C;&#x5982;&#x679C;&#x90A3;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><strong>Procedure &#x547D;&#x4EE4;&#xFF08;&#x8FC7;&#x7A0B;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s</code> &#x5C55;&#x793A;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;&#x53EA;&#x6709;&#x5728;&#x7F16;&#x8BD1;&#x5BF9;&#x5E94;&#x7684; lambda &#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#x542F;&#x7528;&#x4E86;&#x751F;&#x6210;&#x5BA1;&#x67E5;&#x5668;&#x4FE1;&#x606F;&#x65F6;&#x624D;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6E90;&#x4EE3;&#x7801;&#x3002;</p>
+<p><code>code</code> &#x6216; <code>c</code> &#x79FB;&#x52A8;&#x5230;&#x8FC7;&#x7A0B;&#x7684;&#x6E90;&#x4EE3;&#x7801;</p>
+<p><code>file</code> &#x6253;&#x5F00;&#x5305;&#x542B;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x77E5;&#x9053;&#x7684;&#x8BDD;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53C2;&#x89C1;&#x4E0A;&#x6587;&#x5BF9; continuation &#x7684;&#x63CF;&#x8FF0;</p>
+<p><code>length</code> &#x6216; <code>l</code> &#x5C55;&#x793A;&#x8BB0;&#x5F55;&#x5728;&#x8FC7;&#x7A0B;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r</code> &#x79FB;&#x52A8;&#x5230;&#x7B2C; n &#x4E2A;&#x6216;&#x8005;&#x662F;&#x5177;&#x540D;&#x7684;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;n &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 0&#x3002;&#x5982;&#x679C;&#x591A;&#x4E2A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x662F;&#x547D;&#x540D;&#x76F8;&#x540C;&#x90A3;&#x4E48;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x83B7;&#x53D6;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x6570;&#x5B57;&#x8BBF;&#x95EE;&#x3002;</p>
+<p><code>set!</code> &#x6216; <code>! n e</code> &#x5C06;&#x7B2C; <code>n</code> &#x4E2A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>e</code> &#xFF0C;&#x524D;&#x63D0;&#x662F;&#x8BE5;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x88AB;&#x8D4B;&#x503C;&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><code>eval</code> &#x6216; <code>e expr</code> &#x5728;&#x5305;&#x542B;&#x8BE5;&#x8FC7;&#x7A0B;&#x7684;&#x7ED1;&#x5B9A;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x5BF9; <code>expr</code> &#x6C42;&#x503C;&#x3002;&#x5728;&#x88AB;&#x6C42;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5185;&#x90E8;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x81EA;&#x7531;&#x53D8;&#x91CF; <code>n</code> &#x7684;&#x503C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D8;&#x91CF; <code>%n</code> &#x6765;&#x83B7;&#x53D6;&#x3002;&#x5177;&#x540D;&#x7684;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ED6;&#x4EEC;&#x7684;&#x540D;&#x5B57;&#x83B7;&#x53D6;&#x5230;&#x53D8;&#x91CF;&#x503C;&#x3002;&#x53EA;&#x6709;&#x5728;&#x7F16;&#x8BD1;&#x5BF9;&#x5E94;&#x7684; lambda &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x542F;&#x7528;&#x4E86;&#x751F;&#x6210;&#x5BA1;&#x67E5;&#x5668;&#x4FE1;&#x606F;&#x624D;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x53D8;&#x91CF;&#x540D;&#x3002; </p>
+<p><strong>Pair(list)&#x547D;&#x4EE4;&#xFF08;&#x5217;&#x8868;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s n</code> &#x663E;&#x793A; list &#x4E2D;&#x7684;&#x7B2C; n &#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A; n &#x90A3;&#x4E48;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x88AB;&#x5C55;&#x793A;&#x3002;</p>
+<p><code>length</code> &#x6216; <code>l</code> &#x5C55;&#x793A; list &#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p><code>car</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684; car &#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><code>cdr</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684; cdr &#x5BF9;&#x5E94;&#x7684;&#x961F;&#x5F62;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r n</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D; list &#x4E2D;&#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><code>tail n</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D; list &#x7684;&#x7B2C; <code>n</code> &#x4E2A; cdr&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 1&#x3002;</p>
+<p><strong>Vector&#xFF0C;Bytevector&#xFF0C;Fxvector &#x547D;&#x4EE4;&#xFF08;&#x5411;&#x91CF;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s n</code> &#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D; vector &#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C; <code>n</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5C31;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p><code>length</code> &#x6216; <code>l</code> &#x5C55;&#x793A;&#x5411;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r n</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D; vector &#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#xFF0C; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><strong>String &#x547D;&#x4EE4;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s n</code> &#x5C55;&#x793A;&#x5F53;&#x524D; string &#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A; <code>n</code> &#xFF0C;&#x5C31;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p><code>length</code> &#x6216; <code>l</code> &#x5C55;&#x793A;&#x5F53;&#x524D; string &#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r n</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D; string &#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#xFF0C; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><code>unicode n</code> &#x663E;&#x793A;&#x5F53;&#x524D; string &#x7684;&#x524D; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236; Unicode &#x6807;&#x91CF;&#x503C;&#x3002;</p>
+<p><code>ascii n</code> &#x5C55;&#x793A; string &#x7684;&#x524D; <code>n</code> &#x4E2A;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236; ASCII &#x7F16;&#x7801;&#x503C;&#xFF0C;&#x4F7F;&#x7528; <code>--</code> &#x8BF4;&#x660E;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x7684; Unicode &#x7F16;&#x7801;&#x4E0D;&#x5728; ASCII &#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;</p>
+<p><strong>Symbol &#x547D;&#x4EE4;&#xFF08;&#x7B26;&#x53F7;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s</code> &#x663E;&#x793A; symbol &#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x3002;</p>
+<p><code>value</code> &#x6216; <code>v</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D; symbol &#x9876;&#x5C42;&#x7684;&#x503C;&#x3002;</p>
+<p><code>name</code> &#x6216; <code>n</code>   &#x79FB;&#x52A8;&#x5230;symbol&#x7684;&#x547D;&#x540D;&#x3002;</p>
+<p><code>property-list</code> &#x6216; <code>pl</code> &#x79FB;&#x52A8;&#x5230; symbol &#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r n</code> &#x79FB;&#x52A8;&#x5230; symbol &#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x3002;&#x7B2C; 0 &#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F;&#x8BE5; symbol &#x7684;&#x9876;&#x5C42;&#x503C;&#xFF0C;&#x7B2C; 1 &#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F; symbol &#x7684;&#x540D;&#x5B57;&#xFF0C;&#x7B2C;2&#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F;&#x4ED6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x3002;n &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<p><strong>Character &#x547D;&#x4EE4;&#xFF08;&#x5B57;&#x7B26;&#xFF09;</strong></p>
+<p><code>unicode</code> &#x5C55;&#x793A;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236; Unicode &#x7F16;&#x7801;&#x503C;</p>
+<p><code>ascii</code> &#x5C55;&#x793A;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x7684; ASCII &#x7F16;&#x7801;&#x503C;&#xFF0C;&#x5982;&#x679C; Unicode &#x7F16;&#x7801;&#x503C;&#x4E0D;&#x5728; ASCII &#x7684;&#x7F16;&#x7801;&#x8303;&#x56F4;&#x5185;&#x5219;&#x4F7F;&#x7528; <code>--</code> &#x6765;&#x4EE3;&#x66FF;</p>
+<p><strong>Box &#x547D;&#x4EE4;</strong></p>
+<p><code>show</code> &#x6216; <code>s</code> &#x5C55;&#x793A;&#x5F53;&#x524D; box &#x7684;&#x5185;&#x5BB9; &#x3002;&#xFF08;&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;box &#x50CF;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6700;&#x5C0F;&#x53EF;&#x4FEE;&#x6539;&#x503C;&#xFF09;</p>
+<p><code>unbox</code> &#x6216; <code>ref</code> &#x6216; <code>r</code> &#x79FB;&#x52A8;&#x5230;&#x88AB;&#x88C5;&#x7BB1;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>Port &#x547D;&#x4EE4;</strong></p>
+<p><code>show</code> &#x6216; <code>s</code> &#x5C55;&#x793A;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#xFF0C;&#x5305;&#x62EC;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E0B;&#x6807;&#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x6210;&#x5458;&#x3002;</p>
+<p><code>name</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p><code>handler</code> &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x7684;&#x53E5;&#x67C4;&#x3002;</p>
+<p><code>output-buffer</code> &#x6216; <code>ob</code> &#x79FB;&#x52A8;&#x5230;&#x7AEF;&#x53E3;&#x7684;&#x8F93;&#x51FA;&#x7F13;&#x5B58;&#x3002;</p>
+<p><code>input-buffer</code> &#x6216; <code>ib</code> &#x79FB;&#x52A8;&#x5230;&#x7AEF;&#x53E3;&#x7684;&#x8F93;&#x5165;&#x7F13;&#x5B58;&#x3002;</p>
+<p><strong>Record &#x547D;&#x4EE4; &#xFF08;&#x8BB0;&#x5F55;&#xFF09;</strong></p>
+<p><code>show</code> &#x6216; <code>s</code> &#x663E;&#x793A;&#x8BB0;&#x5F55;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p><code>fields</code> &#x79FB;&#x52A8;&#x5230;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x540D;&#x5B57;&#x5217;&#x8868;&#x3002;</p>
+<p><code>name</code> &#x79FB;&#x52A8;&#x5230;&#x8BB0;&#x5F55;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p><code>rtd</code> &#x79FB;&#x52A8;&#x5230;&#x8BB0;&#x5F55;&#x7684;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;&#x3002;</p>
+<p><code>ref</code> &#x6216; <code>r name</code> &#x5982;&#x679C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF0C;&#x79FB;&#x52A8;&#x5230;&#x8BB0;&#x5F55;&#x7684;&#x5177;&#x540D;&#x6570;&#x636E;&#x6210;&#x5458;&#x3002;</p>
+<p><code>set!</code> &#x6216; <code>! name value</code> &#x4FEE;&#x6539;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x6210;&#x5458;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x3002;</p>
+<p><strong>Transport Link Cell (TLC) &#x547D;&#x4EE4;</strong> </p>
+<p><code>show</code> &#x6216; <code>s</code> &#x5C55;&#x793A; TLC &#x7684;&#x6570;&#x636E;&#x6210;&#x5458; &#x3002;</p>
+<p><code>keyval</code> &#x79FB;&#x52A8;&#x5230; TLC &#x7684; keyval&#x3002;</p>
+<p><code>tonc</code> &#x79FB;&#x52A8;&#x5230; TLC &#x7684; tconc</p>
+<p><code>next</code> &#x79FB;&#x52A8;&#x5230; TLC &#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7684;&#x94FE;&#x63A5;</p>
+<p><code>ref</code> &#x6216; <code>r n</code> &#x79FB;&#x52A8;&#x5230;&#x7B26;&#x53F7;&#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x3002;&#x7B2C; 0 &#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F; keyval&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F; tconc&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x7684;&#x94FE;&#x63A5;&#x3002; <code>n</code> &#x9ED8;&#x8BA4;&#x662F; 0&#x3002;</p>
+<h2 id="34-&#x5BF9;&#x8C61;&#x5BA1;&#x67E5;&#x5668;">3.4 &#x5BF9;&#x8C61;&#x5BA1;&#x67E5;&#x5668;</h2>
+<p>&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x4E0D;&#x540C;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x3002;&#x548C;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x68C0;&#x67E5;&#x90A3;&#x4E9B;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x65E0;&#x6CD5;&#x68C0;&#x67E5;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x5BA1;&#x67E5;&#x5668;&#x9075;&#x5FAA;&#x5355;&#x4E00;,&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x534F;&#x8BAE;&#x3002;&#x4E00;&#x822C;&#x7684; Scheme &#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x5C01;&#x88C5;&#x5728;&#x8FC7;&#x7A0B;&#x6216;&#x8005;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x6216;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x6027;&#x7684;&#x4FE1;&#x606F;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x5173;&#x4E8E;&#x88AB;&#x5C01;&#x88C5;&#x5BF9;&#x8C61;&#x7684;&#x4FE1;&#x606F;&#x6216;&#x8005;&#x662F;&#x65B0;&#x7684;&#x5C01;&#x88C5;&#x7740;&#x5BF9;&#x8C61;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li>&#x8FC7;&#x7A0B;:     (inspect/object object)</li>
+<li>&#x8FD4;&#x56DE;:     &#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x8FC7;&#x7A0B;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:    (chezscheme)</li>
+</ul>
+<p><code>inspect/object</code> &#x7528;&#x4E8E;&#x5C06;&#x4E00;&#x4E2A; Scheme &#x5BF9;&#x8C61;&#x8F6C;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x6709;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x90FD;&#x63A5;&#x53D7; <code>type</code> &#x3001; <code>print</code> &#x3001;<code>write</code> &#x548C; <code>size</code> &#x8FD9;&#x56DB;&#x4E2A;&#x6D88;&#x606F;&#x3002; <code>type</code> &#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x7B26;&#x53F7;&#x8868;&#x793A;&#x3002; <code>print</code> &#x548C; <code>write</code> &#x4E00;&#x5B9A;&#x8981;&#x548C;&#x7AEF;&#x53E3;&#x53C2;&#x6570;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x4E24;&#x6761;&#x6D88;&#x606F;&#x7528;&#x4E8E;&#x901A;&#x8FC7; Scheme &#x8FC7;&#x7A0B; <code>preety-print</code> &#x548C; <code>write</code> &#x5C06;&#x5BF9;&#x8C61;&#x7684;&#x8868;&#x793A;&#x5199;&#x5230;&#x5BF9;&#x5E94;&#x7AEF;&#x53E3;&#x3002; <code>size</code> &#x6D88;&#x606F;&#x4F1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x6240;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x5927;&#x5C0F;&#x7684;&#x5E38;&#x6570;&#x8868;&#x793A;,&#x5305;&#x62EC;&#x4EFB;&#x610F;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x9664;&#x4E86;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;<code>inspect/object</code> &#x8C03;&#x7528;&#x8BA1;&#x7B97;&#x8FC7;&#x5927;&#x5C0F;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x53D8;&#x91CF;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x6240;&#x6709;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x90FD;&#x63A5;&#x53D7;&#x6D88;&#x606F; <code>value</code> &#xFF0C;&#x8FD9;&#x4F1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x771F;&#x6B63;&#x5C01;&#x88C5;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-scheme">(define x (inspect/object &apos;(1 2 3)))
+(x &apos;type) =&gt; pair
+(define p (open-output-string))
+(x &apos;write p)
+(get-output-string p) =&gt; &quot;(1 2 3)&quot;
+(x &apos;length) =&gt; (proper 3)
+(define y (x &apos;car))
+(y &apos;type) \rightarrow simple
+(y &apos;value) =&gt; 1
+</code></pre>
+<p><strong>Pair&#xFF08;&#x5E8F;&#x5BF9;&#xFF09;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong>  &#x5E8F;&#x5BF9;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E00;&#x4E2A; Scheme &#x7684;&#x5E8F;&#x5BF9;&#x3002;</p>
+<p><code>(pair-object &apos;type)</code>   &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>pair</code> &#x3002;</p>
+<p><code>(pair-object &apos;car)</code>    &#x8FD4;&#x56DE;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5E8F;&#x5BF9;&#x7684; <code>car</code> &#x6570;&#x636E;&#x6210;&#x5458;&#x3002;</p>
+<p><code>(pair-object &apos;cdr)</code>    &#x8FD4;&#x56DE;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5E8F;&#x5BF9;&#x7684; <code>cdr</code> &#x6570;&#x636E;&#x6210;&#x5458;&#x3002;</p>
+<p><code>(pair-object &apos;length)</code> &#x8FD4;&#x56DE;&#x8BED;&#x53E5;&#x5F62;&#x5F0F;&#x7684;&#x5217;&#x8868; (&#x4E0E;&#x7C7B;&#x578B;&#x6709;&#x5173;). &#x7C7B;&#x578B;&#x90E8;&#x5206;&#x5305;&#x542B;&#x7B26;&#x53F7; <code>proper</code> &#x3001; <code>omproper</code>
+&#x6216;&#x662F; <code>circular</code>&#xFF0C;&#x8FD9;&#x4F1A;&#x4F9D;&#x636E;&#x5217;&#x8868;&#x7ED3;&#x6784;&#x7684;&#x4E0D;&#x540C;&#x800C;&#x4E0D;&#x540C;&#x3002;&#x8BA1;&#x6570;&#x90E8;&#x5206;&#x5305;&#x542B;&#x8BE5;&#x5217;&#x8868;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x5E8F;&#x5BF9;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><strong>Box &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> Box &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B; Chez Scheme &#x7684; box&#x3002;</p>
+<p><code>(box-object &apos;type)</code>     &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>box</code> &#x3002;
+<code>(box-object &apos;unbox)</code>    &#x8FD4;&#x56DE;&#x5305;&#x542B; box &#x5185;&#x5BB9;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>TLC &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> Box &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B; Chez Scheme &#x7684; box&#x3002;</p>
+<p><code>(tlc-object &apos;type)</code>     &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>tlc</code> &#x3002;</p>
+<p><code>(tlc-object &apos;keyval)</code>   &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;,&#x5305;&#x542B; TLC &#x7684; keyval&#x3002;</p>
+<p><code>(tlc-object &apos;tconc)</code>    &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;,&#x5305;&#x542B; TLC &#x7684; tconc&#x3002;</p>
+<p><code>(tlc-object &apos;next)</code>     &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;,&#x5305;&#x542B; TLC &#x7684; &#x4E0B;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x3002;</p>
+<p><strong>Vector, String, Bytevector, &#x548C; Fxvector &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> .&#x5411;&#x91CF;&#xFF08;bytevector, string, fxvector&#xFF09;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B; Scheme &#x7684;&#x5411;&#x91CF;(bytevectors, strings, fxvectors)&#x3002;</p>
+<p><code>(vector-object &apos;type)</code>   &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>vector</code> ( <code>string</code>, <code>bytevector</code>, <code>fxvector</code>).</p>
+<p><code>(vector-object &apos;length)</code> &#x8FD4;&#x56DE;&#x5411;&#x91CF;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5143;&#x7D20;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(vector-object &apos;ref n)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;,&#x5305;&#x542B;&#x5411;&#x91CF;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C; <code>n</code> &#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+<p><strong>&#x7B80;&#x5355;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> ,&#x7B80;&#x5355;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x975E;&#x7ED3;&#x6784;&#x5316;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5305;&#x62EC;&#x6570;&#x5B57;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3001;&#x7A7A;&#x8868;&#x3001;EOF &#x5BF9;&#x8C61;&#x4EE5;&#x53CA; void &#x5BF9;&#x8C61;&#x3002;
+&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x7ED9;&#x5BF9;&#x8C61;&#x4E00;&#x4E2A; <code>value</code> &#x53C2;&#x6570;&#x6765;&#x68C0;&#x67E5;&#x3002;</p>
+<p><code>(simple-object &apos;type)</code>    &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>symbol</code> &#x3002;</p>
+<p><strong>&#x672A;&#x7ED1;&#x5B9A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#xFF0C;&#x867D;&#x7136; Scheme &#x7A0B;&#x5E8F;&#x901A;&#x5E38;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x672A;&#x7ED1;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5728;&#x68C0;&#x67E5;&#x53D8;&#x91CF;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x5B83;&#x4EEC;&#x3002;</p>
+<p><code>(unbound-object &apos;type)</code>   &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>unbound</code>&#x3002;</p>
+<p><strong>&#x8FC7;&#x7A0B;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x8FC7;&#x7A0B;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E00;&#x4E2A; Scheme &#x8FC7;&#x7A0B;&#x3002;</p>
+<p><code>(procedure-object &apos;type)</code>   &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>procedure</code> &#x3002;</p>
+<p><code>(procedure-object &apos;length)</code> &#x8FD4;&#x56DE;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x91CF; &#x3002;</p>
+<p><code>(procedure-object &apos;ref n)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x8FC7;&#x7A0B;&#x7684;&#x7B2C; n &#x4E2A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;&#x8BE6;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x53D8;&#x91CF;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x90E8;&#x5206;&#x3002;n&#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x6570;&#x4E14;&#x5C0F;&#x4E8E;&#x8FC7;&#x7A0B;&#x4E2D;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(procedure-object &apos;eval expr)</code> &#x5BF9; <code>expr</code> &#x6C42;&#x503C;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x503C;&#x3002;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x5728;&#x88AB;&#x6C42;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x6807;&#x8BC6;&#x7B26;
+%n &#x8868;&#x793A;&#xFF0C;n &#x662F;&#x5BA1;&#x67E5;&#x5668;&#x663E;&#x793A;&#x7684;&#x4F4D;&#x7F6E;&#x6570;&#x5B57;&#x3002;&#x5177;&#x540D;&#x7684;&#x53D8;&#x91CF;&#x540C;&#x6837;&#x4E5F;&#x7ED1;&#x5B9A;&#x5230;&#x4ED6;&#x4EEC;&#x672C;&#x8EAB;&#x7684;&#x540D;&#x5B57;&#x4E0A;&#x3002;</p>
+<p><code>(procedure-object &apos;code)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;,&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8FC7;&#x7A0B;&#x7684;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x3002;&#x5173;&#x4E8E;&#x4EE3;&#x7801;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x8BE6;&#x89C1;&#x4E0B;&#x6587;&#x3002;</p>
+<p><strong>continuation &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x901A;&#x8FC7; <code>call/cc</code> &#x4EA7;&#x751F;&#x7684; continuation &#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8FC7;&#x7A0B;&#x3002;&#x4F46;&#x662F;&#x5728;&#x68C0;&#x67E5;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x65F6;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x9700;&#x8981;&#x5C06; continuation &#x7684;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x66B4;&#x9732;&#x51FA;&#x6765;&#x624D;&#x884C;&#x3002;&#x4E00;&#x4E2A; continuation &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5305;&#x542B;&#x8981;&#x6062;&#x590D;&#x8BA1;&#x7B97;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6267;&#x884C;&#x8BA1;&#x7B97;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x4E0B;&#x4E00;&#x4E2A; continuation &#x7684;&#x94FE;&#x63A5;&#x3002;</p>
+<p><code>(continuation-object &apos;type)</code>  &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>continuation</code> &#x3002;</p>
+<p><code>(continuation-object &apos;length)</code> &#x8FD4;&#x56DE;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(continuation-object &apos;ref n)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B; continuation &#x7684;&#x7B2C; n &#x4E2A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x3002;&#x8BE6;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x53D8;&#x91CF;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x90E8;&#x5206;&#x3002;n&#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x6570;&#x4E14;&#x5C0F;&#x4E8E;&#x8FC7;&#x7A0B;&#x4E2D;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(continuation-object &apos;eval expr)</code> &#x5BF9; <code>expr</code> &#x6C42;&#x503C;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x503C;&#x3002;continuation &#x5E27;&#x4E2D;&#x7684;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x5728;&#x88AB;&#x6C42;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x6807;&#x8BC6;&#x7B26;<code>%n</code> &#x8868;&#x793A;&#xFF0C;n &#x662F;&#x5BA1;&#x67E5;&#x5668;&#x663E;&#x793A;&#x7684;&#x4F4D;&#x7F6E;&#x6570;&#x5B57;&#x3002;&#x5177;&#x540D;&#x7684;&#x53D8;&#x91CF;&#x540C;&#x6837;&#x4E5F;&#x7ED1;&#x5B9A;&#x5230;&#x4ED6;&#x4EEC;&#x672C;&#x8EAB;&#x7684;&#x540D;&#x5B57;&#x4E0A;&#x3002;</p>
+<p><code>(continuation-object &apos;code)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x8FC7;&#x7A0B;&#x7684;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#xFF0C;&#x6B64;&#x4EE3;&#x7801;&#x662F;&#x5F53;&#x524D;&#x7684; continuation &#x5E27;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#x5BF9;&#x5E94;&#x8FC7;&#x7A0B;&#x662F;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x8BE6;&#x89C1;&#x4E0B;&#x6587;&#x6709;&#x5173;&#x4EE3;&#x7801;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><code>(continuation-object &apos;depth)</code> &#x8FD4;&#x56DE;&#x5F53;&#x524D; continuation &#x5305;&#x542B;&#x7684;&#x5E27;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(continuation-object &apos;link)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E0B;&#x4E00;&#x4E2A; continuation &#x5E27;&#x3002;&#x6DF1;&#x5EA6;&#x5FC5;&#x987B;&#x5927;&#x4E8E; 1&#x3002;</p>
+<p><code>(continuation-object &apos;link* n)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B; continuation &#x7684;&#x7B2C; n &#x4E2A;&#x94FE;&#x63A5;&#xFF0C;n &#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x6DF1;&#x5EA6;&#x3002;</p>
+<p><code>(continuation-object &apos;source)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E0E; continuation &#x76F8;&#x5173;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x7A0B;&#x5E8F;&#x4E2D;&#x5BFC;&#x81F4; continuation &#x5F62;&#x6210;&#x7684;&#x6E90;&#x7801;&#xFF09;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9644;&#x52A0;&#x6E90;&#x7801;&#x4FE1;&#x606F;&#x90A3;&#x4E48;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(continuation-object &apos;source-object)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4EA7;&#x751F; continuation &#x5F62;&#x6210;&#x76F8;&#x5173;&#x7684;&#x6E90;&#x7801;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9644;&#x52A0;&#x6E90;&#x7801;&#x5BF9;&#x8C61;&#x90A3;&#x4E48;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(continuation-object &apos;source-path)</code> &#x5C1D;&#x8BD5;&#x5BFB;&#x627E;&#x5305;&#x542B;&#x4EA7;&#x751F; continuation &#x8FC7;&#x7A0B;&#x6240;&#x5728;&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#x5C31;&#x7528;&#x4E09;&#x4E2A;&#x503C;&#x6765;&#x6807;&#x8BB0;&#x6587;&#x4EF6;&#x5185;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A; <code>path</code> &#x3001; <code>line</code> &#x4EE5;&#x53CA; <code>char</code> &#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x540D;&#x77E5;&#x9053;&#x4F46;&#x662F;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x5B57;&#x7B26;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5728;&#x7F16;&#x8BD1;&#x540E;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x5373;&#x4F7F;&#x627E;&#x5230;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x4F9D;&#x7136;&#x662F;&#x4F5C;&#x4E3A;&#x641C;&#x7D22;&#x5931;&#x8D25;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x77E5;&#x9053;&#x6587;&#x4EF6;&#x540D;&#x90A3;&#x4E48;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x53C2;&#x6570; <code>source-directories</code> &#x51B3;&#x5B9A;&#x4E86;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x65F6;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x641C;&#x7D22;&#x76EE;&#x5F55;&#x3002;</p>
+<p><strong>Code(&#x4EE3;&#x7801;) &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B; Chez Scheme &#x7684;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;</p>
+<p><code>(code-object &apos;type)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7B26;&#x53F7; <code>code</code></p>
+<p><code>(code-object &apos;name)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005; <code>#f</code> &#x3002;&#x4EE3;&#x7801;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x8FC7;&#x7A0B;&#x539F;&#x672C;&#x7ED1;&#x5B9A;&#x6216;&#x8005;&#x662F;&#x88AB;&#x8D4B;&#x503C;&#x65F6;&#x7684;&#x540D;&#x5B57;&#x3002;&#x56E0;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x7ED1;&#x5B9A;&#x53EF;&#x4EE5;&#x88AB;&#x6539;&#x53D8;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;&#x4E0D;&#x4E0A;&#x3002; &#x5982;&#x679C;&#x5BA1;&#x67E5;&#x5668;&#x4E0D;&#x80FD;&#x83B7;&#x6089;&#x8FC7;&#x7A0B;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(code-object &apos;source)</code> &#x8FD4;&#x56DE;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x9644;&#x52A0;&#x7684;&#x6E90;&#x7801;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6E90;&#x7801;&#x4FE1;&#x606F;&#x5C31;&#x8FD4;&#x56DE; #f&#x3002;</p>
+<p><code>(code-object &apos;source-object)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x7684;&#x6E90;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9644;&#x52A0;&#x6E90;&#x5BF9;&#x8C61;&#x5219;&#x8FD4;&#x56DE; #f&#x3002;</p>
+<p><code>(code-object &apos;source-path)</code> &#x5C1D;&#x8BD5;&#x5BFB;&#x627E;&#x5305;&#x542B;&#x4EA7;&#x751F;&#x4EA7;&#x751F;&#x5BF9;&#x5E94;&#x8FC7;&#x7A0B;&#x7684; lambda &#x8868;&#x8FBE;&#x5F0F;&#x6240;&#x5728;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#x5C31;&#x7528;&#x4E09;&#x4E2A;&#x503C;&#x6765;&#x6807;&#x8BB0;&#x6587;&#x4EF6;&#x5185;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A; <code>path</code> &#x3001; <code>line</code> &#x4EE5;&#x53CA; <code>char</code> &#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x540D;&#x77E5;&#x9053;&#x4F46;&#x662F;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x5B57;&#x7B26;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5728;&#x7F16;&#x8BD1;&#x540E;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x5373;&#x4F7F;&#x627E;&#x5230;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x4F9D;&#x7136;&#x662F;&#x4F5C;&#x4E3A;&#x641C;&#x7D22;&#x5931;&#x8D25;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x77E5;&#x9053;&#x6587;&#x4EF6;&#x540D;&#x90A3;&#x4E48;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x53C2;&#x6570; <code>source-directories</code> &#x51B3;&#x5B9A;&#x4E86;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x65F6;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x641C;&#x7D22;&#x76EE;&#x5F55;&#x3002;</p>
+<p><code>(code-object &apos;free-count)</code>  &#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x7684;&#x4EFB;&#x610F;&#x8FC7;&#x7A0B;&#x4E2D;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><strong>Variable&#xFF08;&#x53D8;&#x91CF;&#xFF09;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x3002; &#x53D8;&#x91CF;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5C01;&#x88C5;&#x4E86;&#x53D8;&#x91CF;&#x7ED1;&#x5B9A;&#x3002;&#x5C3D;&#x7BA1;&#x771F;&#x6B63;&#x7684;&#x5E95;&#x5C42;&#x8868;&#x793A;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x540C;&#xFF0C;&#x53D8;&#x91CF;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86;&#x7EDF;&#x4E00;&#x7684;&#x754C;&#x9762;&#x3002;</p>
+<p><code>(variable-object &apos;type)</code>  &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>variable</code></p>
+<p><code>(variable-object &apos;name)</code>  &#x8FD4;&#x56DE;&#x7B26;&#x53F7;&#x6216;&#x8005; <code>#f</code> &#x3002;&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x540D;&#x5B57;&#x6216;&#x8005;&#x540D;&#x5B57;&#x662F;&#x7F16;&#x8BD1;&#x5668;&#x751F;&#x6210;&#x7684;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;&#x5982;&#x679C;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x671F;
+ <code>generate-inspector-information</code> &#x4E3A;&#x5047;&#x5219;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x4E0D;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x3002;</p>
+<p><code>(variable-object &apos;ref)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x53D8;&#x91CF;&#x7684;&#x5F53;&#x524D;&#x503C;&#x3002;</p>
+<p><code>(variable-object &apos;set! e)</code>  &#x5C06;&#x5F53;&#x524D;&#x7684;&#x53D8;&#x91CF;&#x503C;&#x8BBE;&#x5B9A;&#x4E3A; <code>e</code> &#xFF0C; &#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x786E;&#x5B9A;&#x3002;&#x5982;&#x679C;&#x53D8;&#x91CF;&#x4E0D;&#x80FD;&#x88AB;&#x8D4B;&#x503C;&#x5219;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x7C7B;&#x578B;&#x4E3A;<code>&amp;assertion</code> &#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<p><strong>Port(&#x7AEF;&#x53E3;) &#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong>  &#x5305;&#x542B;&#x7AEF;&#x53E3;&#x7684;&#x7AEF;&#x53E3;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><code>(port-object &apos;type)</code>   &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>port</code></p>
+<p><code>(port-object &apos;input?)</code>  &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x662F;&#x8F93;&#x5165;&#x7AEF;&#x53E3;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(port-object &apos;output?)</code>  &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x662F;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(port-object &apos;binary?)</code>  &#x5982;&#x679C;&#x4E00;&#x7684;&#x7AEF;&#x53E3;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x7AEF;&#x53E3;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(port-object &apos;closed?)</code>  &#x5982;&#x679C;&#x7AEF;&#x53E3;&#x5173;&#x95ED;&#x4E86;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> &#xFF0C;&#x5982;&#x679C;&#x5F00;&#x7740;&#x5C31;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>(port-object &apos;name)</code>    &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x7AEF;&#x53E3;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p><code>(port-object &apos;handler)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x7AEF;&#x53E3;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x5C31;&#x50CF; <code>port-handler</code> &#x4F1A;&#x8FD4;&#x56DE;&#x7684;&#x90A3;&#x6837;&#x3002;</p>
+<p><code>(port-object &apos;output-size)</code> &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x7684;&#x8BDD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;&#x7684;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x7684;&#x8BDD;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x3002;</p>
+<p><code>(port-object &apos;output-index)</code> &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x5219;&#x5C06;&#x7F13;&#x51B2;&#x533A;&#x4E0B;&#x6807;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B9A;&#x957F;&#x6570;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#x662F;&#x4E2A;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x503C;&#x3002;</p>
+<p><code>(port-object &apos;output-buffer)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7528;&#x4E8E;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><code>(port-object &apos;input-size)</code> &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7AEF;&#x53E3;&#x7684;&#x8BDD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;&#x7684;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x7684;&#x8BDD;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x3002;</p>
+<p><code>(port-object &apos;input-index)</code> &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7AEF;&#x53E3;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;&#x7684;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x786E;&#x5B9A;&#x3002;</p>
+<p><code>(port-object &apos;input-buffer)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61; &#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x7F13;&#x51B2;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><strong>Symbol(&#x7B26;&#x53F7;)&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x3002; &#x7B26;&#x53F7;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x7B26;&#x53F7;&#xFF0C;&#x5305;&#x6D3B; gensyms&#xFF08;&#x751F;&#x6210;&#x7B26;&#x53F7;&#xFF09;</p>
+<p><code>(symbol-object &apos;type)</code>  &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>symbol</code>&#x3002;</p>
+<p><code>(symbol-object &apos;name)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x3002;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x5BA1;&#x67E5;&#x5668;&#x7684;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x662F;&#x8BE5;&#x7B26;&#x53F7;&#x7684;&#x88AB;&#x6253;&#x5370;&#x65F6;&#x7684;&#x8868;&#x793A;&#x3002;&#x5C31;&#x50CF;&#x8FC7;&#x7A0B;<code>symbol-&gt;string</code> &#x4F1A;&#x8FD4;&#x56DE;&#x7684;&#x90A3;&#x6837;&#x3002;</p>
+<p><code>(symbol-object &apos;gensym?)</code> &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x662F;&#x751F;&#x6210;&#x7B26;&#x53F7;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x8D27; <code>#f</code> &#x3002;&#x751F;&#x6210;&#x7B26;&#x53F7;&#x4F7F;&#x7528; <code>gensym</code> &#x751F;&#x6210;&#x3002;</p>
+<p><code>(symbol-object &apos;top-level-value)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61; &#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7B26;&#x53F7;&#x7684;&#x5168;&#x5C40;&#x503C;&#x3002;</p>
+<p><code>(symbol-object &apos;property-list)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7B26;&#x53F7;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x3002;</p>
+<p><strong>Record(&#x8BB0;&#x5F55;)&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;</strong> &#x3002;&#x8BB0;&#x5F55;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;&#x8BB0;&#x5F55;&#x3002;</p>
+<p><code>(record-object &apos;type)</code>  &#x8FD4;&#x56DE;&#x7B26;&#x53F7; <code>record</code></p>
+<p><code>(record-object &apos;name)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p><code>(record-object &apos;fields)</code>  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x7684;&#x6210;&#x5458;&#x540D;&#x5B57;&#x5217;&#x8868;&#x3002;</p>
+<p><code>(record-object &apos;length)</code>  &#x8FD4;&#x56DE;&#x6570;&#x636E;&#x6210;&#x5458;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p><code>(record-object &apos;rtd)</code>   &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x7684;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</p>
+<p><code>(record-object &apos;accessible? name)</code> &#x5982;&#x679C;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x5C31;&#x8FD4;&#x56DE; <code>#t</code> ,&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;&#x5982;&#x679C;&#x7F16;&#x8BD1;&#x5668;&#x4F18;&#x5316;&#x8FC7;&#x6570;&#x636E;&#x6210;&#x5458;&#x6709;&#x53EF;&#x80FD;&#x4E0D;&#x80FD;&#x88AB;&#x8BBF;&#x95EE;&#x3002;</p>
+<p><code>(record-object &apos;ref name)</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BA1;&#x67E5;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x6570;&#x636E;&#x6210;&#x5458;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x6210;&#x5458;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;&#x5219;&#x4F1A;&#x629B;&#x51FA;&#x72B6;&#x6001;&#x7C7B;&#x578B;&#x4E3A;<code>&amp;assertion</code> &#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<p><code>(record-object &apos;mutable? name)</code> &#x5982;&#x679C;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x6539;&#x53D8;&#x7684;&#x5219;&#x8FD4;&#x56DE; <code>#t</code> ,&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x6CA1;&#x6709;&#x7533;&#x660E;&#x4E3A;&#x53EF;&#x6539;&#x53D8;&#x7684;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x7684;&#x3002;&#x5982;&#x679C;&#x7F16;&#x8BD1;&#x5668;&#x5C06;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x7684;&#x8D4B;&#x503C;&#x90FD;&#x4F18;&#x5316;&#x6389;&#x4E86;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x4E5F;&#x662F;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x7684;&#x3002;</p>
+<p><code>(record-object &apos;set! name value)</code> &#x5C06;&#x5BF9;&#x5E94;&#x540D;&#x5B57;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x8BBE;&#x7F6E;&#x4E3A; <code>value</code> &#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6210;&#x5458;&#x4E0D;&#x80FD;&#x88AB;&#x8D4B;&#x503C;&#x5C31;&#x629B;&#x51FA;&#x72B6;&#x6001;&#x7C7B;&#x578B;&#x4E3A; <code>&amp;assertion</code> &#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<h2 id="35-&#x5B9A;&#x4F4D;&#x5BF9;&#x8C61;">3.5 &#x5B9A;&#x4F4D;&#x5BF9;&#x8C61;</h2>
+<ul>
+<li>&#x8FC7;&#x7A0B;:     (make-object-finder pred)</li>
+<li>&#x8FC7;&#x7A0B;:     (make-object-finder pred g)</li>
+<li>&#x8FC7;&#x7A0B;:     (make-object-finder pred x g)</li>
+<li>&#x8FD4;&#x56DE;:     &#x89C1;&#x4E0B;&#x6587;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p>&#x8FC7;&#x7A0B; <code>make-object-finder</code> &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x8C13;&#x8BCD;&#x8FC7;&#x7A0B; <code>pred</code> &#x4EE5;&#x53CA;&#x4E24;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;: &#x4E00;&#x4E2A;&#x5F00;&#x59CB;&#x70B9; <code>x</code> &#x548C;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x4EE3;&#x6570; <code>g</code> &#x3002;&#x5F00;&#x59CB;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x9ED8;&#x8BA4;&#x662F;&#x8FC7;&#x7A0B; <code>oblist</code> &#x7684;&#x503C;&#xFF0C;&#x6700;&#x5927;&#x4EE3;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x7531;&#x53C2;&#x6570; <code>collection-maximum-generation</code> &#x51B3;&#x5B9A;&#x3002; <code>make-object-finder</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x68C0;&#x7D22;&#x5668;<code>p</code>&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x641C;&#x5BFB;&#x4ECE;&#x8D77;&#x59CB;&#x70B9; <code>x</code> &#x5F00;&#x59CB;&#xFF0C;&#x6EE1;&#x8DB3; <code>pred</code> &#x7684;&#x5BF9;&#x8C61;&#x3002;&#x7ACB;&#x5373;&#x5BF9;&#x8C61;&#x548C;&#x4E16;&#x4EE3;&#x6BD4; g &#x5927;&#x7684;&#x5BF9;&#x8C61;&#x4F1A;&#x88AB;&#x89C6;&#x4E3A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002; <code>p</code> &#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x63A5;&#x53D7;&#x53C2;&#x6570;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x4ECE; <code>x</code> &#x5F00;&#x59CB;&#x80FD;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x6EE1;&#x8DB3; <code>pred</code> &#x7684;&#x5BF9;&#x8C61; y&#xFF0C; <code>p</code> &#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x662F; <code>y</code>&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5143;&#x7D20;&#x4EE3;&#x8868;&#x4ECE; x &#x5F00;&#x59CB;&#x5230; y &#x7684;&#x9014;&#x5F84;&#x5BF9;&#x8C61;&#xFF0C;&#x5217;&#x8868;&#x662F;&#x9006;&#x5E8F;&#x7684;&#x3002; <code>p</code> &#x53EF;&#x4EE5;&#x88AB;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x6765;&#x627E;&#x5230;&#x5176;&#x4ED6;&#x6EE1;&#x8DB3;&#x6EE1;&#x8DB3;&#x8C13;&#x8BCD;&#x8FC7;&#x7A0B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x5C31;&#x8FD4;&#x56DE; <code>#f</code> &#x3002;</p>
+<p><code>p</code> &#x4F1A;&#x5728;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x5B83;&#x641C;&#x7D22;&#x8FC7;&#x54EA;&#x4E9B;&#x5730;&#x65B9;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x641C;&#x7D22;&#x518D;&#x6B21;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x4ED6;&#x4E0D;&#x4F1A;&#x4E24;&#x6B21;&#x8FD4;&#x56DE;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x662F;&#x8D77;&#x59CB;&#x70B9;&#x5BF9;&#x8C61;&#x548C;&#x6240;&#x6709;&#x80FD;&#x4ECE; x &#x8BBF;&#x95EE;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x597D;&#x51E0;&#x500D;&#x3002;</p>
+<p>&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x5BA1;&#x67E5;&#x5668;&#x63D0;&#x4F9B;&#x4E86; <code>find</code> &#x548C; <code>find-next</code> &#x8FD9;&#x4E9B;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5BFB;&#x627E;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x662F;&#x88AB;&#x4E22;&#x5F03;&#x6389;&#x7684;&#xFF0C;&#x8FD9;&#x4F1A;&#x9020;&#x6210;&#x5BF9;&#x8C61;&#x67E5;&#x627E;&#x5668;&#x5728;&#x6D89;&#x53CA;&#x5230;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x65F6;&#x65E0;&#x6CD5;&#x63D0;&#x4F9B;&#x51C6;&#x786E;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x4ECE;&#x5DF2;&#x7ECF;&#x63D0;&#x5347;&#x4E3A;&#x9759;&#x6001;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x627E;&#x5230;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570; <code>--retain-static-relocation</code>&#x9632;&#x6B62;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x88AB;&#x4E22;&#x5F03;&#x3002;</p>
+<h2 id="36-&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x7EC4;&#x6210;">3.6 &#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x7EC4;&#x6210;</h2>
+<p>&#x8FC7;&#x7A0B; <code>compute-size</code> &#x548C; <code>compute-composition</code> &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x77E5;&#x6653;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5927;&#x5C0F;&#x6216;&#x7EC4;&#x6210;&#xFF0C;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x4ECE;&#x8BE5;&#x5BF9;&#x8C61;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6839;&#x636E;&#x4ECE;&#x5BF9;&#x8C61;&#x53EF;&#x5230;&#x8FBE;&#x7684;&#x5BF9;&#x8C61;&#x6570;&#x91CF;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x6D88;&#x8017;&#x5927;&#x91CF;&#x5185;&#x5B58;&#x3002;&#x5728;&#x4E86;&#x89E3;&#x5806;&#x4E2D;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5927;&#x5C0F;&#xFF0C;&#x4EE3;&#x6570;&#x548C;&#x7C7B;&#x578B;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C; <code>object-counts</code> &#x53EF;&#x80FD;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x5C06;&#x7ACB;&#x5373;&#x5BF9;&#x8C61;&#xFF08;&#x5982; &#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#x548C;&#x5B57;&#x7B26;&#xFF09;&#x89C6;&#x4E3A;&#x4E0D;&#x8BA1;&#x6570;&#xFF0C;&#x96F6;&#x5B57;&#x8282;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x8FD8;&#x5C06;&#x9759;&#x6001;&#x5BF9;&#x8C61;&#xFF08;&#x521D;&#x59CB;&#x5806;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#xFF09;&#x89C6;&#x4E3A;&#x4E0D;&#x8BA1;&#x6570;&#xFF0C;&#x96F6;&#x5B57;&#x8282;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;
+&#x4E24;&#x4E2A;&#x8FC7;&#x7A0B;&#x90FD;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x8BA1;&#x7B97;&#x65F6;&#x6700;&#x5927;&#x7684;&#x4EE3;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x7B26;&#x53F7; <code>static</code> &#x7528;&#x4E8E;&#x8868;&#x793A;&#x9759;&#x6001;&#x4EE3;&#x3002;</p>
+<p>&#x5BF9;&#x8C61;&#x6709;&#x65F6;&#x4F1A;&#x6307;&#x5411;&#x6BD4;&#x9884;&#x671F;&#x66F4;&#x591A;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x9759;&#x6001;&#x6570;&#x636E;&#x5305;&#x542B;&#x5728;&#x5185;&#xFF0C;&#x8FC7;&#x7A0B; <code>(lambda (x) x)</code> &#x4F1A;&#x95F4;&#x63A5;&#x6307;&#x5411;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7CFB;&#x5B50;&#x7CFB;&#x7EDF;&#xFF08;&#x7531;&#x4E8E;&#x53C2;&#x6570;&#x6570;&#x91CF;&#x68C0;&#x67E5;&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x8BF8;&#x5982;&#x6B64;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x662F;&#x88AB;&#x4E22;&#x5F03;&#x6389;&#x7684;&#xFF0C;&#x8FD9;&#x4F1A;&#x9020;&#x6210;&#x5BF9;&#x8C61;&#x67E5;&#x627E;&#x5668;&#x5728;&#x6D89;&#x53CA;&#x5230;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x65F6;&#x65E0;&#x6CD5;&#x63D0;&#x4F9B;&#x51C6;&#x786E;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x4ECE;&#x5DF2;&#x7ECF;&#x63D0;&#x5347;&#x4E3A;&#x9759;&#x6001;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x627E;&#x5230;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x9700;&#x8981;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;&#x7684;&#x7CBE;&#x786E;&#x5927;&#x5C0F;&#x548C;&#x7EC4;&#x6210;&#x7684;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570; <code>--retain-static-relocation</code>&#x9632;&#x6B62;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x88AB;&#x4E22;&#x5F03;&#x3002;</p>
+<ul>
+<li>&#x8FC7;&#x7A0B;:     (compute-size object)</li>
+<li>&#x8FC7;&#x7A0B;:     (compute-size object generation)</li>
+<li>&#x8FD4;&#x56DE;:     &#x89C1;&#x4E0B;&#x6587;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p><code>object</code> &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#xFF0C; <code>generation</code> &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A; 0 &#x5230; <code>collect-maximum-generation</code> &#x4E4B;&#x95F4;&#x7684;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x7B26;&#x53F7; <code>static</code>&#x3002;&#x5982;&#x679C; <code>generation</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F; <code>collect-maximum-generation</code> &#x7684;&#x503C;&#x3002;
+<code>compute-size</code> &#x8FD4;&#x56DE; <code>object</code> &#x4EE5;&#x53CA;&#x4ECE;&#x5B83;&#x5F00;&#x59CB;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x6570;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; <code>generation</code> &#x7684;&#x5BF9;&#x8C61;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5360;&#x636E;&#x7684;&#x4EE5;&#x5B57;&#x8282;&#x8BA1;&#x7B97;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x7ACB;&#x5373;&#x503C;&#x4F8B;&#x5982;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#x4EE5;&#x53CA;&#x5B57;&#x7B26;&#x7684;&#x5927;&#x5C0F;&#x4E3A; 0&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x9002;&#x7528;&#x4E8E; 32 &#x4F4D;&#x6307;&#x9488;&#x7684;&#x673A;&#x5668;&#x3002;</p>
+<pre><code class="lang-scheme">(compute-size 0) =&gt; 0
+(compute-size (cons 0 0)) =&gt; 8
+(compute-size (cons (vector #t #f) 0)) =&gt; 24 
+
+(compute-size
+  (let ([x (cons 0 0)])
+    (set-car! x x)
+    (set-cdr! x x)
+    x))                  =&gt; 8 
+
+(define-record-type frob (fields x))
+(collect 1 1) ; force rtd into generation 1
+(compute-size
+  (let ([x (make-frob 0)])
+    (cons x x))
+  0)                       =&gt; 16
+</code></pre>
+<ul>
+<li>&#x8FC7;&#x7A0B;:     (compute-composition object)</li>
+<li>&#x8FC7;&#x7A0B;:     (compute-composition object generation)</li>
+<li>&#x8FD4;&#x56DE;&#x503C;:     &#x89C1;&#x4E0B;&#x6587;</li>
+<li>&#x6240;&#x5C5E;&#x5E93;:     (chezscheme)</li>
+</ul>
+<p><code>object</code> &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#x3002; <code>generation</code> &#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A; 0 &#x5230; <code>collect-maximum-generation</code> &#x4E4B;&#x95F4;&#x7684;&#x5B9A;&#x957F;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x7B26;&#x53F7; <code>static</code>&#x3002;&#x5982;&#x679C; <code>generation</code> &#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F; <code>collect-maximum-generation</code> &#x7684;&#x503C;&#x3002;
+<code>compute-composition</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#x5217;&#x8868;&#x7528;&#x4E8E;&#x8868;&#x793A; <code>object</code> &#x7684;&#x7EC4;&#x6210; , &#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x4ECE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x5F00;&#x59CB;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x4EE3;&#x6570;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;<code>generation</code> &#x7684;&#x5BF9;&#x8C61; &#x3002;&#x5173;&#x8054;&#x5217;&#x8868;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-scheme">((<span class="hljs-name">type</span> count . bytes) ...)
+</code></pre>
+<p><code>type</code> &#x662F;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x7684;&#x540D;&#x5B57;&#xFF08;&#x4F7F;&#x7528;&#x7B26;&#x53F7;&#x8868;&#x793A;&#xFF0C;&#x4F8B;&#x5982; <code>pair</code> &#xFF09;&#x6216;&#x662F;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;&#x7B26;&#xFF08;rtd&#xFF09;&#x3002; <code>count</code> &#x548C; <code>bytes</code> &#x90FD;&#x662F;&#x975E;&#x8D1F;&#x5B9A;&#x957F;&#x6570;&#x3002;</p>
+<p>&#x7ACB;&#x5373;&#x5BF9;&#x8C61;&#x4F8B;&#x5982;&#x5E38;&#x6570;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x548C;&#x5B57;&#x7B26;&#x5E76;&#x4E0D;&#x5305;&#x62EC;&#x5728;&#x7EC4;&#x6210;&#x5185;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x9002;&#x7528;&#x4E8E; 32 &#x4F4D;&#x6307;&#x9488;&#x7684;&#x673A;&#x5668;&#x3002;</p>
+<pre><code class="lang-scheme">(compute-composition 0) =&gt; ()
+(compute-composition (cons 0 0)) =&gt; ((pair 1 . 8))
+(compute-composition
+  (cons (vector #t #f) 0)) =&gt; ((pair 1 . 8) (vector 1 . 16)) 
+
+(compute-composition
+  (let ([x (cons 0 0)])
+    (set-car! x x)
+    (set-cdr! x x)
+    x))                 =&gt; ((pair 1 . 8) 
+
+(define-record-type frob (fields x))
+(collect 1 1) ; force rtd into generation 1
+(compute-composition
+  (let ([x (make-frob 0)])
+    (cons x x))
+  0)                       =&gt; ((pair 1 . 8)
+                                (#&lt;record type frob&gt; 1 . 8))
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.UsingChezScheme.html" class="navigation navigation-prev " aria-label="Previous page: 02. 使用Chez Scheme">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04.ForeignInterface.html" class="navigation navigation-next " aria-label="Next page: 04. 外部接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03. Debugging","level":"1.5","depth":1,"next":{"title":"04. 外部接口","level":"1.6","depth":1,"path":"04.ForeignInterface.md","ref":"04.ForeignInterface.md","articles":[]},"previous":{"title":"02. 使用Chez Scheme","level":"1.4","depth":1,"path":"02.UsingChezScheme.md","ref":"02.UsingChezScheme.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.Debugging.md","mtime":"2020-04-26T22:38:54.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T22:39:25.823Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
