@@ -1,4 +1,4 @@
-# Chez Scheme 用户手册（中文版）
+# Chez Scheme 用户手册
 
 
 [GitBook镜像](https://guenchi.gitlab.io/CSUG) [GitHub镜像](https://guenchi.github.io/CSUG)
