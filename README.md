@@ -5,7 +5,7 @@
 
 翻译活动经费由@guenchi出资赞助： 1000字/100元
 
-### [翻译任务清单](work.md)
+### [翻译任务清单](https://github.com/guenchi/CSUG/blob/master/work.md)
 
 ```
 原著：Kent R. Dybvig
